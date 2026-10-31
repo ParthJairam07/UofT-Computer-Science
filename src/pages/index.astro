@@ -1,0 +1,83 @@
+---
+import Base from '../layouts/Base.astro';
+import data from '../data/courses.json';
+
+const { stages, courses } = data;
+const byCode = new Map(courses.map(c => [c.code, c]));
+const linkCount = courses.reduce((n, c) =>
+  n + c.sections.reduce((m, s) => m + s.blocks.reduce((k, b) => k + (b.html.match(/<a href/g) ?? []).length, 0), 0), 0);
+---
+<Base>
+  <!-- hero -->
+  <section class="hero">
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-content">
+      <span class="kicker">An open self-study curriculum · UTSC Software Engineering</span>
+      <h1 class="display" data-split>Learn the entire curriculum. <em>On your own.</em></h1>
+      <p class="lede">
+        A course-by-course study guide for all 41 computer science, mathematics and statistics
+        courses in the Software Engineering program — every route built from free, public material.
+      </p>
+    </div>
+    <div class="hero-meta" data-hero-meta>
+      <div><div class="n">41</div><div class="l">Courses mapped</div></div>
+      <div><div class="n">6</div><div class="l">Stages of study</div></div>
+      <div><div class="n">{linkCount}+</div><div class="l">Linked resources</div></div>
+      <div><div class="n serif" style="font-style:italic">free</div><div class="l">And public</div></div>
+    </div>
+  </section>
+
+  <!-- roadmap -->
+  <section class="section container rv" id="roadmap">
+    <div class="section-head">
+      <span class="idx">01</span>
+      <h2 class="display">The order of study</h2>
+      <span class="kicker">Recommended, not required</span>
+    </div>
+    <div class="stages">
+      {stages.map((s, i) => (
+        <div class="stage rv">
+          <span class="num">{String(i + 1).padStart(2, '0')}</span>
+          <div>
+            <h3>{s.name}</h3>
+            <p class="outcome">{s.outcome}</p>
+          </div>
+          <div class="courses">
+            {s.codes.map(code => (
+              <a class="code-chip" href={`/courses/${code.toLowerCase()}`}>{code}</a>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- index -->
+  <section class="section container rv" id="index">
+    <div class="section-head">
+      <span class="idx">02</span>
+      <h2 class="display">Every course</h2>
+      <span class="kicker"><kbd style="font:inherit;border:1px solid var(--line-strong);border-radius:3px;padding:.1rem .4rem">⌘K</kbd> to search</span>
+    </div>
+    <div class="index-table">
+      {stages.map((s) => (
+        <>
+          <div class="index-group">Stage {s.index + 1} · {s.name} <span>— {s.codes.length} courses</span></div>
+          {s.codes.map(code => {
+            const c = byCode.get(code)!;
+            return (
+              <a class="index-row" href={`/courses/${code.toLowerCase()}`}>
+                <span class="code">{c.code}</span>
+                <span class="title">{c.title}</span>
+                <span class="subj">{c.code.slice(0, 3)}</span>
+                <span class="stage-tag">→</span>
+              </a>
+            );
+          })}
+        </>
+      ))}
+    </div>
+  </section>
+
+  <script src="../lib/hero.ts"></script>
+</Base>

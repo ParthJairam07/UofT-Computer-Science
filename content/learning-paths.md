@@ -1,0 +1,1075 @@
+# Learn the U of T curriculum independently
+
+A practical, course-by-course study guide for all 41 computer science, mathematics and statistics courses in the Software Engineering program research.
+
+**Access research:** October 29, 2026. This guide includes all 23 named technical requirements **and all 18 elective options**, because your goal is to learn the whole list. It builds on the accompanying [UofT curriculum research](utsc-software-engineering-course-research.html).
+
+For each course, you get an ordered main route, a topic-to-resource map, exercises or implementation work, a suggested way to demonstrate understanding, and access/coverage limits. Many paths use the actual public UofT materials; others combine open textbooks and courses with specific supplements.
+
+The mapping is our researched recommendation for learning the **documented curriculum**. It is not an official equivalency or a promise of identical private lectures, assessments, feedback or grades. The earlier report’s nine limited-syllabus cases remain uncertain; a resource recommendation does not turn an unknown UofT subtopic into a verified one. The original evidence summary is available under each course in the searchable edition.
+
+## How to use this guide
+
+1. **Choose the main route first.** Study the specified units, not every course on every linked website. Supplements close a named gap or provide an alternative explanation.
+2. **Do the work.** Read/watch, then solve problems, write proofs, implement systems or run experiments before looking at solutions. Watching lectures alone does not exercise the skills being taught.
+3. **Keep evidence.** Save worked problems, tests, reports and projects. Use unfamiliar problems to check transfer, not only examples you have already seen.
+4. **Get feedback.** Mathematical proofs, ethical arguments, designs and user studies need criticism from another person where possible. Public solutions and local tests provide useful but incomplete feedback.
+5. **Reuse earlier learning.** Several courses revisit probability, graphs, language models, testing or distributed systems at greater depth. Revisit only what you cannot yet explain or apply; do not repeat entire introductory courses unnecessarily.
+
+All “suggested mastery” tasks in this guide are our assessment ideas, not claimed UofT assignments. Actual university materials are identified separately.
+
+## A recommended learning order
+
+This is an instructional order, not a transcript/prerequisite audit or a fixed calendar. Read each course’s preparation requirements before starting; courses grouped in one row do not necessarily start simultaneously.
+
+| Stage | Work through | What it prepares you to do |
+|---|---|---|
+| Foundations | CSCA08; CSCA67; MATA22 and MATA31, then MATA37; CSCA48 after introductory programming | Write programs, reason with proofs, and use calculus/linear algebra. |
+| Core representations and tools | CSCB07, CSCB09, CSCB36, CSCB58; then CSCB63; MATB24, STAB52 and MATB41 after their mathematics foundations | Build/test software, understand memory/hardware, analyse structures, and use probability/multivariable mathematics. |
+| Core higher-level work | CSCC01, CSCC24, CSCC37, CSCC43, CSCC69 and CSCC73; study CSCD03 alongside technical work | Design software and algorithms; reason about languages, numerical reliability, databases, operating systems and social consequences. |
+| Advanced required work | CSCC63 and CSCD01 after the relevant theory/systems/software foundations | Understand computational limits and justify architecture at scale. |
+| Application branches | CSCC09/C10; CSCC11 → CSCD25/CSCD84/CSC413; CSCC46; CSCC85/CSCD18/CSC320; CSC401/CSC485 | Develop web/HCI, data/AI, networks, robotics/vision/graphics and language expertise. |
+| Systems and compiler depth | CSCD27, CSCD43, CSCD58, CSC469; CSC488 and CSCD70 after language/data-structure/hardware foundations | Implement and analyse deeper security, database, networking, OS and compiler mechanisms. |
+
+The program’s elective credit rules do not restrict what you may study independently. For example, overlapping compiler courses can both be useful for learning; their overlap should reduce duplicated work rather than hide one from this guide.
+
+## Access, cost and equipment
+
+- **Core reading:** The main routes prioritize free, publicly accessible material. A page advertising a paid book, certificate or training course does not mean its linked free chapters require payment; each course entry explains the distinction.
+- **Accounts:** Some public exercises, submissions, model hubs or hosted notebooks need ordinary external accounts. That is different from needing a UofT student identity. Local alternatives are described where practical.
+- **Practice systems:** Public starter code and local tests are distinguished from institutional grading servers. We verified resource availability and documented workflows; we did not execute every third-party lab or complete every external course.
+- **Hardware and compute:** A normal computer supports most reading, mathematics and smaller implementations. Some systems labs need a compatible Linux/VM/container setup; robotics needs hardware to reproduce physical sensing/control experience, and large neural experiments can require substantial compute. Simulator and reduced-scale routes are identified honestly.
+- **Dates and maintenance:** Archived courses can remain excellent teaching resources, but installation instructions, platforms, models and links change. Follow the identified edition/archive and its own dependencies. Do not assume a current homepage and an old assignment use the same environment.
+
+## Course-by-course learning paths
+
+
+<a id="CSCA08H3"></a>
+
+## CSCA08H3 — Introduction to Computer Science I
+
+**Start with:** No programming background is required. Be comfortable with school algebra and using files/folders. **Main route:** Selected CS50 Python units, followed by an explicit algorithms supplement. Learning Python syntax alone leaves part of A08 uncovered.
+
+**Ordered topic-to-resource map:**
+
+1. **Primitive types, expressions, variables, statements, arguments, return values and functions:** Work through CS50P’s **Functions, Variables** unit and its problem set. Continue through **Conditionals** and **Loops** for Boolean decisions, repetition and list processing. The public site supplies lectures, notes and exercises. [CS50P course and unit directory](https://cs50.harvard.edu/python/).
+2. **Classes, objects and methods:** Complete CS50P’s **Object-Oriented Programming** unit after you can solve procedural exercises independently. Write your own class rather than only copying a demonstration. Its **Unit Tests** unit is useful supporting practice. [CS50P OOP](https://cs50.harvard.edu/python/weeks/8/), [unit testing](https://cs50.harvard.edu/python/weeks/5/).
+3. **Lists and manipulating collections:** Practise the list examples in the loops unit; if you need a slower explanation, use PY4E’s **Lists** lesson and exercises. Strings, dictionaries and files there are useful extensions, but are not a substitute for the search/sort component. [PY4E lesson directory](https://www.py4e.com/lessons).
+4. **Searching, sorting and computational complexity:** Read CS50x **Lecture 3: Algorithms** for linear/binary search, asymptotic reasoning and sorting. The examples use C; translate the algorithms into Python, trace them by hand and explain the sorted-input requirement of binary search. This is the bridge from programming to algorithmic reasoning. [CS50x algorithm notes](https://cs50.harvard.edu/x/notes/3/).
+
+**Practice:** Complete the relevant CS50P problem sets, then write and test searches and sorts without calling a library sort. Use empty lists, one element, duplicates, already sorted input and reversed input. Record comparison counts as inputs grow; distinguish a timing observation from an argument about complexity.
+
+**Mastery task — suggested:** Build a small catalogue application using functions and a class, implement search/sort options, document their costs, and add tests. Be able to explain every state change and predict outputs on unfamiliar examples.
+
+**Access and limits:** Reading/watching is public and free; CS50P explicitly welcomes non-Harvard learners. Its submission/feedback workflow asks for an edX account, and verified certificates are a separate option. You can complete the learning work locally without buying a certificate. This route covers the documented A08 areas; the private current UofT project set and exact choice of algorithms remain unknown. [CS50P participation instructions](https://cs50.harvard.edu/python/).
+
+<a id="CSCA48H3"></a>
+
+## CSCA48H3 — Introduction to Computer Science II
+
+**Start with:** A08-level programming, functions, lists, basic algorithm analysis. **Main route:** Use the actual public UofT course textbook as your spine; supplement difficult C memory concepts with CS50’s demonstrations.
+
+**Ordered topic-to-resource map:**
+
+1. **C program structure, compilation, control flow and errors:** Estrada’s *Introduction to Computer Science*, **Chapter 1**. Compile the examples yourself and complete its exercises.
+2. **Memory, functions, arrays and pointers:** **Chapter 2**. Draw memory diagrams before running programs and predict what changes when values or addresses are passed to functions.
+3. **Structures, dynamic allocation, containers, linked lists, queues, searching/deletion and tests:** **Chapter 3**. Build the representations and operations rather than replacing them with Python’s list type.
+4. **Efficiency, binary trees/BSTs, traversal and implementation:** **Chapter 4**. Analyse operation costs for different shapes of tree.
+5. **Graphs, representations, operation costs, recursion and debugging:** **Chapter 5**. Trace recursive executions and state what makes each recursion terminate.
+6. **Modules, interfaces/APIs, encapsulation, classes and inheritance:** **Chapter 6**, including the C++ introduction. Relate an abstract operation’s specification to its hidden representation. These six chapters cover the published A48 textbook’s full main sequence and include exercises. [Actual public A48 textbook](https://www.cs.toronto.edu/~strider/docs/IntroToCS.pdf).
+
+**Supporting explanation and tools:** CS50x’s **Memory** lecture illustrates pointers, allocation, copying strings and memory-management errors. Use it alongside, rather than instead of, A48’s longer data-structure sequence. For your own C/C++ programs, Clang’s AddressSanitizer documentation explains how to detect memory errors during local runs. [CS50 memory notes](https://cs50.harvard.edu/x/notes/4/), [AddressSanitizer documentation](https://clang.llvm.org/docs/AddressSanitizer.html).
+
+**Practice:** Work the textbook’s exercises and repeated “Building Programs That Work” sections. For each structure, implement creation/insertion/search/deletion/destruction, test edge cases, and write both a behavioural specification and an efficiency analysis.
+
+**Mastery task — suggested:** Write a C library containing a linked queue, BST dictionary and graph traversal routines, with a separate client program and tests. Explain ownership of allocated objects and diagnose an injected memory bug. Add a small C++ class/inheritance example to demonstrate the final unit.
+
+**Access and limits:** The textbook is a large public PDF, already retrieved and inspected in the original research; no UofT login is needed. The instructor’s index also links separate chapters. Compiler/tools can run locally; institutional marking is not included. Preserve the book’s licence when using it. The published book version and course-offering dates differ, so follow its contents rather than assuming it is an exact 2026 assignment schedule. [Public note index](https://www.cs.toronto.edu/~strider/LectureNotes.html).
+
+<a id="CSCA67H3"></a>
+
+## CSCA67H3 — Discrete Mathematics
+
+**Prerequisites:** High-school algebra and comfort reading symbolic statements. Programming is useful for experiments but does not replace proof writing.
+
+**Main route:** Work through MIT’s free *Mathematics for Computer Science* course in the order **Proofs → Structures → Counting → Probability**. Its Open Learning Library version can be viewed without enrolment; creating an account is optional for tracking progress. Use the course textbook and problem sessions together. [MIT 6.042J course](https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/).
+
+**Topic-to-resource map:**
+
+| U of T topic cluster | What to study |
+|---|---|
+| Propositions, implication/equivalence, inference, quantifiers | MIT Chapters 1 “What is a Proof?” and 3 “Logical Formulas”; translate English claims and negate quantified statements. |
+| Direct proof, contradiction, counterexamples, induction and well-ordering | MIT Chapters 1–2 and 5; write arguments with hypotheses and base/inductive steps. |
+| Trees, graph representation/search, planar graphs and colouring | MIT Chapters 9 and 11 for graphs/trees/colouring; Chapter 12, “Planar Graphs,” in the full textbook is necessary even though the reading table skips it. Add ODS Chapter 12 for BFS/DFS. [Full MIT text](https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/mit6_042js15_textbook.pdf), [graph-search supplement](https://opendatastructures.org/ods-python/). |
+| Combinatorics and pigeonhole reasoning | MIT Chapter 14 “Cardinality Rules,” including §14.8 pigeonhole; practise combinations and counting proofs. |
+| Discrete probability, conditional probability and independence | MIT Chapters 16 “Events and Probability Spaces” and 17 “Conditional Probability,” including §§17.7–17.8 independence. |
+
+The [MIT reading map](https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/pages/readings/) links the relevant textbook sections in order. This route includes material beyond CSCA67; extra number-theory or advanced probability units are enrichment, not evidence that U of T requires them.
+
+**Practice:** For each cluster, first solve unfamiliar problems without knowing which theorem applies. Add a computational check only afterward: enumerate a small probability space, traverse a small graph, or test a conjectured identity. For additional proof exercises with a close U of T presentation, use Chapters 1, 5 and 6 of [Hadzilacos’s public B36/236/240 notes](https://www.cs.toronto.edu/~vassos/b36-notes/notes.pdf).
+
+**Mastery check — our suggested assessment:** Produce a portfolio containing a quantified-logic translation, a contradiction proof, an induction proof, a counting argument, a conditional-probability calculation, a graph traversal and a planar/colouring argument. For each, explain why a plausible incorrect solution fails. Revise proofs after feedback from a knowledgeable reader or comparison with a worked example.
+
+**Access and coverage:** The main materials are free and publicly readable; there is no need for a U of T account. They do not supply U of T marking or access to its private assessments. The CSCA67 Fall 2026 public schedule was incomplete in the curriculum report, so this is a route through the documented scope, not a certification of every current lecture.
+
+<a id="MATA22H3"></a>
+
+## MATA22H3 — Linear Algebra I for Mathematical Sciences
+
+**Prerequisites:** Algebra, functions, coordinate geometry and introductory proof methods. Hefferon’s publisher page lists one semester of calculus as a prerequisite; calculus can be studied alongside this route if that background is missing.
+
+**Main route:** Use Jim Hefferon’s *Linear Algebra*, fourth edition, as the exercise-based backbone. Study the chapters below in order, writing proofs as well as performing calculations. The author provides the text, slides, a Sage lab manual and a complete worked answer book. [Author’s resource page](https://hefferon.net/linearalgebra/).
+
+**Topic-to-resource map:**
+
+| U of T topic cluster | Exact reading in Hefferon |
+|---|---|
+| Vectors, lines/planes, linear systems and Gaussian reduction | Chapter One, “Linear Systems”: Solving Linear Systems, Linear Geometry and Reduced Echelon Form. |
+| Entire solution sets and their structure | One.I.2 “Describing the Solution Set” and One.I.3 “General = Particular + Homogeneous.” |
+| Subspaces, span, dependence/independence, basis, dimension and direct sums | Chapter Two; include Two.III.4 “Combining Subspaces.” |
+| Linear maps, matrices, inverses, injectivity/surjectivity, kernel/range and rank | Chapter Three, especially Homomorphisms, Computing Linear Maps, Matrix Operations and Change of Basis. |
+| Determinants, their geometry and Cramer’s rule | Chapter Four, including its “Cramer’s Rule” topic. |
+| Complex numbers, characteristic/eigenvalue calculations and diagonalization | Chapter Five, “Complex Vector Spaces” and “Similarity,” including Polynomial Factoring and Complex Numbers, Diagonalizability, Eigenvalues and Eigenvectors. |
+
+[Free fourth-edition text](https://jheffero.w3.uvm.edu/linearalgebra/book.pdf).
+
+**Practice:** For each selected subsection, do routine calculations, an interpretation question and a proof before consulting the [worked answer book](https://jheffero.w3.uvm.edu/linearalgebra/jhanswer.pdf). Use its exercise identifiers rather than PDF page numbers to match questions and answers. Use Sage or another symbolic system to check arithmetic after the hand solution; a numerical eigenvalue alone does not demonstrate the required reasoning.
+
+**Mastery check — our suggested assessment:** Start with a linear transformation of real three-dimensional space whose matrix has a parameter. Determine when it is invertible, describe its kernel/range and solution sets in every case, give bases, calculate determinant and eigenstructure, and decide when it diagonalizes. Then repeat a smaller example over the complex numbers. Explain each structural conclusion without relying on a software printout.
+
+**Access and coverage:** The electronic resources are free; the download page’s donation slider can be set to zero, and the direct text/answer links work publicly. No grader is included. The mapping covers the published calendar and the historical tutorial additions in the original report; those tutorials do not establish an exact 2026 instructor sequence.
+
+<a id="MATA31H3"></a>
+
+## MATA31H3 — Calculus I for Mathematical Sciences
+
+**Prerequisites:** Algebra, trigonometry, exponentials/logarithms and functions; introductory proof writing is essential for the rigorous parts.
+
+**Main route:** Pair **UBC CLP-1** for calculations and applications with **Lebl’s Basic Analysis I** for foundations and proofs. Begin with sets/completeness, work through limits and continuity, then derivatives/theorems/applications, and finish with antiderivatives. The additional analysis reading matters because a computational calculus course alone does not cover the stated mathematical foundations.
+
+**Topic-to-resource map:**
+
+| U of T topic cluster | Reading route |
+|---|---|
+| Sets, real numbers, supremum and infimum | Lebl §0.3 and Chapter 1, particularly §1.2, “The set of real numbers.” [Real-number foundation](https://www.jirka.org/ra/html/rn_chapter.html). |
+| Function limits, continuity, IVT and EVT | CLP-1 Chapter 1; then Lebl §§3.1–3.3 for theorems and proof-level treatment. [Continuous functions](https://www.jirka.org/ra/html/lim_chapter.html). |
+| Derivative/differentiability, algebraic and transcendental functions | CLP-1 §§2.1–2.12, including proofs of derivative rules, exponential/trigonometric/logarithmic functions, chain rule and implicit differentiation. [Derivative chapter](https://personal.math.ubc.ca/~CLP/CLP1/clp_1_dc/chap_deriv.html). |
+| Fermat, Rolle and mean value reasoning | CLP-1 §2.13 and Lebl §§4.1–4.2; check the hypotheses in every use. [Mean value theorem](https://www.jirka.org/ra/html/sec_mvt.html). |
+| Related rates, optimization and graph sketching | CLP-1 §§3.2, 3.5 and 3.6. [Applications chapter](https://personal.math.ubc.ca/~CLP/CLP1/clp_1_dc/chap_appl_deriv.html). |
+| Antiderivatives | CLP-1 §4.1, “Introduction to Antiderivatives.” [Antiderivatives](https://personal.math.ubc.ca/~CLP/CLP1/clp_1_dc/sec_antidiff.html). |
+
+**Practice:** CLP-1 supplies a separate problem book and a combined HTML text, with hints, answers and solutions. Mix computation, counterexamples and theorem-application problems; after completing a topic, solve some questions without a section label. [CLP-1 materials](https://personal.math.ubc.ca/~CLP/CLP1/). Use Lebl’s exercises to practise the reasoning strand; a complete public worked-solutions set for Lebl was not verified.
+
+**Mastery check — our suggested assessment:** Prove a limit from its definition, use completeness to justify an extremum argument, find counterexamples when theorem hypotheses are removed, solve a related-rates model and a constrained-by-domain optimization problem, and explain the connection between derivative sign and graph shape. Show an antiderivative calculation and verify it by differentiation.
+
+**Access and coverage:** These are free author/university texts with no institutional login. Some CLP optional formal-limit sections should be included in this rigorous route. A recent public U of T weekly syllabus was unavailable, so these selections target its documented curriculum rather than an unverified textbook edition or examination specification.
+
+<a id="MATA37H3"></a>
+
+## MATA37H3 — Calculus II for Mathematical Sciences
+
+**Prerequisites:** The MATA31 route, including derivative rules, mean value reasoning and comfort with limits/proofs.
+
+**Main route:** Work through CLP-2’s integration and sequence/series material, reinforcing the integral’s foundations with Lebl. Read before doing problems, then return to the theorem statements after applications; this prevents learning integration as a collection of unrelated tricks.
+
+**Topic-to-resource map:**
+
+| U of T topic cluster | Exact reading route |
+|---|---|
+| Riemann sums, definite integral, properties and FTC | CLP-2 §§1.1–1.3, including the careful-definition subsection; Lebl §§5.1–5.3 for a rigorous Darboux/Riemann treatment. [Lebl’s integral chapter](https://www.jirka.org/ra/html/int_chapter.html). |
+| Integration techniques | CLP-2 §1.4 substitution and §§1.7–1.10 integration by parts, trigonometric integrals/substitution and partial fractions. [CLP-2 integration chapter](https://personal.math.ubc.ca/~CLP/CLP2/clp_2_ic/chap_integral.html). |
+| Numerical and improper integrals | CLP-2 §§1.11–1.12; consult the numerical-integration appendix only as additional depth. [Numerical integration](https://personal.math.ubc.ca/~CLP/CLP2/clp_2_ic/sec_numeric_int.html), [improper integrals](https://personal.math.ubc.ca/~CLP/CLP2/clp_2_ic/sec_improp_int.html). |
+| Sequences, series and convergence tests | CLP-2 §§3.1–3.3. [Sequences and series chapter](https://personal.math.ubc.ca/~CLP/CLP2/clp_2_ic/chap_seq_ser.html). |
+| Absolute/conditional convergence, power and Taylor series | CLP-2 §§3.4–3.6; work with intervals/radii and approximation errors. [Power series](https://personal.math.ubc.ca/~CLP/CLP2/clp_2_ic/chap_seq_ser-7.html), [Taylor series](https://personal.math.ubc.ca/~CLP/CLP2/clp_2_ic/chap_seq_ser-8.html). |
+| Applications | Select area/volume/average examples and series-based approximations from those chapters; these are practice choices, not claims about U of T’s exact application list. |
+
+**Practice:** Use the chapter-matched CLP-2 problem book, attempting questions before opening its hints/answers/solutions. [CLP-2 resource index](https://personal.math.ubc.ca/~CLP/CLP2/). For each integration technique, add a problem where it is an inefficient choice and explain a better choice. For each series test, identify its hypotheses and an example where it gives no conclusion.
+
+**Mastery check — our suggested assessment:** Build a short approximation report: define an integral using sums, establish existence in an appropriate example, compare an exact antiderivative with numerical estimates, analyze an improper integral, and approximate a function with a Taylor series with a justified error bound. Include a conditionally convergent series and a proof that it is not absolutely convergent.
+
+**Access and coverage:** All required reading is free and public; no U of T membership is needed. The selected named techniques/tests are the proposed learning route through the calendar’s broad requirements. Their presence here does not assert that every named method is compulsory in a particular current U of T offering.
+
+<a id="CSCB07H3"></a>
+
+## CSCB07H3 — Software Design
+
+**Start with:** A48-level programming and the ability to design small programs. **Main route:** Learn Java’s static object model, then practise design, testing, refactoring and tools in a real codebase.
+
+**Ordered topic-to-resource map:**
+
+1. **Static typing, classes, constructors, interfaces, packages, inheritance and polymorphism:** Oracle’s Dev.java **Object-Oriented Programming** lessons. Use its language-basics section if Java syntax is new. [Dev.java OOP](https://dev.java/learn/language/oop/), [learning directory](https://dev.java/learn/).
+2. **IDE work:** Follow Dev.java’s **Using IDEs** tutorial for one environment and practise breakpoints, stepping, inspecting values, running tests and refactoring. [IDE tutorials](https://dev.java/learn/first-steps/using-ides/).
+3. **Object-oriented design and patterns:** SE-EDU’s **Software Design Patterns** chapter supplies explanations and exercises. Implement a few patterns to solve concrete design problems; the exact UofT pattern catalogue is not publicly established. [Design-pattern material](https://se-education.org/se-book/designPatterns/index.html).
+4. **Unit testing:** Read SE-EDU **Testing**, then use the JUnit guide with a compatible JDK/build configuration. Distinguish testing your class’s behaviour from merely exercising its lines. [Testing chapter](https://se-education.org/se-book/testing/index.html), [current JUnit documentation](https://docs.junit.org/current/user-guide/).
+5. **Refactoring:** Work SE-EDU **Refactoring**, using Fowler’s catalogue to inspect specific transformations. Keep tests passing while changing structure. [Refactoring chapter](https://se-education.org/se-book/refactoring/index.html), [author’s refactoring catalogue](https://refactoring.com/catalog/).
+6. **Version control and builds:** Take the SE-EDU Git/GitHub tour; learn commits, branches and merges. Follow Maven’s getting-started guide through building, dependencies and tests. [Git tour](https://se-education.org/se-book/gitAndGithub/trail/tours.html), [Maven guide](https://maven.apache.org/guides/getting-started/).
+
+**Practice:** Use SE-EDU’s AddressBook Level 3 as an inspectable Java example: trace its architecture, add a small feature and tests, then refactor a component. Follow that project’s actual tool versions rather than replacing its build tool merely because you practised Maven separately. [AddressBook developer guide](https://se-education.org/addressbook-level3/DeveloperGuide.html).
+
+**Mastery task — suggested:** Deliver a Java application with a reproducible build, unit tests, a documented design choice, a reviewed refactoring and a meaningful Git history. Explain when a pattern would add unnecessary complexity.
+
+**Access and limits:** These readings are public; local builds/tests do not require university enrolment. A GitHub account is useful for hosted collaboration but not required to learn local Git. Helsinki’s Java MOOC is an optional exercise bank, explicitly marked **legacy and unmaintained**; do not depend on its old credit/exam or tooling services. B07’s current project/framework and exact pattern choices remain unverified. [Legacy-course notice](https://java-programming.mooc.fi/).
+
+<a id="CSCB09H3"></a>
+
+## CSCB09H3 — Software Tools and Systems Programming
+
+**Prerequisite knowledge:** Functions, pointers, arrays, dynamic memory and basic data structures at CSCA48 level. Use a Linux environment for the Unix-specific exercises; a Linux VM is a useful option on another operating system.
+
+**Main route:** Follow Albert Lai’s public Summer 2026 sequence, completing each associated lab before moving to the next unit. Its lecture PDFs, example programs and lab directories are available without a UofT sign-in. Add *The Linux Command Line* for shell practice and Beej’s networking guide for socket examples. This uses actual UofT teaching material where public, rather than relying on a vaguely similar systems course. [B09 course and lab index](https://www.cs.toronto.edu/~trebla/CSCB09-2026-Summer/).
+
+**Topic-to-resource map:**
+
+- **Shell, files, filters and pipelines:** Start with UofT's shell notes, distinguishing portable `sh` from Bash extensions. Work through *The Linux Command Line*, Part I, “Learning the Shell,” and Part IV, “Writing Shell Scripts”; reproduce redirection/pipeline examples, then write scripts with arguments, conditions and loops. The author supplies a free PDF and example scripts; print/e-reader purchases are optional. [UofT shell notes](https://www.cs.toronto.edu/~trebla/CSCB09-2026-Summer/08-shell.pdf), [author’s book page](https://linuxcommand.org/tlcl.php).
+- **C types, streams and modularization:** Read B09’s C-data-types, C-I/O and C-modularization units in order. Use the free edition of Jens Gustedt’s *Modern C* as a language reference when a construct is unfamiliar, rather than reading every advanced C23 feature before proceeding. [B09 materials](https://www.cs.toronto.edu/~trebla/CSCB09-2026-Summer/), [Modern C and free download](https://gustedt.gitlabpages.inria.fr/modern-c/).
+- **Unix file system and file descriptors:** Study the course’s “Unix file system” notes and trace which process owns each descriptor before/after opening, duplicating and closing it. [File-system unit](https://www.cs.toronto.edu/~trebla/CSCB09-2026-Summer/40-files.pdf).
+- **Process execution, pipes and signals:** Follow the process/redirection and signals notes; draw parent/child execution timelines and distinguish sharing an open file from sharing a variable. [Processes](https://www.cs.toronto.edu/~trebla/CSCB09-2026-Summer/48-processes.pdf), [course index for signals and examples](https://www.cs.toronto.edu/~trebla/CSCB09-2026-Summer/).
+- **Sockets and network clients/servers:** Use Beej’s sections “System Calls or Bust,” “Client-Server Background” and “Slightly Advanced Techniques”; compile the examples and explain the roles of address lookup, connection establishment and partial I/O. [Free socket-programming guide](https://beej.us/guide/bgnet/).
+- **I/O multiplexing:** Complete B09’s `select()` unit and its examples before attempting a multi-client server. [Multiplexing notes](https://www.cs.toronto.edu/~trebla/CSCB09-2026-Summer/72-select.pdf).
+- **Threads:** Read the thread unit and implement a small shared-data example using pthreads. Threads were taught in this offering even though excluded from its final examination. [Thread notes](https://www.cs.toronto.edu/~trebla/CSCB09-2026-Summer/80-threads.pdf).
+
+**Practice and assessment:** Start with lab 2’s downloadable fixtures, then continue through the public lab/assignment index. Run examples locally, inspect return values, exercise error paths and use a debugger. [Public first lab directory](https://www.cs.toronto.edu/~trebla/CSCB09-2026-Summer/l02/).
+
+**Suggested mastery task — our proposal:** Build a small shell supporting pipelines, redirection, child termination and graceful signal handling; separately build a multi-client chat server with `select()`. Submit to yourself a descriptor/process diagram, tests for disconnected clients and a comparison with a threaded design. These are suggested demonstrations of knowledge, not UofT assignment specifications.
+
+**Access and coverage:** The main path is free. *The Linux Programming Interface*, named by the UofT offering, is a paid optional reference; its purchase is unnecessary for accessing the linked teaching notes. Local practice does not provide UofT marking, office hours or credentials. The path covers the documented 2026 topic sequence, not a promise about later offerings.
+
+<a id="CSCB36H3"></a>
+
+## CSCB36H3 — Introduction to the Theory of Computation
+
+**Prerequisites:** CSCA67-style logic/proofs, sets/functions/relations, recursion, and elementary programming.
+
+**Main route:** Use the actual publicly available **Hadzilacos B36/236/240 notes** as the spine. Their age is visible, but they provide a particularly close topic match. Pair them with Hefferon’s open *Theory of Computation* for alternate explanations and independently checkable exercises.
+
+**Topic-to-resource map:**
+
+| U of T topic cluster | Exact study location |
+|---|---|
+| Well-ordering, ordinary/complete induction, structural induction | Hadzilacos Chapter 1, “Induction,” including equivalence of well-ordering and induction, followed by Chapter 4, “Sets Defined by Induction and Structural Induction.” |
+| Iterative/recursive correctness | Hadzilacos Chapter 2, “Correctness of Iterative and Recursive Programs”; write preconditions, postconditions, invariants/induction arguments and termination arguments. |
+| Linear and divide-and-conquer recurrences | Hadzilacos Chapter 3, “Functions Defined by Induction,” especially its recurrence material. |
+| Propositional/predicate logic | Hadzilacos Chapters 5 and 6; use these as reference/review rather than requiring every database-related digression. |
+| DFA/NFA, regular expressions/languages, correctness and pumping lemma | Hadzilacos Chapter 7. |
+| CFGs, parse trees and pushdown automata | Hadzilacos Chapter 8; cover both representations and their relationship. |
+
+[U of T course notes](https://www.cs.toronto.edu/~vassos/b36-notes/notes.pdf).
+
+**Exercises and second explanations:** Hefferon’s “Languages, Grammars, and Graphs” and “Automata” chapters contain languages/grammars, finite-state machines, nondeterminism, regular expressions, nonregular languages and pushdown machines. Its author provides a free companion answer book with worked solutions and lecture videos. [Author’s resources](https://hefferon.net/computation/), [table of contents](https://hefferon.net/computation/toc.html), [direct textbook PDF](https://jheffero.w3.uvm.edu/computation/book.pdf), [direct answers PDF](https://gitlab.com/jim.hefferon/toc/-/raw/master/src/00downloads/answers.pdf). Do not automatically work through all its Turing-machine/complexity material here; that belongs more naturally in the C63 path.
+
+**Mastery check — our suggested assessment:** Prove one loop and one recursive algorithm correct and terminating; derive and solve their recurrences; construct a DFA and an equivalent NFA/regular expression; prove one language nonregular; construct a CFG and PDA for a related context-free language. Test machines on examples, but include proofs because testing finitely many strings is insufficient.
+
+**Access and coverage:** The U of T notes and Hefferon materials are openly readable outside university. The former do not include a verified complete solution manual or live grading; the latter provides worked answers. The B36 instructor schedule’s term was uncertain, so the route targets the documented topics, not a claimed 2026 week-for-week replica.
+
+<a id="CSCB58H3"></a>
+
+## CSCB58H3 — Computer Organization
+
+**Prerequisite knowledge:** Basic programming, Boolean expressions and binary arithmetic. Prior knowledge of electronics is not assumed for the recommended introductory course.
+
+**Main route:** Study MIT’s open 6.004 *Computation Structures* units in order, then complete Nand to Tetris hardware projects 1–6. Compare the resulting CPU to the public UofT Fall 2020 materials. These resources teach both the circuit abstraction and its software-visible instruction set. [MIT 6.004 course](https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/), [Nand to Tetris project outline](https://www.nand2tetris.org/course).
+
+**Topic-to-resource map:**
+
+- **Binary representation, Boolean logic and transistors:** MIT units 1–3, “Basics of Information,” “The Digital Abstraction” and “CMOS.” [CMOS unit and course navigation](https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c3/).
+- **Combinational circuits, multiplexers, decoders and arithmetic:** MIT unit 4; Nand to Tetris projects 1–2, Boolean logic and Boolean arithmetic.
+- **Latches/flip-flops, registers and counters:** MIT unit 5, “Sequential Logic”; Nand project 3, memory. [Sequential Logic unit](https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c5/).
+- **Finite-state machines:** MIT unit 6, including its worksheet; implement a controller with explicit next-state and output logic.
+- **Latency and design trade-offs:** MIT units 7–8, performance measures and design trade-offs.
+- **ISA, assembly, execution and control:** MIT units 9–13 cover instruction-set design, assembly, procedures/stacks and building a CPU. Nand projects 4–6 connect machine programs, hardware and an assembler. [Assembly unit and adjacent units](https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c10/).
+- **Memory hierarchy, I/O and parallelism:** MIT units 14–15 and 18–21 cover caches, pipelining, devices/interrupts, concurrency, communication and parallel processing. The material goes beyond the narrower UofT hardware archive in places. [Memory hierarchy unit and course navigation](https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c14/).
+- **Karnaugh maps and the historical UofT laboratory sequence:** Use the corresponding combinational-logic lecture/lab in the Fall 2020 CSCB58 schedule; do not assume Nand’s gate-building sequence teaches K-map minimization explicitly. [UofT archived schedule](https://uoft-ecosystem.github.io/CSCB58_F20-Website/schedule.html).
+
+**Practice:** Attempt each MIT worksheet before checking its associated material. Complete the six hardware/assembler projects using the official Nand tools and supplied tests. The official web IDE includes the project files and testing tools; the alternative desktop tools use Java. No physical board is needed for these simulator projects. [Official freely supplied tools](https://www.nand2tetris.org/software).
+
+**Suggested mastery task — our proposal:** Starting from gates, build a CPU capable of executing a small assembly program; trace a load, arithmetic operation, branch and store; add a memory-mapped peripheral and measure the latency effect of a simple pipeline or cache model. Present both the circuit and an execution trace.
+
+**Access and coverage:** MIT’s posted materials and the Nand software/project pages are free; a paid Nand book or MOOC certificate is optional. MIT uses the Beta ISA and Nand uses Hack; neither is evidence of the ISA used by current CSCB58. Learn the principles, then use the UofT archive for any specific historical assembly dialect/Logisim task you wish to reproduce. A current CSCB58 hardware/tool syllabus was not publicly verified in the baseline, so exact laboratory equivalence remains unknown.
+
+<a id="CSCB63H3"></a>
+
+## CSCB63H3 — Design and Analysis of Data Structures
+
+**Prerequisites:** Programming with arrays, linked structures and recursion; B36-level correctness/recurrences; asymptotic notation; elementary discrete probability. A language such as Java, C++ or Python is suitable for the proposed work.
+
+**Main route:** Start with representations and operation contracts, then study heaps, dictionaries, amortization/disjoint sets, graphs and lower bounds. Use Morin’s *Open Data Structures* for implementations and proofs, MIT lectures for AVL trees and augmentation, and the explicitly identified supplements below. After implementing a structure, explain its invariants and derive its operation costs. [Open Data Structures, pseudocode edition](https://opendatastructures.org/ods-python/).
+
+**Topic-to-resource map:**
+
+| U of T topic cluster | Reading and learning target |
+|---|---|
+| ADTs, asymptotics and worst-case bounds | Open Data Structures Chapter 1, “Introduction”; specify the interface separately from the representation. |
+| Binary and mergeable priority queues; binomial heaps | ODS Chapter 10, “Heaps,” gives binary and randomized meldable heaps. **Supplement:** Stanford CS166’s “Binomial Heaps” slides cover the additional historically named structure. [Binomial heap lecture and slides](https://web.stanford.edu/class/archive/cs/cs166/cs166.1256/lectures/09/). |
+| BSTs, AVL balancing, augmentation | ODS Chapters 6 and 9 for binary/red-black trees; MIT 6.006 Lectures 5–6 for BSTs/AVL, and MIT 6.046 Lecture 9 for augmentation/range trees. [6.006 notes](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/pages/lecture-notes/), [6.046 notes](https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/pages/lecture-notes/). |
+| B-trees | ODS Chapter 14, “External Memory Searching,” including the B-tree section; count block transfers as well as ordinary operations. |
+| Chained hashing and expected costs | ODS Chapter 5, “Hash Tables,” together with MIT 6.006 Lecture 8. |
+| Dynamic tables, amortization and disjoint sets | ODS Chapter 2 for array resizing; Erickson’s separate [“Amortized Analysis”](https://jeffe.cs.illinois.edu/teaching/algorithms/notes/09-amortize.pdf) and [“Disjoint Sets”](https://jeffe.cs.illinois.edu/teaching/algorithms/notes/11-unionfind.pdf) notes. |
+| Graph representations, BFS/DFS and MSTs | ODS Chapter 12, “Graphs”; add Erickson’s [Chapter 7, “Minimum Spanning Trees”](https://jeffe.cs.illinois.edu/teaching/algorithms/book/07-mst.pdf). |
+| Randomized Quicksort versus random-input assumptions | ODS Chapter 11, “Sorting Algorithms,” and MIT 6.046 Lecture 6. State what the expectation averages over. |
+| Decision-tree/comparison lower bounds; adversary min/max arguments | MIT 6.006 Lecture 7; Erickson’s [“Lower Bounds”](https://jeffe.cs.illinois.edu/teaching/algorithms/notes/12-lowerbounds.pdf) and [“Adversary Arguments”](https://jeffe.cs.illinois.edu/teaching/algorithms/notes/13-adversary.pdf). |
+
+**Practice:** Attempt the selected ODS chapter exercises and MIT problem sets. MIT provides public assessment material and solutions through its course navigation; a complete ODS answer book was not verified. Implement a heap, a balanced dictionary, chained hashing, a resizing array, union–find and graph searches. Compare empirical operation counts with proofs; timings cannot establish a worst-case theorem.
+
+**Mastery check — our suggested assessment:** Build a small graph-analysis toolkit whose MST implementation uses union–find and a priority queue. Include invariant checks, adversarial inputs and a written comparison of worst-case, expected and amortized costs. Separately prove a sorting lower bound and analyze a binomial-heap merge.
+
+**Access and coverage:** The proposed route is free and publicly accessible. The historical U of T binomial-heap handout returned an authorization requirement, so the Stanford material is the usable substitute. U of T’s current programming assignments and exact choice of balanced trees remain unverified. Historical lower bounds/MST/Quicksort are included as documented additions; optional take-home topics are not inferred as requirements.
+
+<a id="MATB24H3"></a>
+
+## MATB24H3 — Linear Algebra II
+
+**Prerequisites:** MATA22-level linear systems, subspaces, bases, matrices, determinants/eigenvalues, complex arithmetic and proof writing.
+
+**Main route:** Review finite-dimensional vector spaces and maps, then inner products/projections, operator structure, the spectral theorem and applications. Use Axler’s open fourth edition of *Linear Algebra Done Right* as the main proof text. Its scalar field is principally real/complex, so the field and coding supplements below are necessary for the full documented scope. [Author’s open edition](https://linear.axler.net/), [free PDF](https://linear.axler.net/LADR4e.pdf).
+
+**Topic-to-resource map:**
+
+| U of T topic cluster | Exact route |
+|---|---|
+| Fields and vector spaces beyond coordinate examples | Judson’s *Abstract Algebra: Theory and Applications*, §16.2 “Integral Domains and Fields,” then Chapter 20 §§20.1–20.3. [Fields chapter contents](https://judsonbooks.org/aata-files/aata-html/rings.html), [vector spaces](https://judsonbooks.org/aata-files/aata-html/vect.html). |
+| Span, independence, basis, dimension; maps, injectivity/surjectivity and kernel/range | Axler Chapters 1–3, especially 3B “Null Spaces and Ranges.” |
+| Matrix representation, coordinates, similarity/change of basis | Axler 3C–3D. |
+| Inner products, complex calculations, orthonormality, Gram–Schmidt, projections and least squares | Axler 6A–6C, including “Minimization Problems” and pseudoinverse. |
+| Invariant subspaces, eigenstructure and diagonalizability | Axler 5A–5D. |
+| Adjoint, Hermitian/self-adjoint, normal, orthogonal/unitary operators and spectral theorem | Axler 7A–7B and 7D; include its real and complex cases. |
+| QR factorization | Axler 7D’s QR material. |
+| Cayley–Hamilton and determinants as volume | Axler 8B, Theorem 8.29 over complex scalars; 9C, Theorem 9.64 extends it to real scalars and includes determinant/volume interpretation. |
+| Coding applications | **Supplement:** Judson Chapter 8 §§8.1–8.4: error detection/correction, linear codes, parity-check/generator matrices and decoding. [Algebraic coding theory](https://judsonbooks.org/aata-files/aata-html/algcodes.html). |
+
+**Practice:** Work through proof and calculation exercises after each selected section. For coding, also use Judson §8.7’s programming exercises. Keep arithmetic modulo the chosen finite field explicit: ordinary real-number numerical routines do not automatically perform finite-field algebra. Check matrix identities with software after deriving them. Axler’s proof emphasis makes writing complete arguments essential.
+
+**Mastery check — our suggested assessment:** For one real and one complex operator, describe invariant subspaces, test normality/self-adjointness, find an appropriate orthonormal basis where possible and justify diagonalization or its failure. Solve a least-squares fit using projections and QR. Then construct a small binary linear code, calculate generator/parity-check matrices and demonstrate which errors it detects or corrects, with proof of the stated guarantee.
+
+**Access and coverage:** Both texts are free online without U of T enrolment. No unrestricted complete worked solution set for Axler was verified. Judson’s instructor solution manuals require a teaching-course request; do not count them as publicly available learner solutions. [Judson’s access information](https://judsonbooks.org/). The historical Jordan-form material can be pursued in Axler 8C as enrichment; the calendar does not establish it as compulsory. The exact coding family and depth used at U of T remain unverified.
+
+<a id="STAB52H3"></a>
+
+## STAB52H3 — An Introduction to Probability
+
+**Prerequisites:** Counting and basic set/proof notation, single-variable calculus including integrals, and elementary matrix operations for finite-state chains. Learn basic R syntax alongside the mathematical work if needed.
+
+**Main route:** Follow MIT 6.041SC through discrete models, continuous random variables, stochastic processes and limit theorems. Use the lecture, recitation and tutorial sequence within each unit, then solve the problem set before opening solutions. Add the R simulation strand below throughout. [MIT 6.041SC course and public materials](https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/).
+
+**Topic-to-resource map:**
+
+| U of T topic cluster | Exact study route |
+|---|---|
+| Probability models, conditioning and independence | MIT Unit I, Lectures 1–3; translate verbal assumptions into events and a probability model. |
+| Discrete/continuous variables, distribution/density functions and expectation | Unit I Lectures 4–7, then Unit II Lectures 8–12 for continuous/joint distributions, functions of variables and sums. [Unit I](https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/pages/unit-i/), [Unit II](https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/pages/unit-ii/). |
+| Conditional expectation and sampling distributions | Include MIT’s conditional-expectation material and lectures on sums; derive the law of a statistic from its sample model rather than learning only a list of named laws. |
+| Poisson processes and finite-state Markov chains | Unit III Lectures 14–15 “Poisson Process I/II,” then 16–18 “Markov Chains I/II/III.” Lecture 13’s Bernoulli process is useful preparation. [Unit III](https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/pages/unit-iii/). |
+| Weak law and CLT | Unit IV Lectures 19–20; distinguish convergence in probability from distributional approximation. [Unit IV](https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/pages/unit-iv/). |
+| Software and random-variable generation | **Practical supplement:** R’s *Introduction to R*, Chapter 8, especially §8.1, gives distribution/density, cumulative, quantile and random-generation functions. [Official R distribution guide](https://cran.r-project.org/doc/manuals/r-release/R-intro.html#Probability-distributions). |
+| Monte Carlo methods and simulation | **Supplement:** Levin’s STAT340 “Lecture 02: Monte Carlo”: “Basics of Monte Carlo,” estimating expectations, and inverse-CDF generation. Work the R examples and change their models. [University of Wisconsin lecture](https://pages.stat.wisc.edu/~kdlevin/teaching/Fall2022/STAT340/lecs/L02_MonteCarlo.html). |
+
+**Practice:** MIT supplies videos, tutorial/recitation work, problem sets, solutions and examinations publicly. Harvard Stat110’s eleven topic-organized strategic-practice/homework sets add further free problems with solutions. [Harvard practice collection](https://stat110.hsites.harvard.edu/strategic-practice-problems). For Monte Carlo, first compute an expectation or probability exactly, then estimate it from simulated samples; repeat the entire experiment to measure estimator variability. Use the law/CLT to explain observed accuracy, not just to produce a histogram.
+
+**Mastery check — our suggested assessment:** Write a reproducible R report that generates discrete and continuous variables, estimates a probability by Monte Carlo, studies sample-mean distributions as sample size grows, simulates Poisson arrivals and simulates a finite Markov chain. Compare analytic and simulated quantities, document the model assumptions and random seed, and explain why simulation error remains.
+
+**Access and coverage:** All mandatory materials above are free and need no U of T account. MIT OCW provides answer files, not personal marking or an official course grade. The public U of T evidence establishes R historically and names broad simulation units; it does not specify every current distribution or assignment. MIT’s later inference lectures may be useful enrichment, but hypothesis testing/regression are not added as STAB52 requirements. This route supplies a proposed Monte Carlo practice sequence, not the unretrieved U of T exercises.
+
+<a id="CSCC43H3"></a>
+
+## CSCC43H3 — Introduction to Databases
+
+**Prerequisite knowledge:** Programming, sets/relations and basic algorithmic costs. Familiarity with a command line helps with installing a local database.
+
+**Main route:** Read Adrienne Watt’s open *Database Design, 2nd Edition*, then learn SQL by executing the official PostgreSQL tutorial. Add selected CMU database lectures for relational algebra and DBMS internals. Use the Fall 2025 UofT outline as the topic checklist. [Open database-design textbook](https://opentextbc.ca/dbdesign01/), [PostgreSQL tutorial](https://www.postgresql.org/docs/current/tutorial.html).
+
+**Topic-to-resource map:**
+
+- **Conceptual modelling, ER diagrams and the relational model:** Watt chapters 4–10, especially “The Relational Data Model,” “The Entity Relationship Data Model” and “ER Modelling.”
+- **Functional dependencies and normalization:** Watt chapters 11–12. Work out dependencies from stated business rules before decomposing tables. Chapter 13 supplies the broader development process. [Textbook chapters and ERD exercises](https://opentextbc.ca/dbdesign01/).
+- **Relational algebra:** CMU lecture 1, including its relational operators and their connection to queries. [Relational model/algebra notes](https://15445.courses.cs.cmu.edu/fall2025/notes/01-relationalmodel.pdf).
+- **SQL and advanced querying:** PostgreSQL tutorial chapters 2–3; then CMU’s “Modern SQL” notes for aggregation, joins, nested queries and other advanced constructs. [SQL lecture notes](https://15445.courses.cs.cmu.edu/fall2025/notes/02-modernsql.pdf).
+- **Integrity, views, triggers and indexes:** Work through PostgreSQL’s Constraints chapter, `CREATE VIEW` reference and Triggers chapter; use its documentation contents to locate Indexes. [Constraints](https://www.postgresql.org/docs/current/ddl-constraints.html), [views](https://www.postgresql.org/docs/current/sql-createview.html), [triggers](https://www.postgresql.org/docs/current/triggers.html), [documentation contents](https://www.postgresql.org/docs/current/).
+- **SQL in an application:** Add a small client program using a documented PostgreSQL client interface; its documentation’s Part IV includes `libpq` and embedded SQL. Use parameter binding rather than assembling queries from unchecked input. [Client-interface documentation](https://www.postgresql.org/docs/current/).
+- **Query execution/optimization:** Read plans and compare estimates with measurements using `EXPLAIN`/`EXPLAIN ANALYZE`; the complete execution-engine implementation belongs to D43’s path below. [Using EXPLAIN](https://www.postgresql.org/docs/current/using-explain.html).
+- **Transactions:** Complete the tutorial’s transaction examples, observing commit/rollback and concurrent sessions. [Transaction tutorial](https://www.postgresql.org/docs/current/tutorial-transactions.html).
+- **NoSQL exposure:** Compare relational queries with MongoDB’s document-based equivalents. This supplies a concrete nonrelational example without claiming the UofT unit specifies every NoSQL family. [Official SQL-to-MongoDB comparison](https://www.mongodb.com/docs/manual/reference/sql-comparison/).
+
+**Practice:** Complete Watt’s chapter exercises, Appendix B ERD exercises and Appendix C SQL lab. CMU’s Fall 2025 assignments page supplies a SQL homework and published solutions; attempt it before reading those solutions. [CMU public homework](https://15445.courses.cs.cmu.edu/fall2025/assignments.html).
+
+**Suggested mastery task — our proposal:** Design and implement a library, booking or inventory database: ER model, dependencies, normalization argument, SQL schema/constraints, representative queries, one view/trigger, an application client and a transaction that must either finish completely or roll back. Include query plans and a test report.
+
+**Access and coverage:** Reading and local database work are free; no cloud database subscription is required. Public resources cover all named topic clusters in the Fall 2025 outline. The exact current UofT normal-form selection, tutorial-only examples and grading rubric were not public in the baseline; this is a learning route rather than a certified replica of that assessment.
+
+<a id="CSCC69H3"></a>
+
+## CSCC69H3 — Operating Systems
+
+**Prerequisite knowledge:** C, pointers, Unix processes/system calls, assembly and computer organization. Finish B09 and B58-level material before entering kernel projects.
+
+**Main route:** Read *Operating Systems: Three Easy Pieces* (OSTEP) alongside the public UofT lecture sequence, then implement the four actual UofT Pintos project stages. OSTEP’s individual chapter PDFs and homework simulators are free. [OSTEP chapter index](https://pages.cs.wisc.edu/~remzi/OSTEP/), [UofT lecture/readings sequence](https://thierrysans.me/CSCC69/lectures/), [UofT project index](https://thierrysans.me/CSCC69/projects/).
+
+**Topic-to-resource map:**
+
+- **Processes, resource allocation and the process API:** OSTEP chapters 2, 4–6. [Process API chapter](https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-api.pdf).
+- **Scheduling and MLFQ:** Chapters 7–10; calculate execution/completion times and compare policies under different workloads. [MLFQ chapter](https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-mlfq.pdf).
+- **Address spaces and memory APIs:** Chapters 13–17, including translation, segmentation and free-space management.
+- **Paging, TLBs and page tables:** Chapters 18–20; continue with chapters 21–23 on swapping mechanisms/policies and complete VM systems. [Paging introduction](https://pages.cs.wisc.edu/~remzi/OSTEP/vm-paging.pdf).
+- **Threads, locks, semaphores and deadlock/concurrency bugs:** Chapters 26–32. Use chapter 27’s thread API and the end-of-chapter exercises. [Threads introduction](https://pages.cs.wisc.edu/~remzi/OSTEP/threads-intro.pdf).
+- **I/O, files and persistence:** Chapter 36, then 39–40; read 42 on crash consistency as useful reinforcement.
+- **Protection:** OSTEP’s separate security chapters, especially Authentication and Access Control, complement its process/address-space mechanisms. [Free chapter links and homework index](https://pages.cs.wisc.edu/~remzi/OSTEP/).
+
+**Actual UofT practical sequence:** Threads → user programs → virtual memory → file systems. The public introduction supplies the `ThierrySans/CSCC69-Pintos` starter repository, x86 simulator setup, a Docker image and commands for running the code locally. It describes the `tests/` directory as containing project tests. These are public development resources, not a dependence on campus lab machines. [Getting started and local workflow](https://thierrysans.me/CSCC69/projects/WWW/pintos_1.html), [starter repository](https://github.com/ThierrySans/CSCC69-Pintos).
+
+**Practice:** First use OSTEP homework to predict scheduling, translation and synchronization behaviour; then check the simulator’s output. Implement each Pintos stage, keep a written design, and run the included tests after each change. Passing sample tests alone is insufficient: explain race conditions, invariants and resource ownership. [OSTEP homework](https://pages.cs.wisc.edu/~remzi/OSTEP/Homework/homework.html).
+
+**Suggested mastery task — our proposal:** Demonstrate a user program that survives page pressure, concurrent file accesses and process termination. Show how your kernel prevents one process from corrupting another, explain scheduling choices, and document a deadlock/race you found and fixed. This supplements the published projects rather than changing their specifications.
+
+**Access and coverage:** No UofT sign-in is needed for the linked project documentation/repository. A compatible local Linux/Docker/emulation setup is still required, and may need extra configuration on some machines. Official course marking, private tests and staff feedback are not included. The public UofT schedule is not securely dated to a particular offering, so treat this as its documented project implementation plus a complete conceptual study route.
+
+<a id="CSCC73H3"></a>
+
+## CSCC73H3 — Algorithm Design and Analysis
+
+**Prerequisites:** B36 proof/correctness/recurrences, B63 data structures and graph algorithms, elementary probability and matrix/vector notation. Review linear inequalities before linear programming.
+
+**Main route:** Study divide and conquer, greedy methods, dynamic programming, flow, linear programming, then approximation and randomization. Erickson’s *Algorithms* supplies detailed proofs and exercises; the supplementary sources fill specific examples and topics. For every algorithm, write the problem assumptions, design, correctness argument and running-time analysis before implementing it. [Free textbook and chapter index](https://jeffe.cs.illinois.edu/teaching/algorithms/).
+
+**Topic-to-resource map:**
+
+| U of T topic cluster | Exact route |
+|---|---|
+| Divide and conquer: closest pairs, integer/matrix multiplication, order statistics and master theorem | Erickson Chapter 1 “Recursion” for integer multiplication and Appendix II [“Solving Recurrences”](https://jeffe.cs.illinois.edu/teaching/algorithms/notes/99-recurrences.pdf); MIT 6.046 Lecture 2 for median finding and [Recitation 1 for Strassen/master theorem](https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/resources/recitation-1-divide-conquer-smarter-interval-scheduling-master-theorem-strassens-algorithm/). **Supplement:** Wayne’s “Divide and Conquer I,” especially closest pairs. [Princeton slides](https://www.cs.princeton.edu/~wayne/kleinberg-tardos/pdf/05DivideAndConquerI.pdf). |
+| Change-making, scheduling and lateness | **Supplement:** Wayne’s “Greedy Algorithms I”: cashier’s algorithm, interval scheduling and earliest-deadline-first scheduling, including counterexamples and exchange arguments. [Princeton greedy slides](https://www.cs.princeton.edu/~wayne/kleinberg-tardos/pdf/04GreedyAlgorithmsI.pdf). |
+| Huffman coding, Dijkstra and greedy reasoning | Erickson Chapter 4, especially §4.4 “Huffman Codes,” and Chapter 8 “Shortest Paths.” [Greedy chapter](https://jeffe.cs.illinois.edu/teaching/algorithms/book/04-greedy.pdf), [shortest paths](https://jeffe.cs.illinois.edu/teaching/algorithms/book/08-sssp.pdf). |
+| Weighted scheduling, knapsack variants and sequence alignment | Wayne’s “Dynamic Programming I” supplies weighted scheduling and 0/1 knapsack. **Supplement:** Stanford CS161 Lecture 13 §2.2 contrasts discrete/fractional knapsack. Erickson Chapter 3 supplies edit-distance/sequence-style DP and §3.9 optimal BSTs. [DP slides](https://www.cs.princeton.edu/~wayne/kleinberg-tardos/pdf/06DynamicProgrammingI.pdf), [knapsack comparison](https://web.stanford.edu/class/archive/cs/cs161/cs161.1168/lecture13.pdf), [DP chapter](https://jeffe.cs.illinois.edu/teaching/algorithms/book/03-dynprog.pdf). |
+| Bellman–Ford, negative cycles and Floyd’s algorithm | Erickson Chapters 8–9; include when shortest paths fail to be finite. [All-pairs chapter](https://jeffe.cs.illinois.edu/teaching/algorithms/book/09-apsp.pdf). |
+| Ford–Fulkerson and flow applications | Erickson Chapters 10–11: residual networks, augmenting paths, max-flow/min-cut and reductions. [Maximum flows](https://jeffe.cs.illinois.edu/teaching/algorithms/book/10-maxflow.pdf), [applications](https://jeffe.cs.illinois.edu/teaching/algorithms/book/11-maxflowapps.pdf). |
+| LP formulations, duality and difference constraints | **Supplement:** Erickson’s “Linear Programming,” §§H.1–H.4 and H.7. For difference constraints, use Cornell’s ECE5997 “More Scheduling,” slides 18–19: constraint graphs and negative-cycle infeasibility. [LP notes](https://jeffe.cs.illinois.edu/teaching/algorithms/notes/H-lp.pdf), [difference-constraint supplement](https://www.csl.cornell.edu/~zhiruz/5997/pdf/lecture06.pdf). |
+| Approximation and k-centre | Erickson’s “Approximation Algorithms,” §J.2 “Generalities” and §J.10 “k-center Clustering.” [Approximation notes](https://jeffe.cs.illinois.edu/teaching/algorithms/notes/J-approx.pdf). |
+| Randomization | MIT 6.046 Lecture 6 “Randomization: Matrix Multiply, Quicksort”; distinguish correctness/error probability from expected running time. [Verified MIT lecture index](https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/pages/lecture-notes/). |
+
+**Practice:** Use Erickson’s chapter exercises and MIT’s public problem sets/exams with solutions. Erickson does not release a complete exercise solution set. Implement representative algorithms and test small cases against exhaustive search; retain the written proof and complexity derivation.
+
+**Mastery check — our suggested assessment:** Submit a design portfolio with a divide-and-conquer recurrence, a greedy proof plus a counterexample to a competing rule, a DP recurrence with reconstruction, a flow reduction, a primal/dual LP certificate, a randomized analysis and a proved k-centre approximation bound.
+
+**Access and coverage:** These materials are free. Princeton PDFs were readable by direct download even though one web retrieval route returned a restriction; the author-hosted URLs are linked. There is no U of T grading or private assignment access. The original U of T schedule URL is reused and incompletely retrievable, so its detailed examples are historically documented targets, not an immutable current weekly syllabus.
+
+<a id="CSCD03H3"></a>
+
+## CSCD03H3 — Social Impact of Information Technology
+
+**Start with:** Basic familiarity with software and the ability to read an argument critically. **Main route:** A case-based reading and writing course assembled from professional codes, an ethical-analysis framework and open primary cases. No public resource can establish the private current UofT reading list.
+
+**Ordered topic-to-resource map:**
+
+1. **Benefits, harms, stakeholder interests and public-policy choices:** Read the Markkula Center’s **Framework for Ethical Decision Making**. For each proposed computing system, identify affected people, evidence, competing values and possible actions before reaching a conclusion. [Ethical-analysis framework](https://www.scu.edu/ethics/ethics-resources/a-framework-for-ethical-decision-making/).
+2. **Professional responsibility:** Read the complete **ACM Code of Ethics and Professional Conduct**, then its booklet’s case studies. Apply its principles to a new scenario instead of treating the code as a list to memorize. The booklet also supplies an approach for analysing cases. [Official ACM code and case-study booklet](https://www.acm.org/binaries/content/assets/about/acm-code-of-ethics-booklet.pdf).
+3. **Safety-critical software:** Read Leveson and Turner’s **An Investigation of the Therac-25 Accidents**, available as a permitted MIT-hosted reprint. Separate software defects, system design, organizational decisions and responses to incidents. Follow the reprint’s links through all four parts. [Primary accident investigation, part I](https://web.mit.edu/6.033/2004/wwwdocs/papers/Therac_1.html).
+4. **Privacy and online tracking:** Study cookies, tracking mechanisms and browser privacy in MDN, then evaluate what collecting those data enables and who bears the costs. Technical understanding should support the ethical argument. [Web privacy](https://developer.mozilla.org/en-US/docs/Web/Privacy), [cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Cookies).
+5. **Computer crime:** Analyse an actual documented incident, such as the DOJ’s computer-intrusion prosecution below. Distinguish the source’s account and legal outcome from your own ethical analysis; compare individual responsibility, organizational safeguards and social harm. [Primary government case report](https://www.justice.gov/usao-ndtx/pr/federal-jury-convicts-man-computer-intrusion-case).
+6. **Always-online life, social effects and current issues:** Work through the Markkula Internet Ethics resources and select contrasting cases involving online platforms or data use. Revisit a contemporary issue using primary reporting, public policy documents and openly accessible research. [Internet Ethics reading/case directory](https://www.scu.edu/ethics/focus-areas/internet-ethics/resources/).
+
+**Research-method strand and practice:** Use UofT’s public guides to evaluate credibility, read critically, paraphrase accurately and document sources. Apply the methods to an open paper, recording its claim, evidence, assumptions and limitations; the library’s subscription resources are not needed for the readings chosen here. [Source evaluation](https://guides.library.utoronto.ca/c.php?g=698133&p=5338063), [critical reading](https://advice.writing.utoronto.ca/researching/critical-reading/), [citation guidance](https://guides.library.utoronto.ca/c.php?g=698133&p=4955203), [paraphrase/summary](https://advice.writing.utoronto.ca/using-sources/paraphrase/). Keep an annotated bibliography and write position papers with counterarguments and uncertainty. Answer MIT’s [Therac discussion questions](https://web.mit.edu/saltzer/www/publications/recguides/Therac.html).
+
+**Mastery task — suggested:** Produce a researched policy/engineering memo on a computing controversy, with stakeholder analysis, technical explanation, alternatives, professional-code analysis and a justified recommendation. Ask a reader to challenge your evidence and revise the memo.
+
+**Access and limits:** The ACM booklet was downloaded successfully without authentication during this research; its web pages can reject automated readers. MIT and Markkula readings are public. A library subscription is not necessary for the selected route. Faculty feedback, classroom debate and the exact current UofT cases are absent; arrange peer discussion and use open primary evidence rather than inventing assessment equivalence.
+
+<a id="CSCC01H3"></a>
+
+## CSCC01H3 — Introduction to Software Engineering
+
+**Start with:** B07-level design, testing and Git; experience completing one small application. **Main route:** Use Valente’s freely readable *Software Engineering: A Modern Approach* as the organized course, and actual public C01 exercises for practice.
+
+**Ordered topic-to-resource map:**
+
+1. **SDLC, agile development and team processes:** Read **Chapter 2: Processes**, particularly its agile, XP, Scrum and Kanban sections. Compare them to SE-EDU’s **SDLC Process Models** and **Teamwork** material. [Processes](https://softengbook.org/chapter2), [process models](https://se-education.org/se-book/processModels/index.html), [teamwork](https://se-education.org/se-book/teamwork/index.html).
+2. **Requirements, personas, stories and prototypes:** Read **Chapter 3: Requirements**, including requirements engineering, user stories, use cases and MVPs. Complete the public UofT persona and user-story exercises. [Requirements chapter](https://softengbook.org/chapter3), [personas exercise](https://thierrysans.me/CSCC01/lectures/03/personas-exercice.pdf), [user stories exercise](https://thierrysans.me/CSCC01/lectures/03/userstories-exercise.pdf).
+3. **Project/product planning, estimation, dependencies and execution:** Use SE-EDU **Project Planning**, then decompose UofT’s example stories into tasks and estimates. Relate the backlog to a usable product increment rather than only a list of coding tasks. [Planning](https://se-education.org/se-book/projectPlanning/index.html), [task-decomposition exercise](https://thierrysans.me/CSCC01/lectures/04/tasks-exercise.pdf).
+4. **UML, design principles, architecture and patterns:** Read Valente **Chapters 4–7**. Cover class/package/sequence/activity diagrams, cohesion/coupling/information hiding, SOLID and patterns; connect architecture views to the code you build. [Models](https://softengbook.org/chapter4), [design principles](https://softengbook.org/chapter5), [patterns](https://softengbook.org/chapter6), [architecture](https://softengbook.org/chapter7).
+5. **Verification/validation, testing, smells and refactoring:** Read **Chapters 8–9**, then review another implementation against its requirements and tests. Check both whether a feature is implemented correctly and whether it meets the intended need. [Testing](https://softengbook.org/chapter8), [refactoring and smells](https://softengbook.org/chapter9).
+6. **Branching, integration, code review and DevOps:** Work **Chapter 10: DevOps** and GitHub Actions’ introductory guide. Practise small changes, review feedback and a build/test workflow. [DevOps](https://softengbook.org/chapter10), [CI workflow concepts](https://docs.github.com/en/actions/get-started/understand-github-actions).
+
+**Practice:** The public C01 lecture directory links requirement, planning, UML, review and verification/validation material. Use it as a checklist alongside the book, not as a requirement to read every unrelated linked article. [Actual public C01 teaching directory](https://thierrysans.me/CSCC01/lectures/).
+
+**Mastery task — suggested:** With at least one collaborator if possible, deliver a small product in several iterations. Preserve requirements, prototypes, estimates, UML, reviewed changes, tests, CI results and a retrospective explaining changed decisions. A solo version should explicitly simulate reviews and obtain outside feedback.
+
+**Access and limits:** Valente’s web chapters are free to read; downloadable editions are sold separately. SE-EDU and the selected UofT exercises are public. Hosted collaboration/CI requires an account and has service-specific limits; local tests remain available. Team negotiation, customer contact and instructor evaluation require people, not another playlist. The UofT source is an archive, not a verified current assignment sequence.
+
+<a id="CSCC24H3"></a>
+
+## CSCC24H3 — Principles of Programming Languages
+
+**Start with:** Confident programming plus recursion, discrete mathematics and proof basics. **Main route:** The actual Summer 2026 public C24 notes and labs; use Helsinki’s Haskell MOOC to slow down the functional-programming introduction when necessary.
+
+**Ordered topic-to-resource map:**
+
+1. **Functional programming foundations:** Start with the Haskell MOOC sections on expressions/types, recursion, lists, lambdas, partial application and higher-order functions. Its material and exercises are openly available. Then work C24’s **Haskell Basics** to align terminology and examples. [Haskell MOOC](https://haskell.mooc.fi/), [Part 1](https://haskell.mooc.fi/part1), [C24 basics](https://www.cs.toronto.edu/~trebla/CSCC24-2026-Summer/01-haskell-basic.html).
+2. **Types and abstraction:** Follow the C24 schedule’s **Haskell types part 1** and **part 2** for algebraic/recursive/polymorphic types, currying and type classes. Continue with **Lazy evaluation** and **Folds**, doing their code examples. [Complete C24 lecture/code index](https://www.cs.toronto.edu/~trebla/CSCC24-2026-Summer/).
+3. **Recursion’s mathematical meaning:** Work **Partial Order Theory of Recursion and Semantics** for undefinedness, infinite data and successive approximations. The page explicitly marks its more formal theory section as **not on the test/exam**; keep that depth distinction. [Recursion/semantics notes](https://www.cs.toronto.edu/~trebla/CSCC24-2026-Summer/partial-order-recursion.html).
+4. **Logic/functional-logic programming:** Follow the schedule’s **Curry** unit and sections 1–4 of the official Curry tutorial it assigns. Run examples using the implementation described by the course software page. Curry supplies the documented 2026 logic-programming vehicle; you do not have to substitute a whole Prolog course. [Official Curry tutorial](https://www.curry-lang.org/docs/tutorial/html/), [C24 software/setup](https://www.cs.toronto.edu/~trebla/CSCC24-2026-Summer/software.html).
+5. **Syntax and parsing:** Work the schedule’s **Syntax** and **Parsing** notes and example code. Construct a small grammar and parser, rather than only recognizing grammar notation. [C24 topic index](https://www.cs.toronto.edu/~trebla/CSCC24-2026-Summer/).
+6. **Type inference, parametricity and semantics:** Complete the dedicated notes and exercises on inferring types, abstract types/polymorphism, and evaluating expressions/bindings/functions. [Type inference](https://www.cs.toronto.edu/~trebla/CSCC24-2026-Summer/11-type-inference.html), [parametricity](https://www.cs.toronto.edu/~trebla/CSCC24-2026-Summer/abs-type-param.html), [bindings/functions semantics](https://www.cs.toronto.edu/~trebla/CSCC24-2026-Summer/09-semantics-1.html).
+
+**Practice:** Download the public labs and assignment handouts from the course index. The checked lab-2 directory includes source files and local tests; assignment 1 has its handout, starter files and tests. These can support self-study without submitting to UofT. [Lab 2 files](https://www.cs.toronto.edu/~trebla/CSCC24-2026-Summer/l02/), [assignment 1 files](https://www.cs.toronto.edu/~trebla/CSCC24-2026-Summer/a1/).
+
+**Mastery task — suggested:** Implement a parser/evaluator for a tiny functional language, infer types for examples and explain how lexical bindings and lazy evaluation affect results. Solve a small nondeterministic problem in Curry.
+
+**Access and limits:** Core notes, source examples and the checked lab files are public; use local tools instead of university teaching servers. No institutional grades or office hours are included. The 2026 site explicitly excludes Dhall/rank-n, state/exception semantics, functors/applicatives/monads from that offering; extra Haskell MOOC material in those areas is enrichment, not a missing compulsory C24 unit.
+
+<a id="CSCC37H3"></a>
+
+## CSCC37H3 — Introduction to Numerical Algorithms for Computational Mathematics
+
+**Prerequisites:** Linear systems/matrices, single-variable calculus and Taylor expansions, convergence of sequences, and programming functions/loops/arrays. A22/A31/A37-level knowledge is the relevant mathematical base.
+
+**Main route:** Use Driscoll and Braun’s free *Fundamentals of Numerical Computation* (FNC), Python edition: floating point and stability → linear systems → roots → interpolation/integration. Read the mathematical error analysis and reproduce the computational demonstrations. Python, NumPy and SciPy make the proposed route possible without a paid MATLAB licence. [FNC text and setup links](https://fncbook.com/python/).
+
+**Topic-to-resource map:**
+
+| U of T topic cluster | Exact route |
+|---|---|
+| Bases/representation, significant digits, rounding/chopping, overflow/underflow, roundoff and machine precision | FNC §1.1 “Floating-point numbers”; Harder’s §2.3 for binary representation/arithmetic; Demmel’s error-analysis lecture; IIT Delhi’s chopping-versus-rounding exercise. [FNC](https://fncbook.com/python/floating-point/), [binary supplement](https://ece.uwaterloo.ca/~dwharder/nm/Lecture_materials/pdfs/2.%20Floating-point%20representations.pdf), [Berkeley lecture](https://people.eecs.berkeley.edu/~demmel/cs267/lecture21/lecture21.html), [chopping/rounding practice](https://www.cse.iitd.ac.in/~suban/cs210/tute2/node1.html). Treat old hardware examples as historical. |
+| Error propagation and subtractive cancellation | FNC §1.4 “Stability”; distinguish conditioning of a problem from stability of an algorithm. [Stability](https://fncbook.com/python/stability/). |
+| Gaussian elimination/Gauss transforms, triangular substitution, LU, singular systems and operation counts | FNC Chapter 2, especially §2.3 triangular systems, §2.4 “LU factorization,” §2.5 “Efficiency of matrix computations.” Express each elimination row operation as a matrix and reconstruct its product. [LU](https://fncbook.com/python/lu/), [efficiency](https://fncbook.com/python/efficiency/). |
+| Partial pivoting, permutation matrices and PA=LU | FNC §2.6 “Row pivoting”; track the same row permutation in the right-hand side. [Pivoting](https://fncbook.com/python/pivoting/). |
+| Relative residual/error, condition numbers, geometric interpretation and bounds | FNC §2.7 vector/matrix norms and §2.8 “Conditioning of linear systems”; read the linear-system examples and derive the residual/error relationship. [Conditioning](https://fncbook.com/python/condition-number/). |
+| Iterative refinement | **Supplement:** Demmel and coauthors’ open paper *Error Bounds from Extra Precise Iterative Refinement*, Introduction and Algorithm 1. Implement the elementary residual/correction loop; the later production-library analysis is optional depth. [Author/research-library PDF](https://netlib.org/lapack/lawnspdf/lawn165.pdf). |
+| Fixed-point transformations, convergence conditions/rates, Newton and secant | FNC §§4.2–4.4: analyze convergence assumptions, not just update formulas. [Fixed point](https://fncbook.com/python/fixed-point/), [Newton](https://fncbook.com/python/newton/), [secant](https://fncbook.com/python/secant/). |
+| Bisection | **Supplement:** CLP-1 Appendix C, “Root Finding,” develops bisection and Newton; prove the bracketing and interval-length guarantees. [Root-finding appendix](https://personal.math.ubc.ca/~CLP/CLP1/clp_1_dc/app_root_finding.html). |
+| Approximation/interpolation and quadrature | Proposed choices: FNC Chapter 5’s piecewise interpolation and §5.6 numerical integration, then §§9.1–9.2 polynomial interpolation/barycentric formula. [Integration](https://fncbook.com/python/integration/), [barycentric formula](https://fncbook.com/python/barycentric/). These methods fill the broad units; U of T’s exact later method list was not verified. |
+
+**Practice:** FNC includes mathematical and coding exercises plus executable demonstrations. A complete unrestricted worked solution manual/autograder was not verified. Use known exact solutions, high-precision reference calculations and convergence plots to check work; a tiny residual alone is not enough.
+
+**Mastery check — our suggested assessment:** Build a numerical experiment report showing cancellation, a small-residual/large-error system, pivoted versus unpivoted LU, iterative refinement, successful and failing root iterations, and interpolation/quadrature error as resolution changes. Explain each result using conditions and bounds.
+
+**Access and coverage:** The route is free and public. Its programming language and proposed later methods are learning choices, not claims about U of T’s current software/assignments. The detailed baseline is a partially indexed 2025 guide, not a verified 2026 examination specification.
+
+<a id="CSCC63H3"></a>
+
+## CSCC63H3 — Computability and Computational Complexity
+
+**Prerequisites:** B36 proof techniques, formal languages/machines, asymptotic analysis, reductions and elementary algorithms; discrete probability for the final units. Review binary encodings and polynomial versus exponential growth first.
+
+**Main route:** Use **Roei Tell’s actual Winter 2026 public U of T decks**, in numerical order: preliminaries, models, computability, basic complexity, P versus NP, stronger lower bounds, applications of hardness. Pair them with the matching public question banks. This is the closest available route to the specifically documented revised offering; a generic automata course omits its final strands. [Preliminaries](https://www.cs.toronto.edu/~roei/2026%20complexity/1%20preliminaries.pdf).
+
+**Topic-to-resource map:**
+
+| Documented cluster | Exact source and learning target |
+|---|---|
+| Encodings, languages/search problems, configurations, Turing machines, multi-tape/RAM variants, simulations and polynomial time | Deck 2, “Models.” Work through machine execution and simulation arguments. [Models](https://www.cs.toronto.edu/~roei/2026%20complexity/2%20models.pdf). |
+| Universal computation, uncomputability, reductions and Kolmogorov complexity | Deck 3, “Computability.” Separate nonexistence of any algorithm from high running time. [Computability](https://www.cs.toronto.edu/~roei/2026%20complexity/3%20computability.pdf). |
+| Church–Turing thesis; recursive/recursively enumerable languages | For the calendar’s classical terminology, add MIT 6.045 Lectures 6–8 on Turing machines, decidability and undecidability. This is a calendar supplement, not evidence that all older classical results remained in Winter 2026. [MIT lecture notes](https://ocw.mit.edu/courses/6-045j-automata-computability-and-complexity-spring-2011/pages/lecture-notes/). |
+| Time/space classes, constructibility, diagonalization and hierarchy theorems | Deck 4, “Basic complexity”; track the resource bound and machine model in each statement. [Basic complexity](https://www.cs.toronto.edu/~roei/2026%20complexity/4%20basic%20complexity.pdf). |
+| Verification, P/NP, reductions, Cook–Levin, CircuitSAT → 3CSP → 3SAT; independent set/clique/colouring, bit-quadratic equations, subset sum/knapsack and pseudopolynomial time | Deck 5, “P vs NP.” Prove both directions of each reduction and bound its construction/encoding size. [P versus NP](https://www.cs.toronto.edu/~roei/2026%20complexity/5%20p%20vs%20np.pdf). |
+| ETH, fine-grained hardness, PCPs and approximation hardness | Deck 6, “Stronger forms of P ≠ NP.” Learn the PCP theorem’s statement, interpretation and applications; a full proof is outside the documented offering. [Stronger lower bounds](https://www.cs.toronto.edu/~roei/2026%20complexity/6%20stronger%20lbs.pdf). |
+| PRGs, indistinguishability, Naor commitment, interactive proofs and zero knowledge | Deck 7, “Lemons into lemonade.” Distinguish definitions, assumed hardness and selected toy constructions. [Hardness applications](https://www.cs.toronto.edu/~roei/2026%20complexity/7%20lemons%20into%20lemonade.pdf). |
+
+**Second explanations:** Barak’s free *Introduction to Theoretical Computer Science* offers Chapters 7–9 for models/uncomputability, 13–15 for time/reductions/NP, 17 for space and 21 for cryptography. It is a work in progress, and its chapter numbering differs from the lecture numbers embedded in URLs. [Author’s chapter index](https://introtcs.org/public/index.html). The U of T decks remain the source for the precise advanced selection.
+
+**Practice:** The public assignment directory includes asymptotics/lower-bound refreshers and banks for models, computability/Kolmogorov complexity, basic complexity, NP, ETH/fine-grained hardness, PCP/approximation, and PRG/commitment. [Question-bank directory](https://www.cs.toronto.edu/~roei/2026%20complexity/assignments/), [PCP questions](https://www.cs.toronto.edu/~roei/2026%20complexity/assignments/7%20pcp%20hardness%20of%20approx.pdf), [PRG/commitment questions](https://www.cs.toronto.edu/~roei/2026%20complexity/assignments/8%20prgs%20and%20commitments.pdf). Complete worked solutions or automated grading for these banks were not verified.
+
+**Mastery check — our suggested assessment:** Prepare a proof portfolio containing an uncomputability reduction, hierarchy-theorem explanation, complete NP-completeness reduction, a pseudopolynomial-time distinction, a conditional fine-grained consequence, a PCP-to-approximation explanation and a commitment security reduction. Label every assumption. A toy protocol simulation may illustrate interaction, but cannot prove computational security.
+
+**Access and coverage:** The decks and checked question PDFs are free without a U of T account. They do not provide personal feedback. The instructor’s [change report](https://www.cs.toronto.edu/~roei/2026%20complexity/cscc63%20changes.pdf) explicitly reduces classical coverage; do not silently add Kleene’s recursion theorem or a proof of Rice’s theorem as requirements. No claim of full PCP proof or production cryptographic implementation is made.
+
+<a id="CSCD01H3"></a>
+
+## CSCD01H3 — Engineering Large Software Systems
+
+**Start with:** C01, databases and operating-systems knowledge; experience maintaining an application with tests. **Main route:** Treat the public D01 outcomes as a checklist, and build an architecture portfolio using the open readings below. This course needs design decisions, measurements and communication as well as reading.
+
+**Ordered topic-to-resource map:**
+
+1. **Understanding/contributing to large codebases:** Read one application in *The Architecture of Open Source Applications*, then inspect the corresponding repository and its contribution guide. Trace a feature across components and propose a small improvement. [AOSA, accounts by system builders](https://aosabook.org/en/).
+2. **Requirements, structural qualities, UML and design patterns:** Reuse C01’s requirements/design chapters, then study SE-EDU **Modeling** and **Software Architecture**. Draw multiple views of the same system and connect quality requirements to architectural choices. Advanced UML’s precise UofT subset is unspecified, so these are a recommended modelling bridge. [UML modelling](https://se-education.org/se-book/modeling/index.html), [architecture](https://se-education.org/se-book/architecture/index.html).
+3. **Architectural styles:** Read Valente’s **Architecture** chapter for MVC, services and messaging, and Mark Richards’s free **Lesson 160** for microkernel/plug-in architecture. Compare monolith, layered/MVC, plug-in and service-oriented alternatives against maintainability, testability, latency and failure assumptions. [Architecture chapter](https://softengbook.org/chapter7), [microkernel lesson](https://developertoarchitect.com/lessons/lesson160.html).
+4. **Load, performance models, scaling and cost:** Read Google SRE **Chapters 4, 19 and 21** on objectives, frontend load balancing and overload. Distinguish availability/uptime, SLI/SLO/SLA and health checks, then use deployment monitoring to detect failures. Pair these with the actual D01 public architecture-problem-solving slides, which contain load/capacity and queue-management examples. Estimate demand before testing, compare predicted and measured behaviour, and explain vertical/horizontal scaling and elasticity. [SLOs](https://sre.google/sre-book/service-level-objectives/), [load balancing](https://sre.google/sre-book/load-balancing-frontend/), [overload](https://sre.google/sre-book/handling-overload/), [public D01 slides in HTML view](https://docs.google.com/presentation/d/1sC7NnjEDlId3tUm2rH7Bb84XlRc9Bw2nl3jeDTqi1nQ/htmlpresent).
+5. **Containers, orchestration and state:** Work the Docker introductory application tutorial and Kubernetes Basics’ scaling tutorial. Explain why session state complicates adding replicas; run a small local example before considering hosted infrastructure. [Docker tutorials](https://docs.docker.com/get-started/), [Kubernetes scaling](https://kubernetes.io/docs/tutorials/kubernetes-basics/scale/scale-intro/).
+6. **Replication, consistency, availability and caching:** Study synchronous/asynchronous replication in PostgreSQL’s standby-server documentation. Read Gilbert and Lynch’s CAP paper for the consistency/availability limits under partitions, then Redis’s cache-layer guide for read-through and write-through designs. The latter is a vendor explanation of general patterns, not a requirement to buy Redis services. [CAP paper](https://www.comp.nus.edu.sg/~gilbert/pubs/BrewersConjecture-SigAct.pdf), [replication](https://www.postgresql.org/docs/current/warm-standby.html), [D01 data/availability outcomes](https://cscd01.com/lectures/4/), [cache patterns](https://redis.io/blog/cache-layer-architecture-guide/).
+7. **Compatible change and deployment:** Read Semantic Versioning, the safe-deployment guide and the blue-green explanation. Add Kubernetes **Deployment Strategy** for Recreate versus RollingUpdate. Practise a backward-compatible API/schema migration and rollback; compare recreate, rolling/ramped, canary and blue-green approaches. [Semantic Versioning](https://semver.org/), [recreate/rolling strategies](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#strategy), [progressive deployment/health checks](https://learn.microsoft.com/en-us/azure/well-architected/operational-excellence/safe-deployments), [blue-green](https://martinfowler.com/bliki/BlueGreenDeployment.html).
+8. **Analytical/distributed architectures:** Read the free **Pipes and Filters** summary, then Mark Richards’s publisher-posted **Software architecture patterns**, specifically **Event-Driven Architecture → Mediator Topology / Broker Topology**. Add SRE **Chapter 25** for pipelines and Dehghani for warehouses/lakes/mesh trade-offs. The separately public 60-slide D01 architecture-problem-solving deck linked in item 4 covers ETL, warehouses, lakes, lakehouses and mesh on **slides 40–48**; the week-7 deck itself is not assumed accessible. [Pipes/filters](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PipesAndFilters.html), [mediator versus broker lesson](https://www.oreilly.com/content/software-architecture-patterns/), [data pipelines](https://sre.google/sre-book/data-processing-pipelines/), [data mesh and centralized platforms](https://martinfowler.com/articles/data-monolith-to-mesh.html).
+9. **Risk evaluation and mitigation:** Study the SEI’s **ATAM** report, particularly quality attributes, scenarios, utility trees, risks and trade-off points. Use it as one concrete evaluation method; it is not asserted to be the method mandated by D01. [Free ATAM report](https://www.sei.cmu.edu/documents/629/2000_005_001_13706.pdf).
+10. **Formal methods and verification:** Work **Structural modeling** and **Behavioral modeling** in *Practical Alloy*. Specify constraints, find counterexamples and check a small stateful design. This supplies a concrete formal-methods route where the calendar names the area without prescribing a public current tool. [Structural modelling](https://practicalalloy.github.io/chapters/structural-modeling/index.html), [behavioural modelling](https://practicalalloy.github.io/chapters/behavioral-modeling/index.html).
+
+**Mastery task — suggested:** Produce an architecture document and presentation for an existing open-source service: requirements and UML views; load/cost assumptions; scaling/state/replication/cache decisions; a data pipeline; compatibility/deployment plan; benchmark evidence; a small formal model; and a risk/mitigation table. Compare at least two architectures and obtain a critical review. Add a tested contribution or reproducible improvement proposal to exercise large-codebase work.
+
+**Access and limits:** Selected text/PDF/HTML materials are publicly readable; core study does not require a cloud subscription. Local simulations do not reproduce production traffic or team experience. Google Slides may need its HTML view. Some D01 child pages carry older offering labels, and guest/TBA topics cannot be reconstructed from an announcement alone. Use the dated baseline as the target, not an assumption that every live link belongs to one consistent term. [Public D01 schedule](https://cscd01.com/lectures/).
+
+<a id="MATB41H3"></a>
+
+## MATB41H3 — Techniques of the Calculus of Several Variables I
+
+**Prerequisites:** Single-variable differentiation/integration, Taylor approximation, vectors/matrices and three-dimensional coordinate geometry. Review CLP-3 Chapter 1 where geometry is unfamiliar.
+
+**Main route:** Work through CLP-3’s Chapter 2 on derivatives, then the selected Chapter 3 integration sections below. Use its paired problem book continuously. Include sections labelled optional by CLP when they supply a topic explicitly named by MATB41, particularly Taylor polynomials and general change of variables. [UBC’s free text/problem-book index](https://personal.math.ubc.ca/~CLP/CLP3/).
+
+**Topic-to-resource map:**
+
+| U of T topic cluster | Exact route |
+|---|---|
+| Partial and higher derivatives | CLP-3 §§2.2–2.3; understand the variables held constant and when mixed partials agree. [Partial derivatives](https://personal.math.ubc.ca/~CLP/CLP3/clp_3_mc/sec_partials.html), [higher derivatives](https://personal.math.ubc.ca/~CLP/CLP3/clp_3_mc/sec_higher_order.html). |
+| Chain rule and Jacobian matrices | CLP-3 §2.4; add Lebl’s §8.3 treatment of the derivative as a linear map/matrix for explicit Jacobian notation. [Chain rule](https://personal.math.ubc.ca/~CLP/CLP3/clp_3_mc/sec_chain_rule.html), [derivative supplement](https://www.jirka.org/ra/html/sec_svtheder.html). |
+| Tangent planes, gradients and directional derivatives | CLP-3 §§2.5 and 2.7. [Tangent planes](https://personal.math.ubc.ca/~CLP/CLP3/clp_3_mc/sec_tangent_planes.html), [gradient/directional derivatives](https://personal.math.ubc.ca/~CLP/CLP3/clp_3_mc/sec_directional_derivatives.html). |
+| Linear/quadratic approximations and multivariable Taylor expansion | CLP-3 §2.6, including §2.6.2 “Taylor Polynomials”; use Lebl §8.6 for additional higher-derivative/mixed-partial reasoning. [Approximations/Taylor](https://personal.math.ubc.ca/~CLP/CLP3/clp_3_mc/sec_lin_approx.html), [higher-order supplement](https://www.jirka.org/ra/html/sec_mvhighordders.html). |
+| Local extrema, constrained optimization and Lagrange multipliers | CLP-3 §§2.9–2.10; check interior, boundary and constraint cases. [Extrema](https://personal.math.ubc.ca/~CLP/CLP3/clp_3_mc/sec_max.html), [Lagrange multipliers](https://personal.math.ubc.ca/~CLP/CLP3/clp_3_mc/sec_Lagrange.html). |
+| Multiple integrals and planar coordinate changes | CLP-3 §§3.1–3.2: double integrals and polar coordinates; practise setting up regions and changing integration order. [Double integrals](https://personal.math.ubc.ca/~CLP/CLP3/clp_3_mc/sec_2d_integrals.html), [polar](https://personal.math.ubc.ca/~CLP/CLP3/clp_3_mc/sec_polars.html). |
+| Triple integrals, cylindrical and spherical coordinates | CLP-3 §§3.5–3.7. [Triple](https://personal.math.ubc.ca/~CLP/CLP3/clp_3_mc/sec_3d_integrals.html), [cylindrical](https://personal.math.ubc.ca/~CLP/CLP3/clp_3_mc/sec_cylindrical.html), [spherical](https://personal.math.ubc.ca/~CLP/CLP3/clp_3_mc/sec_spherical.html). |
+| General changes of variables and Jacobian determinant factors | CLP-3 §3.8, “Optional — Integrals in General Coordinates”; include it here despite CLP’s optional label. Lebl §10.7 provides further theorem-level detail. [Jacobian changes](https://personal.math.ubc.ca/~CLP/CLP3/clp_3_mc/sec_Jacobian.html), [change-of-variables supplement](https://www.jirka.org/ra/html/sec_mvchangeofvars.html). |
+
+**Practice:** Use CLP-3’s matched exercises and its hints/answers/solutions appendices. Attempt a mixture of derivative calculations, geometric explanations, optimization and region-setting problems before checking. Graphing software can help inspect a surface, but it cannot replace an argument establishing all extrema or valid integral bounds. A complete Lebl worked-solutions collection was not verified.
+
+**Mastery check — our suggested assessment:** Analyze a function of two or three variables: calculate its Jacobian/gradient, tangent approximation and quadratic Taylor polynomial; classify critical points and solve a constrained optimization problem. Evaluate a volume or mass integral in two coordinate systems, explicitly deriving the Jacobian factor and describing the transformed region.
+
+**Access and coverage:** The texts and exercises are free, with no institutional login or live grading. This path covers the detailed calendar; a current U of T weekly syllabus remains unverified. Line/surface integrals and Green/Stokes/divergence theorems belong to other curricula unless separately established and are not promoted into MATB41 requirements here.
+
+<a id="CSCC09H3"></a>
+
+## CSCC09H3 — Programming on the Web
+
+**Start with:** Confident programming, Git, basic databases and the ability to debug a program. **Main route:** MDN fundamentals → Helsinki Full Stack Open’s relevant client/server units → the web-platform supplements below. React/Node are learning vehicles chosen here; the UofT description does not mandate one framework.
+
+**Ordered topic-to-resource map:**
+
+1. **HTML, CSS, Flexbox/Grid, browser JavaScript and HTML5 APIs:** Follow MDN’s learning curriculum through semantic HTML, CSS layout, JavaScript and browser scripting. Build a static accessible page before introducing a framework. [MDN learning curriculum](https://developer.mozilla.org/en-US/docs/Learn_web_development).
+2. **Internet/web operation, static/dynamic content, clients/servers and multi-tier architecture:** Complete Full Stack Open **Part 0: Fundamentals of Web apps** and inspect requests in browser developer tools. Then use its React material for a dynamic client and **Part 3: Node.js and Express** for a REST backend. [Web-app foundations](https://fullstackopen.com/en/part0/fundamentals_of_web_apps/), [React introduction](https://fullstackopen.com/en/part1/introduction_to_react/), [backend unit](https://fullstackopen.com/en/part3/node_js_and_express/).
+3. **Data/files, users and authentication:** Work the backend’s database and validation sections, followed by **Part 4: User administration** and **Token authentication**. Add Node’s file-system examples for file storage. Separately study cookies and Express sessions: token authentication alone does not cover every session concept in C09. [Backend/auth unit](https://fullstackopen.com/en/part4/token_authentication/), [file APIs](https://nodejs.org/api/fs.html), [cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Cookies), [session middleware](https://expressjs.com/en/resources/middleware/session/).
+4. **Security and development/deployment processes:** Use Full Stack Open’s testing, validation and deployment work plus MDN’s security guides. Add a reproducible local launch and test procedure; examine trust boundaries and authentication/session failures. [Course requirements and parts](https://fullstackopen.com/en/part0/general_info/), [security guides](https://developer.mozilla.org/en-US/docs/Web/Security).
+5. **Promises, execution/event-loop model and workers:** Read these specific MDN guides and write examples showing the difference between asynchronous I/O and moving computation to a worker. [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises), [execution model](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Execution_model), [workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers).
+6. **Real-time communication:** Study WebSockets and server-sent events, then Socket.IO’s transport explanation for HTTP long polling and connection upgrades. Build one small real-time feature and explain which direction(s) data must flow; distinguish the native WebSocket API from Socket.IO’s extra protocol. [WebSocket API](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API), [server-sent events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events), [long-polling/transport explanation](https://socket.io/docs/v4/how-it-works/).
+7. **Scaling and HTTP/2–3:** Read MDN **Evolution of HTTP**, then apply the load-balancing/state/cache work in D01 to your application. Protocol improvements do not remove application bottlenecks. [HTTP evolution](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Evolution_of_HTTP).
+8. **Internationalization/localization, web services, advertising/analytics/tracking and privacy:** Use **Intl** for locale-aware behaviour and document your API as a service. Read MDN’s third-party-cookie guide for advertising/tracking mechanics, then Matomo’s **Dashboard** and **Goals and Conversions** guides for interpreting analytics. Inspect requests and compare first-party measurement with cross-site tracking. The reading does not require buying Matomo hosting or extensions. [Intl](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl), [privacy](https://developer.mozilla.org/en-US/docs/Web/Privacy), [third-party cookies](https://developer.mozilla.org/en-US/docs/Web/Privacy/Guides/Third-party_cookies), [analytics dashboards](https://matomo.org/guide/reports/dashboard/), [goals/conversions](https://matomo.org/guide/reports/goals-and-conversions/).
+
+**Practice:** Complete the relevant Full Stack Open exercises as you build its applications. Then add the missing platform exercises above. Work against local servers and a local database where possible; hosted deployment is an additional environment choice.
+
+**Mastery task — suggested:** Create a multilingual application with an API, persistence/file handling, authentication, tests, one real-time feature and a deployable build. Explain its request lifecycle, event-loop behaviour, session model, scaling limit and tracking/privacy choices; demonstrate a failure and its diagnosis.
+
+**Access and limits:** MDN and the selected course lessons are free/public. Hosted submissions, certificates or services may need non-university accounts; optional cloud products can impose charges. Full Stack Open says some parts have moved to the newer MOOC platform, so follow the notices rather than stale part-11/12 links. This route targets the documented curriculum; the current UofT project/framework is unverified.
+
+<a id="CSCC10H3"></a>
+
+## CSCC10H3 — Human-Computer Interaction
+
+**Start with:** Some software experience and willingness to observe users, critique designs and revise prototypes. **Main route:** MIT’s public UI-design course for methods, Hearst for search, and specialist supplements for visualization, mobile/accessibility and social interaction.
+
+**Ordered topic-to-resource map:**
+
+1. **HCI principles, interface analysis and user-centred design:** Work MIT 6.831’s lecture notes on usability, learnability, visibility, efficiency, errors/user control, task analysis and generating designs. Explain the principle behind each design criticism. [MIT lecture notes](https://ocw.mit.edu/courses/6-831-user-interface-design-and-implementation-spring-2011/pages/lecture-notes/).
+2. **Prototyping and evaluation:** Continue through prototyping, user testing, experiment analysis and heuristic evaluation. Use the public project progression to move from requirements through alternatives, prototypes, implementation and evaluation. Paper prototypes are sufficient to start; a paid design tool is unnecessary. [MIT project materials](https://ocw.mit.edu/courses/6-831-user-interface-design-and-implementation-spring-2011/pages/projects/).
+3. **Information search:** Read Hearst’s *Search User Interfaces*, **Chapters 1–3** for design/evaluation/information seeking, then **Chapters 4–8** for query entry, results, reformulation, supporting search and faceted navigation. The author provides the full text free with publisher permission. [Book/chapter directory](https://searchuserinterfaces.com/book/), [design chapter](https://searchuserinterfaces.com/book/sui_ch1_design.html), [information-seeking models](https://searchuserinterfaces.com/book/sui_ch3_models_of_information_seeking.html).
+4. **Information visualization:** Use Hearst **Chapters 10–11** for search/text-analysis visualization, and UW’s interactive **Visualization Curriculum** units on encodings, scales, composition and interaction for hands-on work. [Search visualization](https://searchuserinterfaces.com/book/sui_ch10_visualization.html), [UW notebooks](https://idl.uw.edu/visualization-curriculum/).
+5. **Mobile devices and accessibility:** Complete the W3C WAI tutorials on structure, images, forms/tables as relevant, then study its mobile-accessibility guidance. Evaluate touch, small screens, keyboard operation and assistive-technology support as separate concerns. [Accessibility tutorials](https://www.w3.org/WAI/tutorials/), [mobile guidance](https://www.w3.org/WAI/standards-guidelines/mobile/).
+6. **Social media/social-network interaction:** Read Tom Erickson’s **Social Computing** encyclopedia chapter. Analyse how interface choices affect participation, coordination, identity and communities. This is an open reading by a researcher, not a requirement to enrol in the publisher’s paid courses. [Social-computing chapter](https://assets.interaction-design.org/literature/book/the-encyclopedia-of-human-computer-interaction-2nd-ed/social-computing).
+
+**Practice:** Observe a real task, write findings and requirements, sketch competing designs, run a small usability study with willing participants, record errors/observations and revise. Repeat an evaluation after the change. For visualization, explain your encodings and test whether users can answer the intended questions.
+
+**Mastery task — suggested:** Design and evaluate a search-and-community interface with a mobile layout and an accessible prototype. Deliver research observations, requirements, alternatives, prototype iterations, an evaluation protocol/results and a justified revision. Include both a search task and a social interaction task.
+
+**Access and limits:** The selected notes, book chapters, tutorials and visualization notebooks are public. UW offers local notebooks as an alternative to cloud accounts. MIT’s course is an older methods resource; supplement it with current W3C guidance. Real-user feedback cannot be replaced by self-scoring. The current UofT syllabus is not public, so the mapping covers its documented subject areas rather than an authenticated current list of every named HCI theory or technique.
+
+<a id="CSCC11H3"></a>
+
+## CSCC11H3 — Introduction to Machine Learning and Data Mining
+
+**Preparation:** Python/NumPy; vectors, matrices, eigenvectors; derivatives/gradients; conditional probability, expectation and Gaussian distributions. These are learning recommendations, not an enrolment check.
+
+**Main route:** Use the actual public UofT Winter 2024 [weekly calendar](https://www.cs.toronto.edu/~fleet/courses/C11/calendar.html) as the sequence, and its [notes collection](https://www.cs.toronto.edu/~fleet/courses/C11/notesReadings.html) as the textbook. Read a unit, work through its derivations, reproduce its notebook, then attempt the corresponding assignment independently. This is an unusually close public match to the documented offering.
+
+| Target topic | Where to learn it | Work to do |
+|---|---|---|
+| Least squares, linear and nonlinear/basis-function regression, polynomial/RBF features, ridge and kNN regression | UofT notes chapters 2–4; calendar weeks 1–2 | Derive the matrix solution; compare underfitting and overfitting as feature count and regularization change. |
+| Probability; ML/MAP/Bayes estimates; multivariate Gaussian means, covariances, marginals and conditionals | UofT chapters 5–7; week 3 Gaussian notebook | Calculate a conditional Gaussian both algebraically and by simulation. |
+| Entropy, class boundaries, kNN, trees/forests/bagging, class-conditional models, naive Bayes, logistic regression | UofT chapters 8–9; weeks 4–6 | Implement a small classifier and compare its decision surface with a library model. |
+| Gradient descent, line search, SGD; cross-validation; Bayesian regression, averaging and model selection | UofT chapters 10–13, following the calendar’s required/optional distinctions | Keep validation separate from the test set; compare point estimates with predictive uncertainty. |
+| PCA/probabilistic PCA, k-means/k-means++, Gaussian mixtures and EM; Monte Carlo examples | UofT chapters 14–16 and weeks 9–11 | Recover a low-dimensional representation and fit mixtures with several initializations. |
+
+The chapter labels above are verified by the [public notes index](https://www.cs.toronto.edu/~fleet/courses/C11/notesReadings.html); the practical work suggested in the last column is our study design, not a description of UofT grading.
+
+**Reinforcement and remaining scope:** The authors provide a free PDF and chapter-end Python labs for [*An Introduction to Statistical Learning*](https://www.statlearning.com/): use Regression, Classification, Resampling, Regularization, Tree-Based Methods and Unsupervised Learning for a second explanation. For the calendar’s neural-network topic, add [D2L chapter 5, Multilayer Perceptrons](https://d2l.ai/chapter_multilayer-perceptrons/index.html). For large-data handling, work through scikit-learn’s [out-of-core/scaling strategies](https://scikit-learn.org/stable/computing/scaling_strategies.html), including streaming examples, incremental estimators and feature extraction. These supplement the documented 2024 sequence; they are not claims that every supplement was taught there.
+
+**Exercises and completion:** The calendar exposes A1–A3 handouts and starter-download links. [A1](https://www.cs.toronto.edu/~fleet/courses/C11/Handouts/A1.pdf) mixes mathematical derivation with coding. Attempt the full set and the public practice test, keeping a notebook of failed assumptions and numerical checks. **Suggested mastery task:** build a reproducible benchmark comparing regression, classification and unsupervised methods; justify every train/validation/test decision and derive one algorithm without a library.
+
+**Access and limits:** Notes, handouts and many video/notebook links are public. A starter ZIP endpoint is present, although the web reader could not unpack ZIPs; no official submission, marking, tutorial feedback or full solution set is promised. Small versions of these tasks suit a laptop. The 2024 sequence is evidence-specific; unseen current additions remain unknown.
+
+<a id="CSCC46H3"></a>
+
+## CSCC46H3 — Social and Information Networks
+
+**Preparation:** Basic graph terminology/algorithms, probability, algebra and elementary matrix operations. Learn Python only for the optional computational extension; this subject also requires written arguments.
+
+**Main route:** Follow the Fall 2025 UofT reading order through the authors’ freely posted [*Networks, Crowds, and Markets*](https://www.cs.cornell.edu/home/kleinber/networks-book/). The author site supplies a complete draft plus individual chapters, so no institutional library subscription is necessary.
+
+| Target topic | Exact reading route |
+|---|---|
+| Graphs, connectivity, BFS, representations and web networks | Chapters 1–2 and 13.1–13.4. |
+| Strong/weak ties, communities, homophily | Chapters 3.1–3.4 and 3.6; 4.1–4.3. |
+| Signed networks and balance | Chapter 5.1–5.5. |
+| Small worlds, six degrees, decentralized search | Chapter 20.1–20.7. |
+| PageRank/link analysis | Chapter 14.1–14.6. |
+| Strategic choices and congestion | Chapter 6.1–6.8; 8.1–8.3. |
+| Diffusion, decision/information cascades and crowd effects | Chapters 19.1–19.7 and 16.1–16.7. |
+| Voting and aggregation | Chapter 21.1–21.8. |
+
+These pointers are the selected chapter sections associated with the [documented UofT offering](https://www.cs.toronto.edu/~ashton/cscc46/), not a recommendation to finish the entire book before starting exercises. To explore the calendar’s broader markets strand, add the book’s chapters 9–12 after the core sequence.
+
+**Concrete practice:** Work the exercises at the end of each selected chapter. For an implementation companion, use the official [NetworkX tutorial/examples](https://networkx.org/documentation/stable/auto_examples/index.html). In particular, its [`gnp_random_graph` reference](https://networkx.org/documentation/stable/reference/generated/networkx.generators.random_graphs.gnp_random_graph.html) makes G(n,p) experiments explicit. Generate graphs across several probabilities, estimate component sizes and path lengths, and contrast them with a real network. Implement PageRank once using matrix iteration before calling the library. For the friendship paradox, compare the degree of a uniformly sampled person with the degree reached by sampling an edge endpoint; explain the sampling bias rather than merely plotting it. These experiments are our suggested exercises.
+
+**Suggested mastery task:** Produce a network-analysis report with four parts: (1) community/homophily measures; (2) an explicit signed-network balance example; (3) a cascade simulation and a counterexample to a simplistic “more connections always helps” claim; (4) a voting or congestion-game analysis. Include a proof or worked mathematical argument alongside code.
+
+**Access and limits:** The book draft and NetworkX documentation are free/public; coding can be done locally. The UofT page puts assignment downloads on Quercus, so use the book problems and original tasks instead of expecting those handouts. The route covers the documented topic families closely, but no public resource reproduces the course’s private marking or every current case study. A peer reviewer or study group is useful for judging arguments.
+
+<a id="CSCC85H3"></a>
+
+## CSCC85H3 — Fundamentals of Robotics and Automated Systems
+
+**Preparation:** C programming, data structures, basic computer organization, probability, linear algebra and calculus. Be able to explain a loop’s runtime and a noisy measurement’s uncertainty.
+
+**Main route:** Read Estrada’s eight public UofT note units in order. They are the strongest direct match to this course’s documented content. Pair each with a small simulator experiment; do not start with an unrelated ROS installation and assume it supplies the theory.
+
+| Target topic | Public lesson | Suggested experiment |
+|---|---|---|
+| Reliability, component failure, hardware/software/information redundancy, voting | [Fault tolerance](https://www.cs.toronto.edu/~strider/docs/C85_FaultTolerance.pdf) | Inject a failed sensor and compare a single measurement with redundant measurements. |
+| Sensor properties, sampling/aliasing, frequency reasoning, noise, averaging, smoothing and convolution | [Sensors/signals](https://www.cs.toronto.edu/~strider/docs/C85_Sensors.pdf) | Change sample rate and noise; measure filtering delay as well as noise reduction. |
+| State/reference/error, switching and proportional/PID feedback | [Controllers](https://www.cs.toronto.edu/~strider/docs/C85_Controllers.pdf) | Plot tracking error and overshoot for several controller gains. |
+| Histogram/particle localization, motion/sensor models, resampling and ambiguous environments | [Localization](https://www.cs.toronto.edu/~strider/docs/C85_Localization.pdf) | Recover position from noisy simulated readings; test a symmetric environment. |
+| Accelerometers/gyroscopes, frames, orientation/velocity/position and drift | [Inertial navigation](https://www.cs.toronto.edu/~strider/docs/C85_InertialNav.pdf) | Integrate noisy motion data and observe accumulated drift. |
+| Prediction/correction, uncertainty/covariance, gain and model limitations | [Kalman filtering](https://www.cs.toronto.edu/~strider/docs/C85_KalmanFilters.pdf) | Compare raw readings, model-only prediction and fused estimates. |
+| Pipelines, dependencies/branches, caches, profiling and bottlenecks | [Code optimization](https://www.cs.toronto.edu/~strider/docs/C85_Optimization.pdf) | Profile the sensing/control loop before optimizing it. |
+| FSMs, event-driven behaviour, deadlines, real-time OS concepts and deterministic latency | [FSM/control](https://www.cs.toronto.edu/~strider/docs/C85_FSMs.pdf) | Implement nonblocking states; record missed deadlines under added workload. |
+
+**Outside-campus practical path:** Install the open-source [Webots simulator](https://github.com/cyberbotics/webots). Follow its [official tutorials 1–8](https://github.com/cyberbotics/webots/blob/master/docs/guide/tutorials.md): first simulation, environment, controllers, robot mechanics and supervisor. They include C examples and installed tutorial solutions. Then implement the table’s exercises on a small wheeled robot. Use the supervisor to introduce disturbances and collect ground truth; this is our proposed lab design.
+
+**Ethics:** Read *Ethically Aligned Design*, [General Principles, printed pp. 17–35, and Methods to Guide Ethical Research and Design, pp. 124–139](https://standards.ieee.org/wp-content/uploads/import/documents/other/ead1e.pdf). Relate human well-being, agency and accountability to sensor failure, unsafe motion and the design of override mechanisms.
+
+**Suggested mastery task:** Build a simulated robot that localizes, follows a route and changes FSM behaviour when an obstacle or sensor fault occurs. Submit code, controller tuning plots, a timing/profile report, injected-failure tests and an ethical impact analysis. An optional final extension is a simulated robot-soccer controller inspired by the instructor’s [public project description](https://www.cs.toronto.edu/~strider/CSCC85.html).
+
+**Access and limits:** The public notes are listed as August 2024 material. Webots is free, runs outside the university and supplies a practical substitute for unavailable kits. Simulation does not reproduce building/wiring/calibration, battery behaviour, physical wear, real sensor/actuator errors or guaranteed real-time hardware timing. To learn those skills, add a physical mobile robot with accessible sensors; that introduces a hardware cost. No access to UofT’s EV3 kits, competition or grading is implied.
+
+<a id="CSCD18H3"></a>
+
+## CSCD18H3 — Computer Graphics
+
+**Preparation:** C/C++, vectors/matrices, transformations, derivatives and integrals, probability, data structures and numerical reasoning.
+
+**Main route:** Work through the public UofT graphics notes, then implement the corresponding feature in one renderer. Use [*Ray Tracing in One Weekend*, then *The Next Week* and *The Rest of Your Life*](https://raytracing.github.io/) as a more gradual coding companion. Keep the UofT topic checklist as the target; the shorter ray-tracing books alone do not cover the whole course.
+
+| Target topic | Public UofT lesson |
+|---|---|
+| Parametric curves, tangents/normals, ellipses and polygons | [Curves/2D geometry](https://www.cs.toronto.edu/~strider/docs/D18_Curves.pdf) |
+| Affine and homogeneous transformations, composition and hierarchies | [Transformations](https://www.cs.toronto.edu/~strider/docs/D18_Transforms.pdf) |
+| Parametric/implicit surfaces, planes, patches, cylinders/revolution/quadrics, meshes, spherical/nonlinear transforms | [3D objects](https://www.cs.toronto.edu/~strider/docs/D18_3Dobjects.pdf) |
+| Pinhole/orthographic/perspective projection, camera pose, depth and thin lenses | [Cameras](https://www.cs.toronto.edu/~strider/docs/D18_Camera.pdf) |
+| Rays, intersections, transformed normals, local shading, reflection/shadows/refraction | [Basic ray tracing](https://www.cs.toronto.edu/~strider/docs/D18_BasicRayTracing.pdf) |
+| Area lights, antialiasing, textures/bump maps, photon mapping, depth of field and acceleration | [Advanced ray tracing](https://www.cs.toronto.edu/~strider/docs/D18_AdvancedRayTracing.pdf) |
+| Rendering equation, distribution/path tracing, integration, importance and explicit-light sampling | [Photorealistic rendering](https://www.cs.toronto.edu/~strider/docs/D18_DistributionRayTracing.pdf) |
+
+For a rigorous second treatment and many implementation exercises, read [*Physically Based Rendering*, fourth edition](https://pbr-book.org/4ed/contents): chapters 2–3 for sampling/geometry, 4–6 for radiometry/cameras/shapes, 7 for acceleration, 8 for sampling/reconstruction, 9–10 for reflection/textures, and 12–13 for lights and surface transport. Its chapter-end exercises are suitable for extending your renderer. For the specifically documented photon-mapping topic, use the freely accessible third edition’s [section 16.2, Stochastic Progressive Photon Mapping](https://pbr-book.org/3ed-2018/Light_Transport_III_Bidirectional_Methods/Stochastic_Progressive_Photon_Mapping); do not assume the fourth edition retains the same chapter layout.
+
+**Suggested implementation milestones:** First produce correct camera rays and sphere/triangle intersections; add transformed objects and normal tests; implement shadow/reflection/refraction; add image/procedural textures and lens sampling; introduce a BVH; finally compare explicit-light/importance sampling against naive path sampling. These are our proposed milestones, not recovered UofT assignment instructions.
+
+**Suggested mastery task:** Render one scene with several materials, transformed mesh/quadric objects, an area light and depth of field. Supply convergence plots against sample count, images exposing aliasing/shadow/noise differences, analytic unit tests for geometry, and a runtime comparison with/without acceleration. Explain at least one failure caused by floating-point precision.
+
+**Access and limits:** The notes, ray-tracing books and PBRT web editions/source are public and free. Small CPU renders are sufficient; large scenes may take substantial time, but a GPU is not required to learn the algorithms. The UofT note collection is dated August 2024 and does not establish every future assignment. A library renderer can help check output, but replacing your implementation with it removes much of the learning objective.
+
+<a id="CSCD25H3"></a>
+
+## CSCD25H3 — Advanced Data Science
+
+**Preparation:** Python or R, introductory probability/statistics, SQL fundamentals and the C11-level learning methods. Expect to make and defend analytical choices, not only run models.
+
+**Main route:** Complete an end-to-end analysis while working through Berkeley’s public [Data 100 notes](https://ds100.org/course-notes/). Start with the introduction and EDA units, then regular expressions/visualization/sampling, modelling/feature engineering, human-contexts-and-ethics, validation/regularization, inference, classification, clustering and PCA. These notes identify themselves as accompanying Fall 2025 and can be read without campus access.
+
+| Target topic | Exact supplement and task |
+|---|---|
+| Raw data, wrangling, cleaning, joining, missing values | [*R for Data Science*, second edition](https://r4ds.hadley.nz/), chapters 3, 5, 7, 18–19. In a Python route, implement the same operations in Data 100’s pandas workflow. |
+| Web scraping and acquiring structured/unstructured data | R4DS chapter 24, “Web scraping,” with chapters 14–15 on strings/regex; preserve the original data and document extraction assumptions. |
+| Supervised/unsupervised analysis and preprocessing | Data 100’s Feature Engineering, Cross Validation and Regularization, Logistic Regression, Clustering and PCA units; repeat relevant C11 methods, now as a coherent workflow. |
+| Treating text as data | [NLTK chapters 2–3 and 6](https://www.nltk.org/book/) for corpora/raw text/classification; extract features, establish a simple baseline and audit errors. |
+| Experimentation and A/B tests | [*Computational and Inferential Thinking*, 12.1 “A/B Testing”](https://inferentialthinking.com/chapters/12/1/ab-testing/index.html), followed by 12.2 “Causality.” Build a randomization test and distinguish observational association from an experiment. |
+| Visualization, interpretation and reporting | R4DS chapters 1, 9–11 and 28–29: visualization, exploratory analysis, communication and Quarto. Produce an executable report, not pasted charts without provenance. |
+| Ethical questions and impacts of AI/data | Data 100’s [Human Contexts and Ethics case study](https://ds100.org/course-notes/case-study-hce/) plus a written stakeholder, data-quality, bias, privacy and downstream-use analysis for your project. |
+
+**Practice:** Complete exercises in the relevant R4DS sections or the equivalent notebook transformations in Python. For inferential methods, work the accompanying Data 8 textbook examples by hand before simulation. You do not need to learn both programming ecosystems simultaneously; choose one main stack, translate concepts when a supplement uses the other, and explain the assumptions in your own language.
+
+**Suggested mastery task:** Choose a question with an obtainable dataset, write a short analysis plan, acquire/clean/document the data, explore it, fit and validate an appropriate model, conduct or simulate an A/B experiment, analyze uncertainty and bias, and publish a reproducible report with limitations. Keep a held-out set and an audit trail of changes to the question. This is our proposed assessment.
+
+**Access and limits:** The required reading route is free/public; R4DS also links suggested exercise answers. Public textbook access does not provide Berkeley/UofT grading or course accounts. The A/B text uses Berkeley’s `datascience` Python package rather than pandas. The UofT baseline for D25 is calendar-level only, so this is a full route through every verified topic family, not certification of an unavailable current weekly syllabus or dataset/project selection.
+
+<a id="CSCD27H3"></a>
+
+## CSCD27H3 — Computer and Network Security
+
+**Prerequisite knowledge:** C/assembly memory layout, operating-system processes/protection, basic networking and probability; elementary modular arithmetic is helpful for the cryptography.
+
+**Main route:** Study the free Berkeley CS161 textbook in the order security principles → memory safety → cryptography → web → networks. Fill the baseline’s classical, quantum and human/risk components using the actual UofT public slides and Ross Anderson’s free third-edition chapters. [Berkeley textbook](https://textbook.cs161.org/), [UofT lecture index](https://thierrysans.me/CSCD27/lectures/).
+
+**Topic-to-resource map:**
+
+- **Security vocabulary and classical cryptography:** UofT’s “Definitions” and “Classical Cryptography” units; distinguish a cipher mechanism from its threat assumptions. [Classical-cryptography slides](https://thierrysans.me/CSCD27/lectures/01/CSCD27-ClassicalCryptography.pdf).
+- **Symmetric/public-key encryption, AES/RSA, hashes, MACs, signatures, key exchange and certificates:** CS161 chapters 5–13 and case studies. These provide the cryptographic building blocks used by the network/web units. [Symmetric-key chapter and book navigation](https://textbook.cs161.org/crypto/symmetric.html).
+- **Protocols, TLS and network attacks/defences:** CS161 chapters 25–39, including transport, naming, secure channels, firewalls, intrusion detection, malware and anonymity. Work through the protocol threat model before its mitigation. [TLS chapter and network-section navigation](https://textbook.cs161.org/network/tls.html).
+- **Human authentication:** CS161 “Passwords”; add Anderson third edition, chapters 2–3 and 6 for opponents, psychology/usability and access control. [Free Security Engineering chapters](https://www.cl.cam.ac.uk/~rja14/book.html).
+- **Program/OS insecurity and protections:** CS161 chapters 2–4 cover stack layout, memory vulnerabilities and mitigations; reason about canaries, address randomization and non-executable memory. [Memory-safety mitigations chapter](https://textbook.cs161.org/memory-safety/mitigations.html).
+- **Web security:** Study CS161 chapters 17–24 and practise SQL injection, XSS, CSRF, authentication and access-control topics in PortSwigger’s deliberately vulnerable training labs. [Web Security Academy](https://portswigger.net/web-security).
+- **Social engineering and risk:** Anderson’s “Who is the Opponent?”, “Psychology and Usability,” “Secure Systems Development” and “Assurance and Sustainability” chapters connect human weaknesses to system design and assessment. These are third-edition chapter names; older editions use different numbering. [Author’s third-edition downloads](https://www.cl.cam.ac.uk/~rja14/book.html).
+- **Quantum, post-quantum and quantum cryptography:** Read the actual short UofT unit for the intended introductory exposure; use NIST’s project and plain-language introduction to check current post-quantum terminology/standards. This is not a substitute for a full quantum-information course. [UofT quantum unit](https://thierrysans.me/CSCD27/lectures/04/CSCD27-Quantum.pdf), [NIST post-quantum resources](https://csrc.nist.gov/projects/post-quantum-cryptography).
+
+**Practice:** Use the academy’s beginner learning paths and labs, recording the precondition, failure, exploit in the training environment and fix. Create diagrams showing confidentiality, integrity and authentication across a toy protocol. Use only the provided labs or systems you control for hands-on attack work.
+
+**Suggested mastery task — our proposal:** Threat-model and harden a small web service: authentication/session design, authorization, database interaction, TLS termination, memory-safe boundaries, logging/alerting and recovery. Provide tests for the chosen attack classes and explain what cryptography does not protect.
+
+**Access and coverage:** The readings are free. PortSwigger advertises free training/labs; account-dependent features require a free account, and a paid certification is separate. CS161’s book is public; its university grading infrastructure is not needed for this route. The exact current UofT security syllabus remains undated in the baseline, and particular cryptographic standards or mitigations can evolve.
+
+<a id="CSCD43H3"></a>
+
+## CSCD43H3 — Database System Technology
+
+**Prerequisite knowledge:** C43-level relational design, SQL, transactions and query plans; C++ ownership, concurrency, testing and data structures; OS storage, buffering and synchronization. CMU’s implementation projects expect C++20 rather than teaching C++ from scratch. [CMU FAQ](https://15445.courses.cs.cmu.edu/fall2025/faq.html).
+
+**Main route:** Follow CMU 15-445 Fall 2025 from physical storage through recovery, implementing its BusTub projects in order. Add distributed databases, analytics, mining and object-relational/web data using the separate resources below. This separates the baseline’s narrower Winter 2023 implementation outline from its broader calendar scope. [CMU schedule](https://15445.courses.cs.cmu.edu/fall2025/schedule.html).
+
+**Topic-to-resource map:**
+
+- **Storage, buffers, physical design and main-memory/column-oriented systems:** CMU lectures 3–6 cover page/tuple layout, the buffer manager, storage models and compression. Compare layouts using the actual workload’s reads, writes and cache behaviour. [Storage notes](https://15445.courses.cs.cmu.edu/fall2025/notes/03-storage1.pdf), [storage models/compression](https://15445.courses.cs.cmu.edu/fall2025/notes/06-storage3.pdf).
+- **One-dimensional and multidimensional indexing:** CMU lectures 7–10 cover hashing, ordered indexes and concurrency in index structures; PostgreSQL’s GiST documentation provides the additional spatial/multidimensional indexing strand. [B+ tree unit](https://15445.courses.cs.cmu.edu/fall2025/notes/08-indexes1.pdf), [PostgreSQL GiST](https://www.postgresql.org/docs/current/gist.html).
+- **Query processing and optimization:** CMU lectures 11–16 cover sorting/aggregation, joins, execution models and optimization. Use PostgreSQL EXPLAIN to connect algorithms and estimates to actual plans. [Execution notes](https://15445.courses.cs.cmu.edu/fall2025/notes/13-queryexecution1.pdf), [optimizer notes](https://15445.courses.cs.cmu.edu/fall2025/notes/15-optimization1.pdf), [EXPLAIN guide](https://www.postgresql.org/docs/current/using-explain.html).
+- **Concurrency, transactions and recovery:** Study CMU lectures 17–22: serializability/control, locking, timestamps, multiversioning, logging and recovery. Draw conflicting execution histories and reason about which failures recovery must tolerate. [Concurrency-control notes](https://15445.courses.cs.cmu.edu/fall2025/notes/17-concurrencycontrol.pdf), [recovery notes](https://15445.courses.cs.cmu.edu/fall2025/notes/22-recovery.pdf).
+- **Parallel/distributed databases:** Lectures 23–24 introduce partitioning, distributed processing and coordination. Read both OLTP and OLAP perspectives. [Distributed databases I](https://15445.courses.cs.cmu.edu/fall2025/notes/23-distributed1.pdf), [distributed databases II](https://15445.courses.cs.cmu.edu/fall2025/notes/24-distributed2.pdf).
+- **Warehousing, OLAP and Spark:** Study Kimball's free techniques on grain, facts/dimensions, star schemas/cubes, conformed dimensions and changing dimensions. Practise SQL GROUPING SETS, ROLLUP and CUBE, then use Spark SQL/DataFrames for analytic processing. [Dimensional-modeling techniques](https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/), [PostgreSQL grouping constructs](https://www.postgresql.org/docs/current/queries-table-expressions.html), [Spark SQL guide](https://spark.apache.org/docs/latest/sql-programming-guide.html).
+- **Data mining:** Spark MLlib’s guide supplies classification/regression, clustering, feature processing and evaluation workflows. Implement one clustering and one prediction pipeline; these are our selections because the calendar does not name required mining algorithms. [MLlib guide](https://spark.apache.org/docs/latest/ml-guide.html).
+- **Web and object-relational data:** Practise JSON queries, composite types and inheritance in PostgreSQL; compare their modelling and integrity limits. Expose a small read-only JSON endpoint as our integration exercise. [JSON](https://www.postgresql.org/docs/current/datatype-json.html), [composite types](https://www.postgresql.org/docs/current/rowtypes.html), [inheritance](https://www.postgresql.org/docs/current/ddl-inherit.html).
+- **Object databases:** Use ZODB's Python tutorial and programming-guide sections on persistent objects, identity, transactions/concurrency and schema migration. Compare object traversal with SQL and object-relational types; ZODB has no built-in relational query engine. This supplies a concrete object-database example, without asserting that UofT uses this engine. [ZODB tutorial](https://zodb.org/en/latest/tutorial.html), [programming guide](https://zodb.org/en/latest/guide/index.html).
+
+**Practice:** CMU’s public assignments provide written exercises and staged C++ implementation: primer → buffer pool → index → query execution → concurrency. The linked offering uses an ARC buffer replacement project; do not mix a different year’s handout with its starter code. [Assignments](https://15445.courses.cs.cmu.edu/fall2025/assignments.html), [buffer-pool project](https://15445.courses.cs.cmu.edu/fall2025/project1/).
+
+**Suggested mastery task — our proposal:** Build the BusTub components, then benchmark an analytic PostgreSQL/Spark workload against alternative layouts/indexes. Include query-plan explanations, concurrent correctness tests, a crash/recovery experiment and a discussion of what changes when data is partitioned across machines.
+
+**Access and coverage:** Course pages, notes and BusTub code are public/free; the FAQ documents a non-CMU Gradescope route after deadlines, requiring an account and its current enrolment instructions. Local tests remain available independently. Staff feedback and private grading are not promised. Spark can begin in local mode; no paid cloud is necessary. [Public BusTub repository](https://github.com/cmu-db/bustub), [outsider access FAQ](https://15445.courses.cs.cmu.edu/fall2025/faq.html). No current UofT weekly syllabus was established; column stores, Spark and in-memory systems were only conditional in the 2023 overview, while the calendar’s web/object/mining scope does not establish exact depth.
+
+<a id="CSCD58H3"></a>
+
+## CSCD58H3 — Computer Networks
+
+**Prerequisite knowledge:** C/C++ programming, processes/sockets, binary representations, basic probability and performance arithmetic; comfort reading packet formats and state machines.
+
+**Main route:** Read the free author-maintained *Computer Networks: A Systems Approach* in chapter order: foundations → direct links → internetworking/scaling → end-to-end protocols → congestion → applications. Combine it with Stanford CS144’s public networking implementation work. The book supplies the breadth missing from a TCP-only project. [Book’s open-source repository and access information](https://github.com/SystemsApproach/book), [CS144 public course](https://cs144.github.io/).
+
+**Topic-to-resource map:**
+
+- **Layering, OSI and Internet architecture:** Book chapter 1, especially network architecture; draw encapsulation from an application message to a link frame and explain how OSI and Internet stacks correspond. [Chapter 1: Foundation](https://book.systemsapproach.org/foundation.html).
+- **Link protocols, LANs, errors and recovery:** Chapter 2 covers direct links, framing, error detection, reliable transmission and access technologies. Work through sender/receiver state and acknowledgements before implementing a reliable stream. [Chapter 2: Direct Links](https://book.systemsapproach.org/direct.html).
+- **Network functions, switching and routing:** Chapter 3 provides switching/IP/routing foundations; chapter 4 adds scalable/interdomain routing. Trace the next hop separately from the end-to-end transport connection. [Internetworking](https://book.systemsapproach.org/internetworking.html), [Advanced Internetworking](https://book.systemsapproach.org/scaling.html).
+- **Transport, connection-oriented communication and recovery:** Chapter 5 covers UDP, TCP and RPC. Relate sequencing, acknowledgements, retransmission and flow control to CS144’s byte-stream reassembler, receiver and sender. [End-to-End Protocols](https://book.systemsapproach.org/e2e.html), [CS144 checkpoints](https://cs144.github.io/).
+- **Congestion control:** Chapter 6 distinguishes network congestion from receiver flow control, then treats queueing/resource allocation and control mechanisms. Analyse fairness, throughput, round-trip time and buffering with small experiments. [Congestion Control](https://book.systemsapproach.org/congestion.html).
+- **Application services and naming:** Chapter 9’s traditional applications plus section 9.3’s DNS/name-resolution material. Build a small socket client/server and inspect the lookup, transport and application exchanges. [Traditional applications](https://book.systemsapproach.org/applications/traditional.html), [Infrastructure Applications](https://book.systemsapproach.org/applications/infrastructure.html).
+- **Multicast:** Section 4.3 addresses multicast addressing and multicast routing; compare one-to-many delivery with repeated unicast. [Multicast](https://book.systemsapproach.org/scaling/multicast.html).
+- **Multimedia and quality of service:** Sections 9.2 and 6.5 connect session/resource needs to delay, loss, reservations and differentiated service. These are additional reading requirements because the programming checkpoints alone do not cover them. [Multimedia Applications](https://book.systemsapproach.org/applications/multimedia.html), [Quality of Service](https://book.systemsapproach.org/congestion/qos.html).
+
+**Practice:** Start with CS144 checkpoint 0’s environment, sockets and byte stream, then checkpoints 1–3’s reassembly/TCP components and checkpoint 4’s measurement work. Follow the handouts’ local tests. As verified on October 29, 2026, the active Fall 2026 page posted checkpoints 0–4; older later-checkpoint PDFs must not be mistaken for a complete matching 2026 project. Use the page’s public practice exams/answers for conceptual checks. [Checkpoint 0](https://cs144.github.io/assignments/check0.pdf), [course handouts and practice examinations](https://cs144.github.io/).
+
+**Suggested mastery task — our proposal:** Demonstrate reliable transfer under controlled loss/reordering, measure throughput and delay while changing bandwidth/buffering, and explain a packet trace across naming, routing and transport. Add a routing-table exercise and a written multicast/QoS design for a live-media application.
+
+**Access and coverage:** The book/source and public handouts are free. The 2026 implementation requires GNU/Linux and C++23; its handout provides local/virtual-machine options for Intel/AMD and ARM Macs. One warmup SMTP subsection uses a Stanford login/network: outsiders can replace it with protocol exchanges against a local test server. Cloud credits and official grading are not assumed. [Environment and institutional dependencies](https://cs144.github.io/assignments/check0.pdf). Stanford’s Canvas/Ed are separate services. We verified book pages directly where the search reader could not retrieve them. The UofT baseline has only calendar-level detail: exact algorithms, packet tools and assignments remain unknown, so this is a documented-topic route rather than a verified reconstruction of a current offering.
+
+<a id="CSCD70H3"></a>
+
+## CSCD70H3 — Compiler Optimization
+
+**Prerequisite knowledge:** A working compiler pipeline, C/C++ and LLVM IR basics, assembly/processor organization, graphs, sets/lattices and algorithm analysis. Complete the compiler-construction strand first if you cannot yet generate correct code.
+
+**Main route:** Use Cornell CS6120’s explicit self-guided route for IR/analysis/optimization, then add backend, memory-locality and parallel-compilation readings. It is a graduate course; use its relevant lessons and tasks rather than assuming every paper is a UofT requirement. [Self-guided instructions](https://www.cs.cornell.edu/courses/cs6120/2025sp/self-guided/).
+
+**Topic-to-resource map:**
+
+- **Compiler organization, IR and local/global optimization:** Cornell lessons 2–5 introduce representations, basic blocks, value numbering and control/data-flow analysis. Implement analyses before transformations. [Lesson index](https://www.cs.cornell.edu/courses/cs6120/2025sp/lesson/), [data-flow lesson](https://www.cs.cornell.edu/courses/cs6120/2025sp/lesson/4/).
+- **SSA and dominance:** Lesson 6 covers SSA conversion, phi nodes, dominance/frontiers and conversion back. Test loops and branches, including simultaneous phi semantics. [SSA lesson](https://www.cs.cornell.edu/courses/cs6120/2025sp/lesson/6/).
+- **Loops, LICM and strength reduction:** Cornell lesson 8 plus the actual UofT Winter 2020 loop/optimization slides. Prove the safety preconditions, including side effects and execution paths. [Loop optimization](https://www.cs.cornell.edu/courses/cs6120/2025sp/lesson/8/), [UofT archived units](https://www.cs.toronto.edu/~pekhimenko/courses/cscd70-w20/content.html).
+- **Pointer/memory dependence:** Cornell lesson 10’s alias-analysis introduction plus UofT’s pointer-analysis and memory-optimization slides. Conservative uncertainty must prevent an unsafe motion or parallelization. [Alias analysis](https://www.cs.cornell.edu/courses/cs6120/2025sp/lesson/10/).
+- **Instruction scheduling and register allocation:** Use LLVM’s code-generator guide for backend scheduling, machine representations and allocation; work through UofT’s allocation unit with interference/spilling examples. [LLVM backend guide](https://llvm.org/docs/CodeGenerator.html).
+- **Memory hierarchy, locality and prefetching:** UofT’s “Memory Optimizations” and “Prefetching” units supply the archived course strand; Calvin Lin’s parallelism/locality handout connects loop dependence and cache-oriented changes. [Parallelism and locality handout](https://www.cs.utexas.edu/~lin/cs380c/handout26.pdf).
+- **Vectorization and predication:** LLVM’s guide distinguishes loop and SLP vectorization and explains legality/profitability; use Lin’s handout for predication and control speculation. [LLVM vectorizers](https://llvm.org/docs/Vectorizers.html), [Predication and Speculation](https://www.cs.utexas.edu/~lin/cs380c/handout25.pdf).
+- **Multicore parallelization and thread extraction:** Study dependence-aware loop transformations and Polly’s automatic OpenMP generation; for the explicit thread-extraction topic, read Rangan’s dissertation chapter 2, especially section 2.6, on automatic decoupled software pipelining. This is a supplementary research treatment selected by us. [Polly with Clang](https://polly.llvm.org/docs/UsingPollyWithClang.html), [Pipelined Multithreading, chapter 2](https://www.cs.princeton.edu/techreports/2007/778.pdf).
+- **Speculation in dynamic compilation:** Cornell lesson 12 adds guards, tracing and deoptimization; distinguish these from hardware/control speculation. Lesson 13 adds concurrency/memory-model context. [Dynamic compilers](https://www.cs.cornell.edu/courses/cs6120/2025sp/lesson/12/), [concurrency and parallelism](https://www.cs.cornell.edu/courses/cs6120/2025sp/lesson/13/).
+
+**Practice:** Complete the relevant Bril analysis/optimization tasks, then write and run a real LLVM pass using its current pass-manager tutorial. Pin mutually compatible LLVM/Clang/Polly versions; archived slides are conceptual references, not a current build recipe. [LLVM pass tutorial](https://llvm.org/docs/WritingAnLLVMNewPMPass.html).
+
+**Suggested mastery task — our proposal:** Build a small optimizer with data flow, SSA and one loop transformation. Differentially test original versus optimized programs, report multiple workloads and measurement variance, inspect vectorization diagnostics, and explain when aliasing or loop-carried dependence blocks parallel execution. Add a small dependence-graph partitioning demonstration for thread extraction.
+
+**Access and coverage:** The linked instruction/docs are publicly readable and the main tools are free/open source; official Cornell feedback/grading is not promised. Some linked research papers elsewhere in a course may have separate access terms. The 2020 UofT schedule does not establish current tool versions or the precise depth of the broader calendar’s parallel-compilation topics. Production-quality automatic thread extraction requires substantially more than these exercises.
+
+<a id="CSCD84H3"></a>
+
+## CSCD84H3 — Artificial Intelligence
+
+**Preparation:** Algorithms and graph search, Python, probability/conditional independence, linear algebra, gradients and basic machine learning. Complete C11-level material before the deep-model units if needed.
+
+**Main route:** Study the ten public UofT note units below in their published order, with Bayesian networks before advanced neural applications if probability is new. Use Berkeley’s free CS188 textbook as the worked classical-AI companion. The December 2025 UofT collection includes modern models; stopping after search and minimax would leave substantial documented material unstudied.
+
+| Target topics | Public lesson and companion |
+|---|---|
+| Agents/states/actions/goals, BFS/DFS/UCS/A*, admissibility, negative edges/Bellman–Ford | UofT [Search](https://www.cs.toronto.edu/~strider/docs/D84_Search.pdf), then Berkeley [Search](https://inst.eecs.berkeley.edu/~cs188/textbook/search/). Contrast assumptions behind each algorithm. |
+| Backtracking, MRV/degree/least-constraining-value heuristics, tree CSPs/cutsets, hill climbing | UofT [CSPs](https://www.cs.toronto.edu/~strider/docs/D84_CSPs.pdf) and Berkeley [CSP unit](https://inst.eecs.berkeley.edu/~cs188/textbook/csp/). |
+| Utilities, depth limits, minimax, alpha–beta, chance/expectiminimax | UofT [Games](https://www.cs.toronto.edu/~strider/docs/D84_MiniMax.pdf) and Berkeley [Game Search](https://inst.eecs.berkeley.edu/~cs188/textbook/games/). |
+| Discounted return, policies/value iteration, Q-learning, exploration and feature generalization | UofT [RL](https://www.cs.toronto.edu/~strider/docs/D84_RL.pdf) and Berkeley [Reinforcement Learning](https://inst.eecs.berkeley.edu/~cs188/textbook/rl/). |
+| Neurons/threshold, sigmoid/tanh/ReLU/RBF, feed-forward training, backpropagation, initialization and vanishing gradients | UofT [Neural Networks](https://www.cs.toronto.edu/~strider/docs/D84_NeuralNets.pdf). Derive a tiny network’s gradients before automatic differentiation. |
+| Joint/conditional distributions, factorization, Bayesian networks, observed variables and weighted sampling | UofT [Bayesian Networks](https://www.cs.toronto.edu/~strider/docs/D84_BayesNets.pdf) and Berkeley [Bayes Nets](https://inst.eecs.berkeley.edu/~cs188/textbook/bayes-nets/). |
+| Depth, gradient propagation, skip/residual connections, momentum/Adam, batch normalization | UofT [Deep Learning](https://www.cs.toronto.edu/~strider/docs/D84_DeepLearning.pdf); reproduce a training ablation. |
+| Convolution, feature maps/pooling, multiscale features, image applications and transfer learning | UofT [ConvNets](https://www.cs.toronto.edu/~strider/docs/D84_ConvNets.pdf); inspect learned features and compare frozen versus updated weights. |
+| Tokens/embeddings/context; Q/K/V, multi-head/cross-attention, positions, next-token prediction; MoE, prompting and RL reasoning | UofT [Language Models](https://www.cs.toronto.edu/~strider/docs/D84_LLMs.pdf). Explain each component and its training/inference role. |
+| Manifolds, forward noise, reverse denoising, learned generation | UofT [Diffusion](https://www.cs.toronto.edu/~strider/docs/D84_DiffusionModels.pdf), then the author’s [UDL notebook 18.2, 1D diffusion](https://github.com/udlbook/udlbook/blob/main/Notebooks/Chap18/18_2_1D_Diffusion_Model.ipynb). |
+| Calendar-level logic, reasoning and planning | Berkeley [Logic](https://inst.eecs.berkeley.edu/~cs188/textbook/logic/), including propositional/first-order representation, inference, satisfiability and planning. These supplement the ten UofT chapters rather than pretending a separate published UofT logic chapter was found. |
+
+**Exercises:** Complete Berkeley’s archived [Pacman Search project](https://inst.eecs.berkeley.edu/~cs188/archive/sp24/projects/proj1/), then the games/Bayes projects from its course navigation. Use [Project 3](https://inst.eecs.berkeley.edu/~cs188/archive/sp24/projects/proj3/) for logic-based planning/localization and [Project 5](https://inst.eecs.berkeley.edu/~cs188/archive/sp24/projects/proj5/) for value iteration/Q-learning. Public starter packages include local autograder instructions. Finish the UDL diffusion notebook’s coding prompts. Preserve the projects’ credit notices.
+
+**Suggested mastery task:** Build a small game/maze benchmark comparing search, a logical planner, a stochastic model and learned control. Separately demonstrate a tiny classifier, an attention computation and 1D diffusion; explain their failures and computational costs. This breadth is deliberate: one chatbot project cannot demonstrate the classical material.
+
+**Access and limits:** Readings and these programming resources are public/free, with no university submission or staff grading implied. Classical tasks and tiny neural demonstrations fit local computing; large language/reasoning models require much more compute, and reading about MoE/RL reasoning does not reproduce their industrial training. The calendar promises a selected subset per offering; covering this collection exceeds what can be guaranteed compulsory in an unseen 2026 section.
+
+<a id="CSC320H1"></a>
+
+## CSC320H1 — Introduction to Visual Computing
+
+**Preparation:** Python/NumPy/Jupyter, matrices/eigenvectors, derivatives, complex numbers and basic probability. Be comfortable changing code and explaining image artifacts.
+
+**Main route:** Follow the Fall 2026 UofT schedule’s order: geometry → filtering/Fourier → colour → differentiable/vector representations → multiscale methods. Its own syllabus recommends Shree Nayar’s public [First Principles of Computer Vision videos](https://fpcv.cs.columbia.edu/). Use those as the lesson sequence and OpenCV examples as experimental notebooks. This is primarily image acquisition/processing and mathematical vision; D18’s 3D renderer is a different learning target.
+
+| Target topics | Exact resource route |
+|---|---|
+| Homogeneous 2D/3D transforms, homographies/warping, pinhole/perspective/planes and panoramas | FPCV **Image Formation** and **Image Stitching** lessons; the latter covers transforms, homography estimation, RANSAC, warping and blending. |
+| LSI systems/convolution; Gaussian/derivative/sharpening/bilateral filters; interpolation | FPCV [Image Processing I monograph](https://cave.cs.columbia.edu/Statics/monographs/Image%20Processing%201%20FPCV-1-4.pdf), then OpenCV’s [image-processing tutorials](https://docs.opencv.org/4.13.0/d2/d96/tutorial_py_table_of_contents_imgproc.html): geometric transformations, smoothing and gradients. |
+| Fourier/convolution theorem, frequency filters, hybrids, sampling/aliasing/antialiasing | FPCV [Image Processing II monograph](https://cave.cs.columbia.edu/Statics/monographs/Image%20Processing%202%20FPCV-1-5.pdf). Compare downsampling with and without prefiltering. |
+| Human colour perception, colour spaces/displays, camera/smartphone ISP | FPCV **Image Sensing** and the course-linked [Color Perception video](https://www.youtube.com/watch?v=cM2wvHtVcM8); Durand’s public [Computational Photography §3.15, ISP recap](https://people.csail.mit.edu/fredo/comp-photo-book/03-basic-image-processing-and-isp-15-recap-isp-non-destructive-editing.html) explains the RAW-to-JPEG pipeline. For deeper colour study, read [§2.8, Human Vision](https://people.csail.mit.edu/fredo/comp-photo-book/02-fundamentals-08-human-and-animal-vision-and-color.html) and [§2.9, Colour Technology](https://people.csail.mit.edu/fredo/comp-photo-book/02-fundamentals-09-color-technology.html), including colour measurement, spaces and displays. |
+| Curves, tangent/normal/moving frame; image gradient/Laplacian/Canny | UofT’s public [D18 curve notes](https://www.cs.toronto.edu/~strider/docs/D18_Curves.pdf) for parametric tangents/normals; construct the normalized tangent/normal frame. FPCV **Edge Detection** for derivative-based edges/corners; OpenCV’s gradient/Canny tutorials for experiments. |
+| Intelligent scissors and painterly rendering | OpenCV [IntelligentScissorsMB](https://docs.opencv.org/4.13.0/df/d6b/classcv_1_1segmentation_1_1IntelligentScissorsMB.html) documents path-map/contour extraction and edge-cost controls; Hertzmann’s original [Painterly Rendering with Curved Brush Strokes](https://mrl.cs.nyu.edu/publications/painterly98/) supplies the paper and examples. |
+| Template matching/similarity, Harris/Förstner corners, PCA/eigenfaces | FPCV **Image Processing I**, **Edge Detection** and **Appearance Matching** lessons; OpenCV’s [feature tutorials](https://docs.opencv.org/4.13.0/db/d27/tutorial_py_table_of_contents_feature2d.html); scikit-learn’s runnable [eigenfaces example](https://scikit-learn.org/stable/auto_examples/applications/plot_face_recognition.html). For Förstner specifically, use the authors’ [1987 operator paper](https://www.ipb.uni-bonn.de/pdfs/Forstner1987Fast.pdf), including window selection and precise point location. |
+| Haar wavelets, multiscale image processing and compression | PyWavelets’ [2D DWT/inverse-DWT reference](https://pywavelets.readthedocs.io/en/latest/ref/2d-dwt-and-idwt.html): select the `haar` wavelet; reconstruct after thresholding coefficients and measure quality/storage tradeoffs. Haar wavelets here are not Haar-like classifier features. |
+| SIFT/correspondences, RANSAC, Gaussian/Laplacian pyramids and blending | FPCV [SIFT Detector monograph](https://cave.cs.columbia.edu/Statics/monographs/SIFT%20Detector%20FPCV-2-3.pdf), **SIFT Descriptor**/**Image Stitching** videos; OpenCV feature matching/homography and image-pyramid tutorials. |
+| Calendar-level morphing and inpainting | CMU’s public [Face Morphing project](https://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15463-f15/www/hw/proj4-morph.html), plus OpenCV’s [photo tutorials → Image Inpainting](https://docs.opencv.org/4.13.0/d0/d07/tutorial_py_table_of_contents_photo.html). |
+
+**Suggested mastery task:** Create five exploratory notebooks mirroring the *themes*, not the unavailable contents, of the 2026 labs: geometry; filtering/Fourier; colour/ISP; edges/features/PCA; wavelets/stitching/blending. In each, vary parameters, state predictions, compare results and explain failure cases. Include the morphing/inpainting extensions and a paper-to-experiment exercise for painterly rendering.
+
+**Access and gaps:** The [2026 UofT page](https://www.cs.toronto.edu/~alevis/teaching/csc320/) exposes the plan, while supplied notebooks/slides/exam solutions use its Quercus-linked Dropbox and recordings use Quercus. They are not assumed available. The route above is free and mostly CPU/laptop friendly; use small images. Optional deeper reading is Szeliski’s author-hosted book: the [second-edition PDF request](https://szeliski.org/Book/download.php) asks for name/email, while the [2010 first edition](https://szeliski.org/Book/1stEdition.htm) links a direct PDF with different pagination. The original-paper supplements cover specialized topics, but exact lecture derivations, ISP examples and supplied lab experiments remain private. November/December 2026 topics remain planned, not confirmed completed teaching.
+
+<a id="CSC401H1"></a>
+
+## CSC401H1 — Natural Language Computing
+
+**Preparation:** Python, probability, information theory basics, vectors/matrices, gradients and dynamic programming. Learn text encoding/tokenization before neural libraries.
+
+**Main route:** Follow the actual January–April 2026 [public UofT lecture materials](https://www.cs.toronto.edu/~kenshi/csc401/), adding the free *Speech and Language Processing* draft as the textbook. The draft was reorganized on **August 19, 2026**: use the chapter titles/numbers below, rather than copying the older numbers shown on UofT’s lecture page. Finish the speech strand as well as text models.
+
+| Target topic | Ordered reading/practice |
+|---|---|
+| Corpora, tokens/features, n-grams, smoothing, entropy/perplexity | SLP chapter 2 for words/tokens, [chapter 3](https://web.stanford.edu/~jurafsky/slp3/3.pdf) for n-grams, then chapter 4 text classification and appendix C Kneser–Ney. Build a smoothed count model and evaluate on held-out sentences. |
+| Word embeddings, neural foundations/language models, RNNs | SLP chapters 5–6 and 14, available through the [author’s current chapter index](https://web.stanford.edu/~jurafsky/slp3/). Compare representations and count/neural language models. |
+| Statistical and neural MT, alignment, attention | UofT [MT Part I](https://www.cs.toronto.edu/~kenshi/csc401/lectures/6_NMT_pt1_2026.pdf) retains noisy-channel/SMT foundations; [Part II](https://www.cs.toronto.edu/~kenshi/csc401/lectures/8_NMT_pt2_2026.pdf) and SLP [chapter 13](https://web.stanford.edu/~jurafsky/slp3/13.pdf) develop neural translation. Trace decoding and errors on a tiny bilingual set. |
+| Transformers, variants and LLMs | SLP chapters 7–9: transformer/pretraining, post-training and masked models. Reproduce Q/K/V attention and inspect generation/evaluation; a prompting-only tutorial is insufficient. |
+| Acoustics, phonetics, waveforms/spectra and speech features | SLP [chapter 15](https://web.stanford.edu/~jurafsky/slp3/15.pdf) with UofT’s Acoustics and Speech Features lectures. Visualize a waveform, spectrogram and feature sequence. |
+| Speaker identification | SpeechBrain’s [Speech Classification from Scratch](https://speechbrain.readthedocs.io/en/latest/tutorials/tasks/speech-classification-from-scratch.html) has a speaker-ID route using mini-LibriSpeech, x-vectors/ECAPA and a coding template. Speaker identification is distinct from transcription. |
+| Dynamic programming, HMMs and speech recognition | UofT’s Dynamic Programming/HMM lectures, SLP appendix A and [chapter 16, ASR](https://web.stanford.edu/~jurafsky/slp3/16.pdf). Work a Viterbi example by hand, then compare recognition errors. |
+| Text-to-speech | SLP [chapter 17](https://web.stanford.edu/~jurafsky/slp3/17.pdf), covering text/speech representations and synthesis models; compare synthesized samples and state evaluation limits. |
+| Retrieval, summarization, dialogue and extraction | SLP chapter 11 for IR/RAG, 21 for information extraction and 26 for conversation; use UofT’s [Text Summarization lecture](https://www.cs.toronto.edu/~kenshi/csc401/lectures/16_Summ_2026.pdf) for its actual treatment. These retain the calendar’s broader application scope. |
+
+The live UofT lecture list additionally exposes [RAG](https://www.cs.toronto.edu/~kenshi/csc401/lectures/15_RAG_2026.pdf) and ethics [module 1](https://www.cs.toronto.edu/~kenshi/csc401/lectures/17_ethics1_2026.pdf)/[module 2](https://www.cs.toronto.edu/~kenshi/csc401/lectures/18_ethics2_2026.pdf); read these after IR and generation. This is an explicit current-page addition to the earlier topic summary. SLP’s chapter 12 on agents is marked unwritten, so it is not assigned as a substitute for dialogue material.
+
+**Suggested mastery task:** Produce three small reproducible studies: a feature/count versus neural text classifier, a translation/attention experiment, and a speech study combining features, speaker ID and ASR. Include a miniature retrieval/summarization demonstration, synthesized speech samples and a short bias/privacy/error analysis. These are our proposed local assessments.
+
+**Access and limits:** Lectures and the SLP draft are publicly readable. UofT assignment handouts are public, but starter code is distributed through MarkUS and teaching-server execution is specified; private data/code or official grading is not implied. NLTK/SpeechBrain and small downloaded models provide an outside-campus route; package/model/dataset downloads need storage and may have their own licences. Tiny models can run on a CPU; realistic neural speech/translation training benefits from a GPU, and full LLM training is outside a laptop-scale substitute. Exact 2026 private assignment datasets and marking remain gaps.
+
+<a id="CSC413H1"></a>
+
+## CSC413H1 — Neural Networks and Deep Learning
+
+**Preparation:** C11-level machine learning, calculus/chain rule, matrices/probability and Python. Complete D2L’s preliminary tensor/autodiff exercises before training models.
+
+**Main route:** Use the free executable *Dive into Deep Learning* in PyTorch: preliminaries → linear regression/classification → MLPs → CNNs → sequence models/attention → optimization. Then add the targeted generative/graph/RL resources below. This follows the verified Winter 2025 topic families without presenting an unverified 2026 syllabus as current.
+
+| Target topics | Exact resource route |
+|---|---|
+| Linear models/MLPs, distributed representations, backpropagation/autodiff | D2L chapters 3–5, with [§2.5 Automatic Differentiation](https://d2l.ai/chapter_preliminaries/autograd.html) and [chapter 5](https://d2l.ai/chapter_multilayer-perceptrons/index.html). Derive gradients and check them numerically. |
+| CNNs for images | D2L [chapter 7](https://d2l.ai/chapter_convolutional-neural-networks/index.html), then [chapter 8](https://d2l.ai/chapter_convolutional-modern/index.html): core operations, architectures, batch normalization and residual networks. |
+| Optimization/generalization | D2L chapter 5’s initialization/dropout/generalization material and [chapter 12](https://d2l.ai/chapter_optimization/index.html): SGD/minibatches, momentum, adaptive methods and learning-rate design. Compare validation curves under controlled changes. |
+| RNNs, attention, transformers/autoregression and LLMs | D2L [chapter 9](https://d2l.ai/chapter_recurrent-neural-networks/index.html) and [chapter 11](https://d2l.ai/chapter_attention-mechanisms-and-transformers/index.html), including sequence language models, backpropagation through time, attention, positional encoding and transformer pretraining. |
+| Interpretability | Molnar’s free [Saliency Maps chapter](https://christophm.github.io/interpretable-ml-book/pixel-attribution.html), followed by its linked Learned Features, Detecting Concepts and Evaluation chapters. Compare attribution methods and test whether explanations change under perturbation. |
+| Large/image generative models and unsupervised representations | Simon Prince’s [author repository/book/notebook collection](https://github.com/udlbook/udlbook), chapters/notebooks 15–18: GANs, normalizing flows, latent-variable/VAE models and diffusion. Start with tiny 1D/2D examples; these explain mechanisms without pretending to reproduce large commercial systems. |
+| Graph neural networks | UDL chapter 13 notebooks: graph representation, graph classification and neighborhood sampling; the public [13.2 Graph Classification notebook](https://github.com/udlbook/udlbook/blob/main/Notebooks/Chap13/13_2_Graph_Classification.ipynb) is a concrete starting point. |
+| Deep RL | Hugging Face’s free [Deep RL course](https://huggingface.co/learn/deep-rl-course/en/unit0/introduction): units 2–4 for Q-learning/DQN/policy gradients, then 6 and 8 for actor–critic/PPO. Compare with tabular RL before using deep function approximation. |
+
+**Exercises:** Stanford’s public [CS231n 2026 Assignment 1](https://cs231n.github.io/assignments2026/assignment1/) supplies kNN/softmax/two-layer-network exercises; [Assignment 2](https://cs231n.github.io/assignments2026/assignment2/) adds normalization/dropout, CNNs, PyTorch and recurrent captioning. For a working archived follow-on, [2024 Assignment 3](https://cs231n.github.io/assignments2024/assignment3/) offers transformers, GANs and self-supervised learning. Its age is intentional: the 2026 assignment-3 link did not resolve to its own handout during verification. Use book/notebook prompts and public student-answer material where provided; instructor-only complete solutions are not presumed.
+
+**Suggested mastery task:** Submit a portfolio containing a gradient-checked MLP, CNN training/generalization ablation, recurrent/transformer sequence comparison, interpretable predictions, a tiny generative model, a graph classifier and a small deep-RL experiment. Report seeds, losses, held-out metrics, compute and negative results. This is our assessment design; the [official 2025 outline](https://www.cs.toronto.edu/dcs/ugdocs/course-outlines/2025/Winter/CSC413H1S-Winter2025.pdf) gives the undergraduate course an exam and the shared graduate course a final project.
+
+**Access and limits:** Readings, code and these handouts are free/public; Colab hosting and hub uploads require relevant accounts, and free accelerator availability is not guaranteed. Small numerical examples run locally; image/sequence/deep-RL experiments may need an accelerator or reduced workloads. HF explicitly labels its RL course low-maintenance: leaderboard and AI-vs-AI functionality are unavailable. Stanford’s live CS224W Fall 2026 videos are enrolled-only, so they are not the required graph-learning path. No public route provides identical UofT grading or the compute needed for full-scale large models.
+
+<a id="CSC469H1"></a>
+
+## CSC469H1 — Operating Systems Design and Implementation
+
+**Prerequisite knowledge:** C69-level operating systems and hands-on kernel work, C/assembly, concurrency, networks and data structures. This route adds design, measurement and research-paper analysis after introductory OS implementation.
+
+**Main route:** Use MIT 6.1810’s complete Fall 2024 archive for kernel code/labs and selected advanced paper units, then add explicit multiprocessor/nonblocking, performance and distributed-systems strands below. Read each design paper with its assumptions, failure model, alternatives and measurement method. [MIT archive](https://pdos.csail.mit.edu/6.1810/2024/schedule.html).
+
+**Topic-to-resource map:**
+
+- **OS structure, processes and IPC:** Study the archive’s OS-organization/microkernel and high-level-language-kernel units alongside xv6 process, syscall and coordination code. Read the assigned L4 microkernel paper, especially its IPC/design and performance comparisons; compare isolation boundaries, crossings and communication mechanisms. [Fall 2024 sequence](https://pdos.csail.mit.edu/6.1810/2024/schedule.html), [The Performance of Micro-Kernel-Based Systems](https://pdos.csail.mit.edu/6.1810/2024/readings/microkernel.pdf).
+- **Benchmarking and performance evaluation:** Use Brendan Gregg’s methodology material to choose a question, workload and useful measurements; distinguish saturation, latency, utilization and experimental artefacts. [Performance methodologies](https://www.brendangregg.com/methodology.html).
+- **Advanced synchronization, including nonblocking techniques:** Read MIT’s multicore/RCU unit and Linux’s examples, then study Michael and Scott’s nonblocking queue algorithm alongside its two-lock alternative. Analyse atomic operations, progress, ABA and reclamation assumptions; RCU does not make every operation lock-free. [MIT RCU lecture](https://pdos.csail.mit.edu/6.1810/2024/lec/l-rcu.txt), [Linux RCU](https://docs.kernel.org/RCU/whatisRCU.html), [authors’ concurrent-queue paper](https://www.cs.rochester.edu/u/scott/papers/1996_PODC_queues.pdf).
+- **Large-address-space and multiprocessor VM:** Combine xv6 page-table/page-fault/COW/mmap work with Linux's page-table documentation. Add its cache/TLB-flushing interfaces for multiprocessor translation consistency and NUMA memory-policy guide for locality/allocation tradeoffs. These provide real-kernel references beyond a teaching kernel. [Linux memory-management contents](https://docs.kernel.org/mm/index.html), [cache/TLB flushing](https://docs.kernel.org/core-api/cachetlb.html), [NUMA memory policy](https://docs.kernel.org/admin-guide/mm/numa_memory_policy.html).
+- **Multiprocessor scheduling:** Read OSTEP chapter 10 for shared/per-CPU queue and affinity tradeoffs, then Linux’s scheduler documentation for production scheduling policies and domains. [Multiprocessor scheduling chapter](https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-multi.pdf), [Linux scheduler reference](https://docs.kernel.org/scheduler/index.html).
+- **File systems and reliable storage:** Complete xv6’s filesystem lab and the archive’s crash-recovery/journaling paper unit; reason about ordering, atomicity and recovery after interrupted writes. [MIT filesystem lab](https://pdos.csail.mit.edu/6.1810/2024/labs/fs.html).
+- **Networking in a concurrent kernel:** Follow the device/networking units and network-driver lab; read the receive-livelock paper linked in the schedule. [MIT networking lab](https://pdos.csail.mit.edu/6.1810/2024/labs/net.html).
+- **Distributed systems:** MIT 6.5840’s public 2026 schedule provides RPC/threads, replication, Raft, consistency, distributed storage and transactions. Start with MapReduce, then replicated-log/key-value labs and their local tests. These are a selected deeper strand, not a claim that one UofT term assigns all of MIT’s course. [Distributed-systems schedule](https://pdos.csail.mit.edu/6.824/schedule.html), [MapReduce lab](https://pdos.csail.mit.edu/6.824/labs/lab-mr.html), [Raft lab](https://pdos.csail.mit.edu/6.824/labs/lab-raft1.html).
+- **Security:** Work through the archive’s Meltdown/protection unit and relate it to page-table isolation, trust boundaries and hardware assumptions. [MIT Meltdown lecture](https://pdos.csail.mit.edu/6.1810/2024/lec/l-meltdown.txt).
+
+**Practice:** Use the public kernel labs for locking, networking, COW, filesystems and mmap. Before each change, state an invariant and prepare a workload that could violate it; run local tests and compare performance with the unmodified kernel. For nonblocking depth, explain a paper’s correctness/progress argument and reclamation assumptions rather than equating “no mutex” with correctness.
+
+**Suggested mastery task — our proposal:** Produce three connected studies: benchmark two IPC designs; evaluate a concurrent structure under contention and reclamation; build a replicated key-value service and inject crashes/partitions. Provide reproducible measurements, invariants, safety/liveness reasoning and limitations.
+
+**Access and coverage:** MIT handouts/starter repositories and Linux docs are public/free. Kernel work needs a compatible compiler/emulator; distributed labs need Go and local processes, with extra resources for larger experiments. University submission/office hours/grades are separate. This combination covers the documented advanced clusters; the exact current UofT papers, kernel and projects remain unknown, and a teaching-kernel lab alone does not establish modern production-OS expertise.
+
+<a id="CSC485H1"></a>
+
+## CSC485H1 — Computational Linguistics
+
+**Preparation:** Python, probability/statistics, formal grammars, dynamic programming, basic linear algebra and Unix familiarity. Knowing C401 text modelling helps, but this route separately teaches linguistic structure and meaning.
+
+**Main route:** Start with the actual Fall 2026 [UofT handouts](https://www.cs.toronto.edu/~gpenn/csc485/), then complete the free NLTK book chapters 8–10 in order. Add the specific SLP chapters/appendices below. The current UofT outline is tentative and some later handouts are not posted; the external units supply those topic families without claiming identical examples.
+
+| Target topics | Exact public reading/practice |
+|---|---|
+| CFGs, parsing, charts and structural ambiguity | [NLTK chapter 8](https://www.nltk.org/book/ch08.html): grammar construction, recursive/shift-reduce/chart parsing, ambiguity and weighted grammars. Complete the parsing exercises and inspect all parses of ambiguous sentences. |
+| Language modelling, stochastic grammars, attachment disambiguation | SLP [chapter 3](https://web.stanford.edu/~jurafsky/slp3/3.pdf) for language models; [appendix E, Statistical Constituency Parsing](https://web.stanford.edu/~jurafsky/slp3/E.pdf) for PCFG/CKY and disambiguation. Compare parse probabilities and attachment choices. |
+| Feature structures, agreement, unification and types | [NLTK chapter 9](https://www.nltk.org/book/ch09.html) teaches manipulation/unification/agreement. For full type inheritance and feature appropriateness, use the free [ALE user guide](https://www.cs.toronto.edu/~gpenn/ale.html), chapter 3 **Feature Structures, Types and Descriptions**, then chapter 5 **Phrase Structure Grammars**. Trace inheritance, subsumption, unification and type constraints; NLTK alone is insufficient here. |
+| Lexical semantics and WSD | UofT’s posted lexical-semantics handout and SLP [appendix I, Word Senses and WordNet](https://web.stanford.edu/~jurafsky/slp3/I.pdf). Compare context-based sense decisions and document inventory/evaluation ambiguity. |
+| Categorial grammars and supertagging | SLP [appendix G](https://web.stanford.edu/~jurafsky/slp3/G.pdf), specifically G.6 on supertagging and CCG parsing. Work category application/composition and a small scored derivation by hand. |
+| Dependency graphs and free-word-order parsing | UofT [Dependency Grammars](https://www.cs.toronto.edu/~gpenn/csc485/2aDepGrammar.pdf) then [Graphical Dependency Parsing](https://www.cs.toronto.edu/~gpenn/csc485/2bDepParsing.pdf): edge scoring, projectivity, nonprojective examples and Chu–Liu–Edmonds. Use [Universal Dependencies syntax principles](https://universaldependencies.org/u/overview/syntax.html) to interpret real multilingual trees/graphs. |
+| Semantics/interpretation, grammatical/semantic roles and QA | UofT’s roles handout; [NLTK chapter 10](https://www.nltk.org/book/ch10.html) for compositional meaning and question-to-database examples; SLP [appendix H](https://web.stanford.edu/~jurafsky/slp3/H.pdf) for logical representations. |
+| Anaphora/reference resolution | SLP [chapter 24, Coreference Resolution and Entity Linking](https://web.stanford.edu/~jurafsky/slp3/24.pdf). Trace candidate mentions and show cases requiring discourse/world knowledge. |
+
+**Practice:** Complete NLTK’s chapter exercises rather than only executing examples. Build a small CFG, then a feature grammar; add probabilities and compare best-parse selection; analyze a CCG derivation; run dependency analysis on sentences with flexible word order. Add a semantic interpreter/QA example and a small annotated coreference set. These exercises are our ordered implementation path.
+
+**Suggested mastery task:** Construct a miniature language-understanding system that exposes tokenization, alternative parses, features, dependency edges, lexical senses, semantic representation and resolved references before answering questions. Include deliberately ambiguous and nonprojective cases, an error taxonomy and a clear comparison of rule-based versus statistically scored decisions. A neural chatbot alone does not demonstrate these mechanisms.
+
+**Access and remaining gaps:** NLTK, SLP and posted UofT handouts are free/public; corpus downloads are separate, and optional theorem-prover demonstrations may require Prover9. CPU-scale grammars and small corpora suffice. ALE’s guide/source/examples are free under its published licence, but the 2001 guide comes as compressed PostScript/LaTeX and its runtime targets old Prolog versions; use it for theory, and treat modern runtime compatibility as unverified. Implementing a small typed unifier is a practical alternative. Large neural parsers/tagged datasets add compute/licensing constraints. The undergraduate course has three homeworks and no final; the five essays belong to graduate CSC2501. Official marking, private starter material and future November/December handouts remain gaps.
+
+<a id="CSC488H1"></a>
+
+## CSC488H1 — Compilers and Interpreters
+
+**Prerequisite knowledge:** Strong programming, preferably C++, data structures, regular languages/context-free grammars, assembly and runtime memory layout. If C++ ownership/build tools are new, learn those before the implementation stages.
+
+**Main route:** Use Stanford CS143 for the complete compiler concepts, then build an LLVM-targeting compiler through the official Kaleidoscope tutorial and ANTLR’s C++ documentation. Stanford’s example language/tools differ from UofT’s Winter 2025 MiniC project; the adaptation below is deliberate. [Stanford syllabus](https://web.stanford.edu/class/cs143/syllabus.html), [LLVM tutorial index](https://llvm.org/docs/tutorial/).
+
+**Topic-to-resource map:**
+
+- **Compiler organization, scanning and regular expressions:** Stanford’s introduction, lexical-analysis and finite-automata units explain the front-end pipeline and scanner construction. Its public handouts and written problems support the formal theory behind a generated lexer. [CS143 handouts and assignments](https://web.stanford.edu/class/cs143/).
+- **Context-free grammars and parsing:** Study the syllabus’s grammar, top-down and bottom-up parsing units. Use ANTLR to generate a lexer/parser from a small grammar and inspect ambiguous/error cases; distinguish the grammar theory from this particular tool’s parsing strategy. [Stanford syllabus](https://web.stanford.edu/class/cs143/syllabus.html), [ANTLR C++ target](https://github.com/antlr/antlr4/blob/master/doc/cpp-target.md).
+- **AST construction, symbols, usage/type checks and semantic analysis:** LLVM tutorial chapters 1–3 introduce a small front end and AST/IR generation. Add Stanford’s semantic-analysis/type-checking material for scope, declarations, type rules and useful diagnostics: the tiny tutorial language alone does not supply a full MiniC checker. [LLVM front-end tutorial](https://llvm.org/docs/tutorial/MyFirstLanguageFrontend/index.html), [Semantic Analysis and Type Checking I](https://web.stanford.edu/class/cs143/lectures/lecture09.pdf).
+- **Runtime organization and storage allocation:** Stanford’s runtime environments, code generation and garbage-collection units cover activation records, object/layout issues and managed storage. Relate these to LLVM tutorial chapters 5–7’s control flow, functions and mutable variables. [CS143 syllabus units](https://web.stanford.edu/class/cs143/syllabus.html), [LLVM mutable variables](https://llvm.org/docs/tutorial/MyFirstLanguageFrontend/LangImpl07.html).
+- **LLVM IR and backend code generation:** Tutorial chapters 3–5 cover IR/JIT/control flow; chapter 8 produces object files. Inspect generated IR and machine code and connect them to source-language semantics. [LLVM object-code chapter](https://llvm.org/docs/tutorial/MyFirstLanguageFrontend/LangImpl08.html).
+- **Optimization:** Stanford’s local/global optimization and register-allocation units supply theory; LLVM’s tutorial and current pass-manager guide provide an implementation route. Measure only after checking semantic preservation. [Writing an LLVM pass](https://llvm.org/docs/WritingAnLLVMNewPMPass.html).
+- **Modern tools:** Use a matching ANTLR generator/C++ runtime, LLVM, Clang and C++ build setup; the ANTLR download page distinguishes the generator from the target-language runtime. [Official ANTLR downloads](https://www.antlr.org/download.html).
+
+**Practice:** Work Stanford’s public written exercises before consulting posted solutions; use its historical exams for independent checks. Its Cool programming assignments are an optional separate project with different language/backend assumptions. Implement and test each Kaleidoscope stage rather than only copying the final code. The public CS143 page supplies assignments/solutions; access to its current institutional autograder or machines is not assumed. [CS143 resource page](https://web.stanford.edu/class/cs143/).
+
+**Suggested mastery task — our proposal:** Build your own small C-like compiler in seven milestones matching the documented 2025 learning progression: reproducible environment → grammar/parser → AST → symbols/types → executable LLVM IR → correct optimization → benchmark report. Define the language precisely, include rejection tests and compare valid-program results against a reference implementation. Treat the last stage as your own measured challenge, not entry into UofT’s competition.
+
+**Access and coverage:** The principal readings, handouts and tools are free/public, with no UofT account needed. LLVM APIs change: use documentation and libraries from one compatible version, and preserve a local build recipe. The 2025 UofT format establishes MiniC/C++/ANTLR/LLVM historically, not a current assignment specification. The Stanford/Kaleidoscope combination needs the explicitly described semantic/runtime additions; it is not automatically a complete MiniC implementation. UofT lists CSCD70 as an exclusion, so these are separately learnable paths rather than an assumed degree-credit combination.
+
+## Research basis
+
+This guide was researched in parallel across mathematics/theory, systems, AI/visual computing and software foundations, then reviewed against the 41-course curriculum manifest. Course entries cite primary university, author, professional-body and official project sources. Public availability, topic fit, practice material and access limitations were checked separately. A dated archive is identified as an archive; a planned lecture is not represented as completed teaching. The documented gaps remain visible rather than being filled with guessed UofT content.

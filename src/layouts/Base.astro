@@ -1,0 +1,73 @@
+---
+import '@fontsource-variable/newsreader';
+import '@fontsource/instrument-sans/400.css';
+import '@fontsource/instrument-sans/500.css';
+import '@fontsource/instrument-sans/600.css';
+import '@fontsource/ibm-plex-mono/400.css';
+import '@fontsource/ibm-plex-mono/500.css';
+import '../styles/global.css';
+import Palette from '../components/Palette.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  back?: { href: string; label: string };
+}
+const { title = 'UofTea', description = 'An open self-study map of the UTSC software engineering curriculum — every course, every resource, in one place.' } = Astro.props;
+const path = Astro.url.pathname;
+const back = path === '/' ? undefined : (Astro.props.back ?? { href: '/', label: 'Home' });
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title === 'UofTea' ? title : `${title} — UofTea`}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><circle cx='8' cy='8' r='7' fill='%23191611'/></svg>" />
+  </head>
+  <body>
+    <header class="nav">
+      <div class="nav-left">
+        {back && (
+          <a class="back-btn" href={back.href} data-back>
+            <span aria-hidden="true" class="arrow">←</span> <span class="back-label">{back.label}</span>
+          </a>
+        )}
+        <a class="wordmark" href="/">UofTea</a>
+      </div>
+      <nav class="links">
+        <a href="/#roadmap" class="desktop-only">Roadmap</a>
+        <a href="/#index" class="desktop-only">Index</a>
+        <a href="/map" aria-current={path === '/map' ? 'page' : undefined}>Map</a>
+        <a href="/guide" aria-current={path === '/guide' ? 'page' : undefined}>Guide</a>
+        <button class="kbd-hint" data-open-palette aria-label="Search (⌘K)">
+          Search <span aria-hidden="true">⌘K</span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <p>
+          UofTea is an open-source, unofficial study companion. Course structure and resource
+          recommendations come from independent research; the university owns its curriculum and
+          trademarks. Nothing here is an official equivalency.
+        </p>
+        <div class="fcol">
+          <a href="https://github.com" rel="noopener">GitHub</a>
+          <a href="/guide">Method</a>
+        </div>
+      </div>
+    </footer>
+
+    <Palette />
+    <script src="../lib/motion.ts"></script>
+    <script src="../lib/palette.ts"></script>
+    <script src="../lib/nav.ts"></script>
+  </body>
+</html>

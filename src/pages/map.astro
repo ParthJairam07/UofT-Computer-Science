@@ -1,0 +1,29 @@
+---
+import Base from '../layouts/Base.astro';
+import data from '../data/courses.json';
+---
+<Base title="Course map" description="All 41 courses as one dependency graph — stages left to right, prerequisites as threads.">
+  <header class="course-hero container">
+    <nav class="crumb kicker"><a href="/">UofTea</a><span>/</span></nav>
+    <h1 class="display">The whole thing, <em>as one map.</em></h1>
+    <p class="lede" style="margin-top:1.4rem;max-width:52ch;color:var(--ink-2)">
+      Courses sit in their stage; threads are the “start with” relationships the guide names.
+      Hover a node to trace what feeds it and what it unlocks. Click to open the route.
+    </p>
+  </header>
+
+  <section class="section container" style="padding-top:2.5rem">
+    <div class="map-wrap rv" data-map-wrap>
+      <canvas id="map-canvas"></canvas>
+      <div class="map-legend">
+        {data.stages.map((s, i) => (
+          <div class="row"><span class="dot" data-stage-dot={i}></span>{s.index + 1} · {s.name}</div>
+        ))}
+      </div>
+      <div class="map-hint"><span class="kbd-hint">drag · scroll · click</span></div>
+      <div class="map-tip" data-map-tip></div>
+    </div>
+  </section>
+
+  <script src="../lib/graph.ts"></script>
+</Base>

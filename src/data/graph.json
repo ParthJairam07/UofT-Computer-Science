@@ -1,0 +1,348 @@
+{
+ "nodes": [
+  {
+   "id": "CSCA08H3",
+   "title": "Introduction to Computer Science I",
+   "stage": 0
+  },
+  {
+   "id": "CSCA48H3",
+   "title": "Introduction to Computer Science II",
+   "stage": 0
+  },
+  {
+   "id": "CSCA67H3",
+   "title": "Discrete Mathematics",
+   "stage": 0
+  },
+  {
+   "id": "MATA22H3",
+   "title": "Linear Algebra I for Mathematical Sciences",
+   "stage": 0
+  },
+  {
+   "id": "MATA31H3",
+   "title": "Calculus I for Mathematical Sciences",
+   "stage": 0
+  },
+  {
+   "id": "MATA37H3",
+   "title": "Calculus II for Mathematical Sciences",
+   "stage": 0
+  },
+  {
+   "id": "CSCB07H3",
+   "title": "Software Design",
+   "stage": 1
+  },
+  {
+   "id": "CSCB09H3",
+   "title": "Software Tools and Systems Programming",
+   "stage": 1
+  },
+  {
+   "id": "CSCB36H3",
+   "title": "Introduction to the Theory of Computation",
+   "stage": 1
+  },
+  {
+   "id": "CSCB58H3",
+   "title": "Computer Organization",
+   "stage": 1
+  },
+  {
+   "id": "CSCB63H3",
+   "title": "Design and Analysis of Data Structures",
+   "stage": 1
+  },
+  {
+   "id": "MATB24H3",
+   "title": "Linear Algebra II",
+   "stage": 1
+  },
+  {
+   "id": "STAB52H3",
+   "title": "An Introduction to Probability",
+   "stage": 1
+  },
+  {
+   "id": "CSCC43H3",
+   "title": "Introduction to Databases",
+   "stage": 2
+  },
+  {
+   "id": "CSCC69H3",
+   "title": "Operating Systems",
+   "stage": 2
+  },
+  {
+   "id": "CSCC73H3",
+   "title": "Algorithm Design and Analysis",
+   "stage": 2
+  },
+  {
+   "id": "CSCD03H3",
+   "title": "Social Impact of Information Technology",
+   "stage": 2
+  },
+  {
+   "id": "CSCC01H3",
+   "title": "Introduction to Software Engineering",
+   "stage": 2
+  },
+  {
+   "id": "CSCC24H3",
+   "title": "Principles of Programming Languages",
+   "stage": 2
+  },
+  {
+   "id": "CSCC37H3",
+   "title": "Introduction to Numerical Algorithms for Computational Mathematics",
+   "stage": 2
+  },
+  {
+   "id": "CSCC63H3",
+   "title": "Computability and Computational Complexity",
+   "stage": 3
+  },
+  {
+   "id": "CSCD01H3",
+   "title": "Engineering Large Software Systems",
+   "stage": 3
+  },
+  {
+   "id": "MATB41H3",
+   "title": "Techniques of the Calculus of Several Variables I",
+   "stage": 1
+  },
+  {
+   "id": "CSCC09H3",
+   "title": "Programming on the Web",
+   "stage": 4
+  },
+  {
+   "id": "CSCC10H3",
+   "title": "Human-Computer Interaction",
+   "stage": 4
+  },
+  {
+   "id": "CSCC11H3",
+   "title": "Introduction to Machine Learning and Data Mining",
+   "stage": 4
+  },
+  {
+   "id": "CSCC46H3",
+   "title": "Social and Information Networks",
+   "stage": 4
+  },
+  {
+   "id": "CSCC85H3",
+   "title": "Fundamentals of Robotics and Automated Systems",
+   "stage": 4
+  },
+  {
+   "id": "CSCD18H3",
+   "title": "Computer Graphics",
+   "stage": 4
+  },
+  {
+   "id": "CSCD25H3",
+   "title": "Advanced Data Science",
+   "stage": 4
+  },
+  {
+   "id": "CSCD27H3",
+   "title": "Computer and Network Security",
+   "stage": 5
+  },
+  {
+   "id": "CSCD43H3",
+   "title": "Database System Technology",
+   "stage": 5
+  },
+  {
+   "id": "CSCD58H3",
+   "title": "Computer Networks",
+   "stage": 5
+  },
+  {
+   "id": "CSCD70H3",
+   "title": "Compiler Optimization",
+   "stage": 5
+  },
+  {
+   "id": "CSCD84H3",
+   "title": "Artificial Intelligence",
+   "stage": 4
+  },
+  {
+   "id": "CSC320H1",
+   "title": "Introduction to Visual Computing",
+   "stage": 4
+  },
+  {
+   "id": "CSC401H1",
+   "title": "Natural Language Computing",
+   "stage": 4
+  },
+  {
+   "id": "CSC413H1",
+   "title": "Neural Networks and Deep Learning",
+   "stage": 4
+  },
+  {
+   "id": "CSC469H1",
+   "title": "Operating Systems Design and Implementation",
+   "stage": 5
+  },
+  {
+   "id": "CSC485H1",
+   "title": "Computational Linguistics",
+   "stage": 4
+  },
+  {
+   "id": "CSC488H1",
+   "title": "Compilers and Interpreters",
+   "stage": 5
+  }
+ ],
+ "edges": [
+  {
+   "from": "MATA31H3",
+   "to": "MATA37H3",
+   "kind": "order"
+  },
+  {
+   "from": "CSCB58H3",
+   "to": "CSCB63H3",
+   "kind": "order"
+  },
+  {
+   "from": "CSCC10H3",
+   "to": "CSCD25H3",
+   "kind": "order"
+  },
+  {
+   "from": "CSCA08H3",
+   "to": "CSCA48H3",
+   "kind": "prereq"
+  },
+  {
+   "from": "CSCA48H3",
+   "to": "CSCB07H3",
+   "kind": "prereq"
+  },
+  {
+   "from": "CSCA48H3",
+   "to": "CSCB09H3",
+   "kind": "prereq"
+  },
+  {
+   "from": "CSCA67H3",
+   "to": "CSCB36H3",
+   "kind": "prereq"
+  },
+  {
+   "from": "CSCB36H3",
+   "to": "CSCB63H3",
+   "kind": "prereq"
+  },
+  {
+   "from": "MATA22H3",
+   "to": "MATB24H3",
+   "kind": "prereq"
+  },
+  {
+   "from": "CSCB09H3",
+   "to": "CSCC69H3",
+   "kind": "prereq"
+  },
+  {
+   "from": "CSCB58H3",
+   "to": "CSCC69H3",
+   "kind": "prereq"
+  },
+  {
+   "from": "CSCB36H3",
+   "to": "CSCC73H3",
+   "kind": "prereq"
+  },
+  {
+   "from": "CSCB63H3",
+   "to": "CSCC73H3",
+   "kind": "prereq"
+  },
+  {
+   "from": "CSCB07H3",
+   "to": "CSCC01H3",
+   "kind": "prereq"
+  },
+  {
+   "from": "CSCB36H3",
+   "to": "CSCC63H3",
+   "kind": "prereq"
+  },
+  {
+   "from": "CSCC01H3",
+   "to": "CSCD01H3",
+   "kind": "prereq"
+  },
+  {
+   "from": "CSCC11H3",
+   "to": "CSCD25H3",
+   "kind": "prereq"
+  },
+  {
+   "from": "CSCC43H3",
+   "to": "CSCD43H3",
+   "kind": "prereq"
+  },
+  {
+   "from": "CSCC11H3",
+   "to": "CSCD84H3",
+   "kind": "prereq"
+  },
+  {
+   "from": "CSCC11H3",
+   "to": "CSC413H1",
+   "kind": "prereq"
+  },
+  {
+   "from": "CSCC69H3",
+   "to": "CSC469H1",
+   "kind": "prereq"
+  }
+ ],
+ "stages": [
+  {
+   "index": 0,
+   "name": "Foundations",
+   "outcome": "Write programs, reason with proofs, and use calculus/linear algebra."
+  },
+  {
+   "index": 1,
+   "name": "Core representations and tools",
+   "outcome": "Build/test software, understand memory/hardware, analyse structures, and use probability/multivariable mathematics."
+  },
+  {
+   "index": 2,
+   "name": "Core higher-level work",
+   "outcome": "Design software and algorithms; reason about languages, numerical reliability, databases, operating systems and social consequences."
+  },
+  {
+   "index": 3,
+   "name": "Advanced required work",
+   "outcome": "Understand computational limits and justify architecture at scale."
+  },
+  {
+   "index": 4,
+   "name": "Application branches",
+   "outcome": "Develop web/HCI, data/AI, networks, robotics/vision/graphics and language expertise."
+  },
+  {
+   "index": 5,
+   "name": "Systems and compiler depth",
+   "outcome": "Implement and analyse deeper security, database, networking, OS and compiler mechanisms."
+  }
+ ]
+}

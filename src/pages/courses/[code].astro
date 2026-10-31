@@ -1,0 +1,90 @@
+---
+import Base from '../../layouts/Base.astro';
+import data from '../../data/courses.json';
+
+export function getStaticPaths() {
+  return data.courses.map(c => ({ params: { code: c.code.toLowerCase() }, props: { course: c } }));
+}
+
+const { course } = Astro.props;
+const { stages, courses } = data;
+const stage = course.stage != null ? stages[course.stage] : null;
+const idx = courses.findIndex(c => c.code === course.code);
+const prev = courses[idx - 1];
+const next = courses[idx + 1];
+
+const decorate = (h: string) => h
+  .replace('<ol>', '<ol class="map-olist">')
+  .replace('<ul>', '<ul class="map-ulist">')
+  .replace('<table>', '<table class="map-table">');
+
+const slug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const sectionId = (s: any, i: number) => `${s.key}-${slug(s.label || String(i))}`;
+
+const LABEL_OVERRIDES: Record<string, string> = {
+  start: 'Start here',
+  route: 'Main route',
+  map: 'Topic → resource map',
+  practice: 'Practice',
+  mastery: 'Mastery — suggested',
+  access: 'Access & limits',
+};
+// canonical labels for the standard sections; when a key repeats (e.g. two
+// "practice" blocks) fall back to the source label so entries stay distinct
+const keyCounts = course.sections.reduce((m: Record<string, number>, s: any) => {
+  m[s.key] = (m[s.key] ?? 0) + 1; return m;
+}, {});
+const labelFor = (s: any) =>
+  s.key === 'extra' || keyCounts[s.key] > 1 ? s.label : (LABEL_OVERRIDES[s.key] ?? s.label);
+---
+<Base title={`${course.code} ${course.title}`} description={`Self-study route for ${course.code} — ${course.title}`} back={{ href: '/#index', label: 'All courses' }}>
+  <header class="course-hero container">
+    <nav class="crumb kicker" aria-label="Breadcrumb">
+      <a href="/">UofTea</a><span>/</span>
+      {stage && <><a href="/#roadmap">Stage {stage.index + 1} — {stage.name}</a><span>/</span></>}
+    </nav>
+    <div class="code">{course.code}</div>
+    <h1 class="display">{course.title}</h1>
+    <div class="tags">
+      {stage && <span class="tag">Stage {stage.index + 1} · {stage.name}</span>}
+      <span class="tag">{course.code.endsWith('H1') ? 'St. George' : 'UTSC'}</span>
+      <span class="tag">{course.code.slice(0, 3)}</span>
+      <span class="tag-spacer" />
+      {prev && <a class="tag tag-link" href={`/courses/${prev.code.toLowerCase()}`} title="Previous course — press [">← {prev.code}</a>}
+      {next && <a class="tag tag-link" href={`/courses/${next.code.toLowerCase()}`} title="Next course — press ]">{next.code} →</a>}
+    </div>
+  </header>
+
+  <div class="course-body container">
+    <article>
+      {course.sections.map((s: any, i: number) => (
+        <section class={`course-section key-${s.key}`} id={sectionId(s, i)}>
+          {(s.label || LABEL_OVERRIDES[s.key]) && <div class="s-label">{labelFor(s)}</div>}
+          {s.blocks.map((b: any) => <div class="prose" set:html={decorate(b.html)} />)}
+        </section>
+      ))}
+
+      <nav class="prev-next" aria-label="Adjacent courses">
+        {prev ? (
+          <a href={`/courses/${prev.code.toLowerCase()}`}>
+            <span class="dir">← Previous</span>
+            <span class="t">{prev.code} — {prev.title}</span>
+          </a>
+        ) : <span />}
+        {next && (
+          <a href={`/courses/${next.code.toLowerCase()}`}>
+            <span class="dir">Next →</span>
+            <span class="t">{next.code} — {next.title}</span>
+          </a>
+        )}
+      </nav>
+    </article>
+
+    <aside class="toc" aria-label="On this page">
+      <span class="kicker">On this page</span>
+      {course.sections.map((s: any, i: number) => s.label && (
+        <a href={`#${sectionId(s, i)}`}>{labelFor(s)}</a>
+      ))}
+    </aside>
+  </div>
+</Base>

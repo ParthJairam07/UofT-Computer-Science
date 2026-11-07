@@ -16,6 +16,7 @@ interface Props {
 const { title = 'UofTea', description = 'An open self-study map of the UTSC software engineering curriculum — every course, every resource, in one place.' } = Astro.props;
 const path = Astro.url.pathname;
 const back = path === '/' ? undefined : (Astro.props.back ?? { href: '/', label: 'Home' });
+const GOATCOUNTER = 'uoftea';
 ---
 <!doctype html>
 <html lang="en">
@@ -59,6 +60,7 @@ const back = path === '/' ? undefined : (Astro.props.back ?? { href: '/', label:
           trademarks. Nothing here is an official equivalency.
         </p>
         <div class="fcol">
+          <span class="visitors" data-visitors data-site={GOATCOUNTER} hidden>Visitors <b>–</b></span>
           <a href="https://github.com" rel="noopener">GitHub</a>
           <a href="/guide">Method</a>
         </div>
@@ -69,5 +71,6 @@ const back = path === '/' ? undefined : (Astro.props.back ?? { href: '/', label:
     <script src="../lib/motion.ts"></script>
     <script src="../lib/palette.ts"></script>
     <script src="../lib/nav.ts"></script>
+    <script src="../lib/counter.ts"></script>
   </body>
 </html>

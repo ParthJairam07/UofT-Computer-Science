@@ -9,7 +9,7 @@ const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 if (!reduced) {
   gsap.registerPlugin(ScrollTrigger, SplitText);
 
-  const lenis = new Lenis({ autoRaf: true, lerp: 0.11 });
+  const lenis = new Lenis({ autoRaf: true, lerp: 0.075, wheelMultiplier: 0.9, touchMultiplier: 1.4 });
   lenis.on('scroll', ScrollTrigger.update);
 
   // anchor links route through lenis
@@ -38,6 +38,14 @@ if (!reduced) {
     gsap.from(split.lines, {
       yPercent: 110, opacity: 0, duration: 1.15, stagger: 0.09, ease: 'power4.out', delay: 0.15,
     });
+  }
+
+  // hero parallax — photo drifts slower than the page, headline lifts and fades as it leaves
+  const hero = document.querySelector<HTMLElement>('.hero');
+  if (hero) {
+    const scrub = { trigger: hero, start: 'top top', end: 'bottom top', scrub: true };
+    gsap.to('.hero-img', { yPercent: 14, ease: 'none', scrollTrigger: scrub });
+    gsap.to('.hero-content', { y: -90, opacity: 0, ease: 'power1.in', scrollTrigger: { ...scrub, end: '75% top' } });
   }
 } else {
   document.querySelectorAll<HTMLElement>('.rv').forEach(el => { el.style.opacity = '1'; el.style.transform = 'none'; });

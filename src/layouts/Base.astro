@@ -29,7 +29,7 @@ const GOATCOUNTER = 'uoftea';
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='88'>%F0%9F%8D%B5</text></svg>" />
   </head>
   <body>
-    <header class="nav">
+    <header class:list={['nav', { 'over-hero': path === '/' }]}>
       <div class="nav-left">
         {back && (
           <a class="back-btn" href={back.href} data-back>

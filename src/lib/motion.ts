@@ -14,7 +14,7 @@ if (!reduced) {
 
   // anchor links route through lenis
   document.addEventListener('click', (e) => {
-    const a = (e.target as HTMLElement).closest('a[href^="#"], a[href^="/#"]') as HTMLAnchorElement | null;
+    const a = (e.target as HTMLElement).closest('a[href^="#"], a[href*="/#"]') as HTMLAnchorElement | null;
     if (!a) return;
     const hash = new URL(a.href, location.href).hash;
     const el = hash && document.querySelector(hash);

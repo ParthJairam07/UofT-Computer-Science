@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import data from '../data/courses.json';
 
+const base = import.meta.env.BASE_URL;
 const { stages, courses } = data;
 const byCode = new Map(courses.map(c => [c.code, c]));
 const linkCount = courses.reduce((n, c) =>
@@ -44,7 +45,7 @@ const linkCount = courses.reduce((n, c) =>
           </div>
           <div class="courses">
             {s.codes.map(code => (
-              <a class="code-chip" href={`/courses/${code.toLowerCase()}`}>{code}</a>
+              <a class="code-chip" href={`${base}/courses/${code.toLowerCase()}`}>{code}</a>
             ))}
           </div>
         </div>
@@ -66,7 +67,7 @@ const linkCount = courses.reduce((n, c) =>
           {s.codes.map(code => {
             const c = byCode.get(code)!;
             return (
-              <a class="index-row" href={`/courses/${code.toLowerCase()}`}>
+              <a class="index-row" href={`${base}/courses/${code.toLowerCase()}`}>
                 <span class="code">{c.code}</span>
                 <span class="title">{c.title}</span>
                 <span class="subj">{c.code.slice(0, 3)}</span>

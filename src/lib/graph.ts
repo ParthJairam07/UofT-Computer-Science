@@ -145,7 +145,7 @@ if (wrap && canvas) {
     if (drag && !drag.moved) {
       const r = canvas.getBoundingClientRect();
       const n = pick(e.clientX - r.left, e.clientY - r.top);
-      if (n) location.href = `/courses/${n.id.toLowerCase()}`;
+      if (n) location.href = `${import.meta.env.BASE_URL}/courses/${n.id.toLowerCase()}`;
     }
     drag = null;
   });

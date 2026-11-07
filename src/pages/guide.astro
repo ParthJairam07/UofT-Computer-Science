@@ -2,10 +2,11 @@
 import Base from '../layouts/Base.astro';
 import guide from '../data/guide.json';
 import data from '../data/courses.json';
+const base = import.meta.env.BASE_URL;
 ---
 <Base title="Guide" description="How to use UofTea — method, access, cost and the research basis behind the routes.">
   <header class="course-hero container">
-    <nav class="crumb kicker"><a href="/">UofTea</a><span>/</span></nav>
+    <nav class="crumb kicker"><a href={base}>UofTea</a><span>/</span></nav>
     <h1 class="display" data-split>{guide.title.replace(/^Learn/, 'Learn')}</h1>
   </header>
 
@@ -29,7 +30,7 @@ import data from '../data/courses.json';
               <p class="outcome">{s.outcome}</p>
             </div>
             <div class="courses">
-              {s.codes.map(code => <a class="code-chip" href={`/courses/${code.toLowerCase()}`}>{code}</a>)}
+              {s.codes.map(code => <a class="code-chip" href={`${base}/courses/${code.toLowerCase()}`}>{code}</a>)}
             </div>
           </div>
         ))}

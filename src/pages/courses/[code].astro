@@ -6,6 +6,7 @@ export function getStaticPaths() {
   return data.courses.map(c => ({ params: { code: c.code.toLowerCase() }, props: { course: c } }));
 }
 
+const base = import.meta.env.BASE_URL;
 const { course } = Astro.props;
 const { stages, courses } = data;
 const stage = course.stage != null ? stages[course.stage] : null;
@@ -37,11 +38,11 @@ const keyCounts = course.sections.reduce((m: Record<string, number>, s: any) => 
 const labelFor = (s: any) =>
   s.key === 'extra' || keyCounts[s.key] > 1 ? s.label : (LABEL_OVERRIDES[s.key] ?? s.label);
 ---
-<Base title={`${course.code} ${course.title}`} description={`Self-study route for ${course.code} — ${course.title}`} back={{ href: '/#index', label: 'All courses' }}>
+<Base title={`${course.code} ${course.title}`} description={`Self-study route for ${course.code} — ${course.title}`} back={{ href: `${base}/#index`, label: 'All courses' }}>
   <header class="course-hero container">
     <nav class="crumb kicker" aria-label="Breadcrumb">
-      <a href="/">UofTea</a><span>/</span>
-      {stage && <><a href="/#roadmap">Stage {stage.index + 1} — {stage.name}</a><span>/</span></>}
+      <a href={base}>UofTea</a><span>/</span>
+      {stage && <><a href={`${base}/#roadmap`}>Stage {stage.index + 1} — {stage.name}</a><span>/</span></>}
     </nav>
     <div class="code">{course.code}</div>
     <h1 class="display">{course.title}</h1>
@@ -50,8 +51,8 @@ const labelFor = (s: any) =>
       <span class="tag">{course.code.endsWith('H1') ? 'St. George' : 'UTSC'}</span>
       <span class="tag">{course.code.slice(0, 3)}</span>
       <span class="tag-spacer" />
-      {prev && <a class="tag tag-link" href={`/courses/${prev.code.toLowerCase()}`} title="Previous course — press [">← {prev.code}</a>}
-      {next && <a class="tag tag-link" href={`/courses/${next.code.toLowerCase()}`} title="Next course — press ]">{next.code} →</a>}
+      {prev && <a class="tag tag-link" href={`${base}/courses/${prev.code.toLowerCase()}`} title="Previous course — press [">← {prev.code}</a>}
+      {next && <a class="tag tag-link" href={`${base}/courses/${next.code.toLowerCase()}`} title="Next course — press ]">{next.code} →</a>}
     </div>
   </header>
 
@@ -66,13 +67,13 @@ const labelFor = (s: any) =>
 
       <nav class="prev-next" aria-label="Adjacent courses">
         {prev ? (
-          <a href={`/courses/${prev.code.toLowerCase()}`}>
+          <a href={`${base}/courses/${prev.code.toLowerCase()}`}>
             <span class="dir">← Previous</span>
             <span class="t">{prev.code} — {prev.title}</span>
           </a>
         ) : <span />}
         {next && (
-          <a href={`/courses/${next.code.toLowerCase()}`}>
+          <a href={`${base}/courses/${next.code.toLowerCase()}`}>
             <span class="dir">Next →</span>
             <span class="t">{next.code} — {next.title}</span>
           </a>

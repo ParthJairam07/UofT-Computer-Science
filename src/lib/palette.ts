@@ -2,11 +2,13 @@
 
 type IndexEntry = { code: string; title: string; stage: number | null; stageName: string; url: string; text: string };
 
+const base = import.meta.env.BASE_URL;
+
 const PAGES = [
-  { code: 'Map', title: 'The course map', s: 'all 41 courses as a dependency graph', url: '/map' },
-  { code: 'Guide', title: 'How to use UofTea', s: 'method, access, research basis', url: '/guide' },
-  { code: 'Index', title: 'Course index', s: 'every course, in order', url: '/#index' },
-  { code: 'Roadmap', title: 'Learning order', s: 'the six stages', url: '/#roadmap' },
+  { code: 'Map', title: 'The course map', s: 'all 41 courses as a dependency graph', url: `${base}/map` },
+  { code: 'Guide', title: 'How to use UofTea', s: 'method, access, research basis', url: `${base}/guide` },
+  { code: 'Index', title: 'Course index', s: 'every course, in order', url: `${base}/#index` },
+  { code: 'Roadmap', title: 'Learning order', s: 'the six stages', url: `${base}/#roadmap` },
 ];
 
 const backdrop = document.querySelector<HTMLElement>('[data-palette-backdrop]')!;
@@ -22,11 +24,11 @@ let items: { url: string; code: string; title: string; s?: string }[] = [];
 
 async function loadIndex() {
   if (index) return;
-  try { index = await (await fetch('/search-index.json')).json(); }
+  try { index = await (await fetch(`${base}/search-index.json`)).json(); }
   catch { index = []; }
   if (!pagefindTried) {
     pagefindTried = true;
-    try { pagefind = await import(/* @vite-ignore */ '/pagefind/pagefind.js'); await pagefind.init(); }
+    try { pagefind = await import(/* @vite-ignore */ `${base}/pagefind/pagefind.js`); await pagefind.init(); }
     catch { pagefind = null; }
   }
 }

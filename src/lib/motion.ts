@@ -38,7 +38,6 @@ if (!reduced) {
     gsap.from(split.lines, {
       yPercent: 110, opacity: 0, duration: 1.15, stagger: 0.09, ease: 'power4.out', delay: 0.15,
     });
-    gsap.from('[data-hero-meta] > *', { y: 14, opacity: 0, duration: 0.8, stagger: 0.06, ease: 'power3.out', delay: 0.7 });
   }
 } else {
   document.querySelectorAll<HTMLElement>('.rv').forEach(el => { el.style.opacity = '1'; el.style.transform = 'none'; });

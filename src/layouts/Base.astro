@@ -26,7 +26,7 @@ const GOATCOUNTER = 'uoftea';
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title === 'UofTea' ? title : `${title} — UofTea`}</title>
     <meta name="description" content={description} />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><circle cx='8' cy='8' r='7' fill='%23191611'/></svg>" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='88'>%F0%9F%8D%B5</text></svg>" />
   </head>
   <body>
     <header class="nav">
@@ -36,7 +36,7 @@ const GOATCOUNTER = 'uoftea';
             <span aria-hidden="true" class="arrow">←</span> <span class="back-label">{back.label}</span>
           </a>
         )}
-        <a class="wordmark" href={base}>UofTea</a>
+        <a class="wordmark" href={base}><img src={`${base}/logo.png`} alt="UofTea" width="851" height="444" /></a>
       </div>
       <nav class="links">
         <a href={`${base}/#roadmap`} class="desktop-only">Roadmap</a>

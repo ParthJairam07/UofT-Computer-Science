@@ -5,26 +5,17 @@ import data from '../data/courses.json';
 const base = import.meta.env.BASE_URL;
 const { stages, courses } = data;
 const byCode = new Map(courses.map(c => [c.code, c]));
-const linkCount = courses.reduce((n, c) =>
-  n + c.sections.reduce((m, s) => m + s.blocks.reduce((k, b) => k + (b.html.match(/<a href/g) ?? []).length, 0), 0), 0);
 ---
 <Base>
   <!-- hero -->
   <section class="hero">
-    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+    <img class="hero-img" src={`${base}/hero.jpg`} alt="" fetchpriority="high" />
     <div class="hero-content">
-      <span class="kicker">An open self-study curriculum · UTSC Software Engineering</span>
-      <h1 class="display" data-split>Learn the entire curriculum. <em>On your own.</em></h1>
+      <h1 class="display" data-split>This website is made by AI, but I have <em>manually verified every single course.</em></h1>
       <p class="lede">
         A course-by-course study guide for all 41 computer science, mathematics and statistics
         courses in the Software Engineering program — every route built from free, public material.
       </p>
-    </div>
-    <div class="hero-meta" data-hero-meta>
-      <div><div class="n">41</div><div class="l">Courses mapped</div></div>
-      <div><div class="n">6</div><div class="l">Stages of study</div></div>
-      <div><div class="n">{linkCount}+</div><div class="l">Linked resources</div></div>
-      <div><div class="n serif" style="font-style:italic">free</div><div class="l">And public</div></div>
     </div>
   </section>
 
@@ -39,10 +30,7 @@ const linkCount = courses.reduce((n, c) =>
       {stages.map((s, i) => (
         <div class="stage rv">
           <span class="num">{String(i + 1).padStart(2, '0')}</span>
-          <div>
-            <h3>{s.name}</h3>
-            <p class="outcome">{s.outcome}</p>
-          </div>
+          <h3>{s.name}</h3>
           <div class="courses">
             {s.codes.map(code => (
               <a class="code-chip" href={`${base}/courses/${code.toLowerCase()}`}>{code}</a>
@@ -79,6 +67,4 @@ const linkCount = courses.reduce((n, c) =>
       ))}
     </div>
   </section>
-
-  <script src="../lib/hero.ts"></script>
 </Base>

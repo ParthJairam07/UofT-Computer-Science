@@ -316,32 +316,32 @@
  "stages": [
   {
    "index": 0,
-   "name": "Foundations",
+   "name": "Level A1",
    "outcome": "Write programs, reason with proofs, and use calculus/linear algebra."
   },
   {
    "index": 1,
-   "name": "Core representations and tools",
+   "name": "Level B1",
    "outcome": "Build/test software, understand memory/hardware, analyse structures, and use probability/multivariable mathematics."
   },
   {
    "index": 2,
-   "name": "Core higher-level work",
+   "name": "Level C1",
    "outcome": "Design software and algorithms; reason about languages, numerical reliability, databases, operating systems and social consequences."
   },
   {
    "index": 3,
-   "name": "Advanced required work",
+   "name": "Level D1",
    "outcome": "Understand computational limits and justify architecture at scale."
   },
   {
    "index": 4,
-   "name": "Application branches",
+   "name": "Additional: Application based",
    "outcome": "Develop web/HCI, data/AI, networks, robotics/vision/graphics and language expertise."
   },
   {
    "index": 5,
-   "name": "Systems and compiler depth",
+   "name": "Additional: Systems and compilers",
    "outcome": "Implement and analyse deeper security, database, networking, OS and compiler mechanisms."
   }
  ]

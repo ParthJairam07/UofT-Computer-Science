@@ -86,7 +86,15 @@ const fmSections = {};
   }
 }
 
-// stages table
+// stages table — display names override the source document's stage labels
+const STAGE_NAMES = {
+  'Foundations': 'Level A1',
+  'Core representations and tools': 'Level B1',
+  'Core higher-level work': 'Level C1',
+  'Advanced required work': 'Level D1',
+  'Application branches': 'Additional: Application based',
+  'Systems and compiler depth': 'Additional: Systems and compilers',
+};
 const stageRows = [];
 {
   const tbl = fmSections['A recommended learning order'] ?? '';
@@ -94,7 +102,7 @@ const stageRows = [];
     if (!l.startsWith('|') || l.includes('---')) continue;
     const cells = l.split('|').map(s => s.trim()).filter(Boolean);
     if (cells.length === 3 && cells[0] !== 'Stage') {
-      stageRows.push({ name: cells[0], spec: cells[1], outcome: cells[2] });
+      stageRows.push({ name: STAGE_NAMES[cells[0]] ?? cells[0], spec: cells[1], outcome: cells[2] });
     }
   }
 }
